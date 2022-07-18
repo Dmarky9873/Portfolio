@@ -1,0 +1,95 @@
+h1 {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: xx-large;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: x-large;
+}
+
+.nice {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.box {
+    border: 2px solid #000;
+    border-radius: 10px;
+    height: 10%;
+    width: 8%;
+    background-color: rgb(17, 50, 150);
+    margin: auto;
+}
+
+.back {
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 6%;
+    background-color: rgb(17, 50, 150);
+    margin: left;
+}
+
+.textinput {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: large;
+    letter-spacing: 1px;
+    background-color: rgb(17, 50, 150);
+}
+
+.center {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.checkbutton {
+    border: 2px solid #000;
+    border-radius: 10px;
+    height: 10%;
+    width: 30%;
+    background-color: rgb(17, 50, 150);
+    margin: auto;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: large;
+    letter-spacing: 1px;
+    align-self: center;
+}
+
+body {
+    background-color: darkblue;
+}
