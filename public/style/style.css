@@ -41,7 +41,7 @@ a:active {
     border: 2px solid #000;
     border-radius: 10px;
     height: 10%;
-    width: 20vw;
+    width: 30vw;
     background-color: rgb(17, 50, 150);
     margin: auto;
 }
@@ -52,6 +52,15 @@ a:active {
     width: 6%;
     background-color: rgb(17, 50, 150);
     margin: left;
+}
+
+.dropdown-text {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: clamp(1em, 1.5vw, 2vw);
+    letter-spacing: 1px;
+    flex-wrap: wrap;
 }
 
 .textinput {
@@ -66,7 +75,6 @@ a:active {
 .center {
     width: 50%;
     margin: auto;
-    padding: 10px;
     align-items: center;
     text-align: center;
 }
@@ -88,6 +96,7 @@ a:active {
 }
 
 body {
+    padding-top: 60px;
     background-color: rgb(0, 0, 81);
 }
 
@@ -97,10 +106,15 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(0, 0, 131);
+    position: fix;
 }
 
 li {
     float: left;
+}
+
+li:last-child {
+    float: right;
 }
 
 li a,
@@ -114,7 +128,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(22, 65, 193);
 }
 
 li.dropdown {
@@ -124,14 +138,13 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgb(17, 50, 150);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -139,7 +152,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgb(22, 65, 193);
 }
 
 .dropdown:hover .dropdown-content {
@@ -148,4 +161,12 @@ li.dropdown {
 
 .active {
     background-color: blueviolet;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-width: 10px;
+    border-color: greenyellow;
 }
