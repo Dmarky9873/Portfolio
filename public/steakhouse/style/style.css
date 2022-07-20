@@ -45,6 +45,20 @@ p {
     font-size: clamp(1em, 2vw, 2.5vw);
 }
 
+.link {
+    font-family: "Mukta", sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    padding: 0;
+    margin: 30px;
+    font-size: clamp(1em, 2vw, 2.5vw);
+    text-decoration: underline;
+}
+
+footer {
+    justify-content: space-between;
+}
+
 body {
     background-color: black;
 }
@@ -146,6 +160,11 @@ img {
     right: 16px;
 }
 
+.social-media-button {
+    height: 3%;
+    width: 3%;
+}
+
 
 /* Centered text */
 
@@ -156,6 +175,10 @@ img {
     transform: translate(-50%, -50%);
 }
 
+.footer {
+    padding: 30px;
+}
+
 
 /* Center top text */
 
@@ -164,7 +187,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-bottom: 30%;
+    padding-bottom: 40%;
 }
 
 a:link {
@@ -199,6 +222,13 @@ a:active {
     transition: 0.5s;
 }
 
+.footer-div {
+    background-color: #111;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -206,6 +236,11 @@ a:active {
     color: #818181;
     display: block;
     transition: 0.3s;
+}
+
+.button {
+    border: 3px solid#818181;
+    padding: 10px;
 }
 
 
