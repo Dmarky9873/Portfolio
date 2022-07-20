@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
 
 <head>
@@ -12,18 +9,86 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="./js/script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
+      >
+      <a href="/public/steakhouse/steakhouseindex.html">
+        <div>
+          <h3>Home</h3>
+        </div>
+      </a>
+        <a href="./menuindex.html">
+            <div>
+                <h3>Menu</h3>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <h3>Catering</h3>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <h3>Locations</h3>
+            </div>
+        </a>
+        <a href="./about.html">
+            <div>
+                <h3>About</h3>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <h3>Contact</h3>
+            </div>
+        </a>
+    </div>
+    <div class="topbox">
+        <span class="sidenav-button" onclick="openNav()">&#9776;</span>
+        <h4>Example Logo</h4>
+        <a href="/public/exampleindex.html">
+            <div>
+                <i class="material-icons" style="font-size: clamp(4em, 5.5em, 7em)">&#xe5c4;</i
+          >
+        </div>
+      </a>
+    </div>
     <h1>Menu</h1>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
-    <script src="" async defer></script>
-</body>
-
+    <div class="text-area-container">
+      <div class="text-area">
+        <div class="inner-text-area">
+          <p class="menu-category-title">Appetizers</p>
+          <br /><br />
+          <p class="menu-item-title">Caesar Salad</p>
+          <br />
+          <p class="menu-item-description">
+            A delicious salad with our signature caesar dressing.
+          </p>
+        </div>
+        <div class="inner-text-area">
+          <p class="menu-category-title">Mains</p>
+          <br /><br />
+          <p class="menu-item-title">Filet Mignon</p>
+          <br />
+          <p class="menu-item-description">
+            Skillfully cut filet cooked to your desired temperature.
+          </p>
+        </div>
+        <div class="inner-text-area">
+          <p class="menu-category-title">Desserts</p>
+          <br /><br />
+          <p class="menu-item-title">Chocolate Cake</p>
+          <p class="menu-item-description">
+            A unique layered blend of sponge and mousse with a scoop of vanilla
+            gelato.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
