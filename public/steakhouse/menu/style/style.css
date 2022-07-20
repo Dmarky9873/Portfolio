@@ -22,8 +22,8 @@ h3 {
 }
 
 h3:hover {
-    transition: all 500ms ease;
     color: whitesmoke;
+    transition: all 500ms ease;
 }
 
 h4 {
@@ -55,15 +55,6 @@ body {
 
 .text-area {
     border: 5px solid white;
-}
-
-.home-buttons {
-    transition: all 500ms ease;
-    opacity: 0.7;
-}
-
-.home-buttons:hover {
-    opacity: 1;
 }
 
 html,
@@ -124,8 +115,8 @@ img {
 
 .top-left {
     position: absolute;
-    top: 1%;
-    left: 3%;
+    top: 8px;
+    left: 16px;
 }
 
 
@@ -164,7 +155,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-bottom: 30%;
+    padding-bottom: 80%;
 }
 
 a:link {
@@ -250,7 +241,7 @@ a:active {
     top: 0;
     right: 0;
     left: 0;
-    width: 100%;
+    width: 98%;
     overflow: hidden;
     display: inline-flex;
     justify-content: space-between;
