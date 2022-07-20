@@ -6,6 +6,13 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: "Mukta", sans-serif;
+    font-size: clamp(1em, 2vw, 3vw);
+    color: whitesmoke;
+    text-align: center;
+}
+
 h3 {
     font-family: "Mukta", sans-serif;
     font-size: 1em;
@@ -19,37 +26,130 @@ h3:hover {
     transition: all 500ms ease;
 }
 
+h4 {
+    cursor: pointer;
+    color: #818181;
+    font-size: 0.5em;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline;
+}
+
 p {
     font-family: "Mukta", sans-serif;
     color: whitesmoke;
-    text-align: justify;
+    text-align: center;
     padding: 0;
     margin: 30px;
     font-size: clamp(1em, 2vw, 2.5vw);
 }
 
 body {
-    padding-top: 60px;
-    background-color: #4f4f4f;
-    background-image: url("https://img.freepik.com/free-photo/grilled-beef-steak-dark-wooden-surface_1150-44344.jpg?w=2000");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
 }
 
-.exit-button {
-    cursor: pointer;
-    padding: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
+.text-area-container {
+    padding: 10%;
+}
+
+.text-area {
+    border: 5px solid white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    padding: 0;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    display: inline;
 }
 
 .material-icons {
     color: #818181;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: clamp(0.5em, 0.7em, 1em);
 }
 
 .material-icons:hover {
     color: whitesmoke;
     transition: all 500ms ease;
+}
+
+
+/* Container holding the image and the text */
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+/* Bottom left text */
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+
+/* Top left text */
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+
+/* Top right text */
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+
+/* Bottom right text */
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+
+/* Centered text */
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Center top text */
+
+.center-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 80%;
 }
 
 a:link {
@@ -130,13 +230,16 @@ a:active {
 }
 
 .topbox {
-    position: absolute;
+    background-color: black;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
+    width: 98%;
     overflow: hidden;
     display: inline-flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 .sidenav-button {
