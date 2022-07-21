@@ -412,6 +412,15 @@ img {
     padding-bottom: 40%;
 }
 
+.center-div {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    /* border: 3px solid #5e3023; */
+    width: 70%;
+    text-align: center;
+}
+
 a:link {
     text-decoration: none;
 }
