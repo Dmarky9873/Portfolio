@@ -26,6 +26,20 @@ h3:hover {
     color: whitesmoke;
 }
 
+.price-container {
+    border: 5px solid #5e3023;
+    margin: 5%;
+}
+
+li {
+    font-family: "Ubuntu", sans-serif;
+    color: #f3e9dc;
+    text-align: center;
+    padding: 0;
+    margin: 3%;
+    font-size: clamp(1em, 2vw, 2.5vw);
+}
+
 
 /* CSS */
 
@@ -236,7 +250,7 @@ p {
 
 footer {
     justify-content: space-between;
-    background-color: #111;
+    background-color: #5e3023;
 }
 
 body {
@@ -383,7 +397,7 @@ img {
 }
 
 .footer-div {
-    background-color: #111;
+    background-color: #5e3023;
     padding: 5%;
 }
 
