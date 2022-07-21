@@ -63,6 +63,10 @@ body {
     background-color: black;
 }
 
+.black-outline {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .text-area-container {
     padding: 10%;
 }
@@ -163,6 +167,7 @@ img {
 .social-media-button {
     height: 3%;
     width: 3%;
+    text-align: center;
 }
 
 
@@ -224,9 +229,12 @@ a:active {
 
 .footer-div {
     background-color: #111;
-    padding-top: 5%;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding: 5%;
+}
+
+.social-media-container {
+    width: 100%;
+    text-align: center;
 }
 
 .sidenav a {
