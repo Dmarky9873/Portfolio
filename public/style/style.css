@@ -1,24 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Ubuntu&display=swap");
 h1 {
+    font-family: "Comfortaa", cursive;
+    font-size: clamp(3em, 5vw, 7vw);
+    color: #f3e9dc;
     text-align: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: white;
-    font-size: clamp(2em, 9vw, 9vw);
 }
 
 h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: clamp(1em, 2vw, 3vw);
+    color: #f3e9dc;
     text-align: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: white;
-    font-size: clamp(1.5em, 5vw, 7vw);
+}
+
+h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1em;
+    color: #dab49d;
+    padding: 0;
+    margin: 0;
+}
+
+h3:hover {
+    transition: all 500ms ease;
+    color: whitesmoke;
+}
+
+
+/* CSS */
+
+.button-50 {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-50:focus {
+    text-decoration: none;
+}
+
+.button-50:hover {
+    text-decoration: none;
+}
+
+.button-50:active {
+    box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.button-50:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button-50 {
+        padding: 12px 50px;
+    }
+}
+
+
+/* CSS */
+
+.button-52 {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-52:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.button-52:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .button-52 {
+        padding: 13px 50px 13px;
+    }
+}
+
+h4 {
+    font-family: "Comfortaa", cursive;
+    color: #895737;
+    font-size: clamp(1.3em, 1.6em, 2em);
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline;
+    text-align: right;
+}
+
+h5 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1em;
+    color: #f3e9dc;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.examples-container {
+    border: 3px solid #5e3023;
+    margin: 5%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.black-outline {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* CSS */
+
+.button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-74:hover {
+    background-color: #fff;
+}
+
+.button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}
+
+.menu-category-title {
+    font-family: "Comfortaa", cursive;
+    color: #f3e9dc;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1.8em, 2.8em, 3.3vw);
+    font-weight: bold;
+    display: inline-flex;
+    padding-right: 30%;
+    text-decoration: underline;
+}
+
+.menu-item-title {
+    font-family: "Ubuntu", sans-serif;
+    color: #f3e9dc;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1.3em, 2.3em, 2.8vw);
+    font-weight: bolder;
+    display: inline-flex;
+}
+
+.menu-item-description {
+    font-family: "Ubuntu", sans-serif;
+    color: #f3e9dc;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    font-size: clamp(0.7em, 1.7em, 2.2vw);
+    display: inline-flex;
 }
 
 p {
+    font-family: "Ubuntu", sans-serif;
+    color: #f3e9dc;
     text-align: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    padding: 0;
+    margin: 30px;
+    font-size: clamp(1em, 2vw, 2.5vw);
+}
+
+footer {
+    justify-content: space-between;
+    background-color: #111;
+}
+
+body {
+    background-color: #c08552;
+    height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.text-area-container {
+    padding: 10%;
+}
+
+.text-area-border {
+    display: flex;
+    border: 5px solid white;
+}
+
+.inner-container {
+    justify-content: space-between;
+    display: flex;
+}
+
+.inner-text-area {
+    margin: 5%;
+}
+
+.home-buttons {
+    transition: all 500ms ease;
+    opacity: 0.7;
+}
+
+.home-buttons:hover {
+    opacity: 1;
+}
+
+.inner-sides-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sides-container {
+    border: 5px solid #f3e9dc;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+img {
+    padding: 0;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    display: inline;
+}
+
+.material-icons {
+    color: #818181;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 5mm;
+}
+
+.sides-title {
+    padding: 10px;
+}
+
+.material-icons:hover {
+    color: #f3e9dc;
+    transition: all 500ms ease;
+}
+
+
+/* Container holding the image and the text */
+
+.container {
+    position: relative;
+    text-align: center;
     color: white;
-    font-size: clamp(2em, 2vw, 3.5vw);
-    letter-spacing: 1px;
-    flex-wrap: wrap;
+}
+
+
+/* Bottom left text */
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+
+/* Top left text */
+
+.top-left {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+}
+
+
+/* Top right text */
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+
+/* Bottom right text */
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.social-media-button {
+    height: 3%;
+    width: 3%;
+    text-align: center;
+}
+
+.social-media-container {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Centered text */
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-div {
+    background-color: #111;
+    padding: 5%;
+}
+
+
+/* Center top text */
+
+.center-top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 40%;
 }
 
 a:link {
@@ -37,134 +414,111 @@ a:active {
     text-decoration: none;
 }
 
-.box {
-    border: 2px solid #000;
-    border-radius: 10px;
-    height: 10%;
-    width: 30vw;
-    background-color: rgb(17, 50, 150);
-    margin: auto;
-}
 
-.back {
-    border: 2px solid #000;
-    border-radius: 10px;
-    width: 6%;
-    background-color: rgb(17, 50, 150);
-    margin: left;
-}
+/* The side navigation menu */
 
-.dropdown-text {
-    text-align: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: white;
-    font-size: clamp(1em, 1.5vw, 3vw);
-    letter-spacing: 1px;
-    flex-wrap: wrap;
-}
-
-.textinput {
-    text-align: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: white;
-    font-size: large;
-    letter-spacing: 1px;
-    background-color: rgb(17, 50, 150);
-}
-
-.center {
-    width: 50%;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-}
-
-.checkbutton {
-    border: 2px solid #000;
-    border-radius: 10px;
-    height: 10%;
-    width: 30%;
-    background-color: rgb(17, 50, 150);
-    margin: auto;
-    padding: 15px 32px;
-    text-align: center;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: white;
-    font-size: large;
-    letter-spacing: 1px;
-    align-self: center;
-}
-
-body {
-    padding-top: 110px;
-    background-color: rgb(0, 0, 81);
-    padding-left: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    background-color: rgb(0, 0, 131);
-}
-
-li {
-    float: left;
-}
-
-li:last-child {
-    float: right;
-}
-
-li a,
-.dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: clamp(14px, 30em, 45px) 16px;
-    text-decoration: none;
-}
-
-li a:hover,
-.dropdown:hover .dropbtn {
-    background-color: rgb(22, 65, 193);
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(17, 50, 150);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: rgb(22, 65, 193);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.active {
-    background-color: blueviolet;
-}
-
-.sticky {
+.sidenav {
+    height: 100%;
+    width: 0;
     position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #895737;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.button {
+    border: 3px solid#818181;
+    padding: 10px;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #dab49d;
+}
+
+.closebtn:hover {
+    color: whitesmoke;
+    transition: all 500ms ease;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.topbox {
+    background-color: #5e3023;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.box {
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    /* for demo purpose  */
+}
+
+.stack-top {
+    display: flex;
+    z-index: 9;
+    margin: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+.sidenav-button {
+    cursor: pointer;
+    color: #895737;
+    font-size: clamp(2em, 3.5em, 5em);
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sidenav-button:hover {
+    color: whitesmoke;
+    transition: all 500ms ease;
 }
