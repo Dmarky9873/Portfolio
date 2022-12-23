@@ -6,13 +6,36 @@
     transform: translate(-50%, -50%);
 }
 
-.bottom-center-div {
-    position: absolute;
-    /* position the child element absolute within the parent */
-    left: 50%;
-    /* align the child element to the horizontal center of the parent */
-    transform: translateY(-100%);
-    /* offset the child element downward by its own height */
-    transform: translateX(-50%);
-    /* offset the child element leftward by half its own width */
+.scroll-down-prompt-div {
+    display: flex;
+    /* enable flexbox layout for the parent element */
+    align-items: flex-end;
+    /* align child elements to the bottom of the parent element */
+    justify-content: center;
+    /* center child elements horizontally within the parent element */
+    height: 100vh;
+}
+
+
+/* Arrow animation */
+
+.arrow {
+    animation: arrow-animation 2.5s infinite;
+    text-align: center;
+    width: 100vw;
+}
+
+@keyframes arrow-animation {
+    0% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-10px);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
