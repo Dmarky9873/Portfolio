@@ -1,36 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Ubuntu&display=swap");
-h1 {
-    font-family: "Comfortaa", cursive;
-    font-size: clamp(3em, 5vw, 7vw);
-    color: #f3e9dc;
-    text-align: center;
-}
-
-h2 {
-    font-family: "Ubuntu", sans-serif;
-    font-size: clamp(1em, 2vw, 3vw);
-    color: #f3e9dc;
-    text-align: center;
-}
-
-h3 {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1em;
-    color: #dab49d;
-    padding: 0;
-    margin: 0;
-}
-
-h3:hover {
-    transition: all 500ms ease;
-    color: whitesmoke;
-}
-
-.price-container {
-    border: 5px solid #5e3023;
-    margin: 5%;
-}
-
 li {
     font-family: "Ubuntu", sans-serif;
     color: #f3e9dc;

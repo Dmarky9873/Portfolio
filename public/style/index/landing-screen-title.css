@@ -1,0 +1,18 @@
+.complete-center-div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-center-div {
+    position: absolute;
+    /* position the child element absolute within the parent */
+    left: 50%;
+    /* align the child element to the horizontal center of the parent */
+    transform: translateY(-100%);
+    /* offset the child element downward by its own height */
+    transform: translateX(-50%);
+    /* offset the child element leftward by half its own width */
+}
