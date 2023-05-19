@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, #cedef0, #9d9ad9, #6b9bd1);
+  height: 100vh;
+}
+
+.logo {
+  max-width: 100%; /* Ensure the logo does not exceed its container's width */
+  height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+}
+
+/* Example media query for adjusting the logo size at different screen sizes */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 80%; /* Reduce the logo size for smaller screens */
+  }
+}
+
+/* Additional media queries can be added as needed for different breakpoints */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 60%; /* Further reduce the logo size for smaller screens */
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}

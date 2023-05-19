@@ -6,3 +6,7 @@ function downloadFile(filePath, fileName) {
 
     link.remove();
 }
+
+$(window).on("load", function () {
+    $("#navbar").animate({ opacity: 1 }, 2500);
+});
