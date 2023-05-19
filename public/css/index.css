@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background: linear-gradient(to bottom right, #cedef0, #9d9ad9, #6b9bd1);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .logo {
@@ -25,4 +25,58 @@ body {
 
 .fade-in {
   opacity: 0;
+}
+
+h1 {
+  color: white;
+  font-family: "Georgia", Times, serif;
+}
+
+h3 {
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+p {
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.highlight {
+  border: 3px solid green;
+}
+
+.details-container {
+  width: 40vw;
+  margin-left: 20%;
+  padding-top: 7%;
+  opacity: 1;
+  transition: opacity 1s ease;
+  padding-bottom: 10%;
+}
+
+.details-container.fade-out {
+  opacity: 0;
+}
+
+.details-container.fade-in {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .details-container {
+    padding-top: 10px;
+    width: 300px; /* Set a specific width for larger screens */
+  }
+}
+
+.nav-link,
+.navbar-brand {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  opacity: 1;
 }

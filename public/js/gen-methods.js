@@ -8,5 +8,24 @@ function downloadFile(filePath, fileName) {
 }
 
 $(window).on("load", function () {
-    $("#navbar").animate({ opacity: 1 }, 2500);
+    $("#navbar").animate({ opacity: 1 }, 1500);
+});
+
+$(document).ready(function () {
+    var fadeElements = $('.details-container');
+
+    function checkFadeElements() {
+        fadeElements.each(function () {
+            var element = $(this);
+            var elementRect = element[0].getBoundingClientRect();
+            if (elementRect.bottom <= 300 || elementRect.top >= $(window).innerHeight() - 300) {
+                element.addClass('fade-out').removeClass('fade-in');
+            } else {
+                element.removeClass('fade-out').addClass('fade-in');
+            }
+        });
+    }
+
+    $(window).scroll(checkFadeElements);
+    checkFadeElements();
 });
