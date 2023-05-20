@@ -48,11 +48,14 @@ p {
 
 .details-container {
   width: 40vw;
-  margin-left: 20%;
   padding-top: 7%;
   opacity: 1;
   transition: opacity 1s ease;
   padding-bottom: 10%;
+}
+
+.margin20 {
+  margin-left: 20%;
 }
 
 .details-container.with-image {
