@@ -86,15 +86,42 @@ p {
 }
 
 .image-container {
-  width: 25vw;
-  height: 20vw;
+  width: 23vw;
+  height: 23vw;
   flex-shrink: 0;
-  margin-right: 3vw;
-  margin-left: 3vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+}
+
+@media (max-width: 773px) {
+  .image-container {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+.centered-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card {
+  background: none;
+  border: none;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .img-txt-container {
