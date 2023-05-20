@@ -29,3 +29,15 @@ $(document).ready(function () {
     $(window).scroll(checkFadeElements);
     checkFadeElements();
 });
+
+$(document).ready(function () {
+    $(window).resize(function () {
+        var screenWidth = $(window).width();
+
+        if (screenWidth < 768) {
+            $('#image-container').removeClass('image-container')
+        } else {
+            $('#image-container').addClass('image-container')
+        }
+    });
+});
