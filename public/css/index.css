@@ -54,6 +54,10 @@ p {
   padding-bottom: 10%;
 }
 
+.footer {
+  background-color: black;
+}
+
 .margin20 {
   margin-left: 20%;
 }
@@ -156,4 +160,21 @@ a.with-underline::after {
 
 .invisible {
   opacity: 0;
+}
+
+.logo-container {
+  width: 10vw;
+  height: 10vw;
+}
+
+.footer-logos {
+  max-width: 100%; /* Ensure the logo does not exceed its container's width */
+  height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+}
+
+/* Example media query for adjusting the logo size at different screen sizes */
+@media (max-width: 768px) {
+  .footer-logos {
+    max-width: 80%; /* Reduce the logo size for smaller screens */
+  }
 }
