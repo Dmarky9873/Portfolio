@@ -72,5 +72,21 @@ $(document).ready(function () {
             $('.details-container').addClass('margin20')
             $('#main-title').removeClass('text-center')
         }
+
+
+
     });
 });
+
+$(window).on('resize', function () {
+    var titleDateContainer = $('.title-date-container');
+    var containerWidth = titleDateContainer.width();
+    var mediaQueryWidth = containerWidth;
+    var mediaQuery = "(max-width: " + mediaQueryWidth + "px)";
+
+    var styleSheet = document.styleSheets[0];
+    var mediaRule = styleSheet.cssRules[0];
+    mediaRule.media.mediaText = mediaQuery;
+});
+
+$(window).trigger('resize');
