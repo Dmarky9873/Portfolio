@@ -32,6 +32,15 @@ h1 {
   font-family: "Georgia", Times, serif;
 }
 
+.title-date-container {
+  white-space: nowrap;
+}
+@media (max-width: 785px) {
+  .title-date-container {
+    white-space: normal;
+  }
+}
+
 h3 {
   color: white;
   font-family: "Lucida Console", "Courier New", monospace;
@@ -52,6 +61,26 @@ p {
   opacity: 1;
   transition: opacity 1s ease;
   padding-bottom: 10%;
+  overflow: visible;
+}
+
+.details-container-no-fade {
+  width: 40vw;
+  padding-top: 7%;
+  opacity: 1;
+  padding-bottom: 10%;
+}
+
+.outline-right {
+  display: inline-block;
+  width: auto;
+  box-shadow: 3px 0 white;
+}
+
+.outline-left {
+  display: inline-block;
+  width: auto;
+  box-shadow: -3px 0 white;
 }
 
 .footer {
