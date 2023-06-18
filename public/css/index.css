@@ -103,8 +103,8 @@ p {
 
 @media (max-width: 773px) {
   .image-container {
-    width: 40vw;
-    height: 40vw;
+    width: 70vw;
+    height: 70vw;
   }
 }
 
