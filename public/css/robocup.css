@@ -137,6 +137,12 @@ p {
   width: 50vw;
 }
 
+@media (max-width: 775px) {
+  .details-container.details-container.with-image {
+    width: 70vw;
+  }
+}
+
 .details-container.fade-out {
   opacity: 0;
 }
@@ -155,6 +161,7 @@ p {
 
 @media (max-width: 800px) {
   .details-container {
+    width: 70vw;
     padding-top: 10px;
     width: 300px; /* Set a specific width for larger screens */
   }

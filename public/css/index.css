@@ -125,6 +125,12 @@ p {
   border: none;
 }
 
+@media (max-width: 775px) {
+  .details-container.details-container.with-image {
+    width: 70vw;
+  }
+}
+
 .fill img {
   flex-shrink: 0;
   min-width: 100%;

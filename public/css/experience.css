@@ -36,6 +36,12 @@ h1 {
   white-space: nowrap;
 }
 
+@media (max-width: 775px) {
+  .details-container.details-container.with-image {
+    width: 70vw;
+  }
+}
+
 @media (max-width: 785px) {
   .title-date-container_0 {
     white-space: normal;

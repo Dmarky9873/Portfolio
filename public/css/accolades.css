@@ -16,6 +16,12 @@ body {
   }
 }
 
+@media (max-width: 775px) {
+  .details-container.details-container.with-image {
+    width: 70vw;
+  }
+}
+
 /* Additional media queries can be added as needed for different breakpoints */
 @media (max-width: 480px) {
   .logo {
