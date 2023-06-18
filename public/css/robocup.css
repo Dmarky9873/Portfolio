@@ -9,6 +9,31 @@ body {
   height: auto; /* Automatically adjust the height to maintain the aspect ratio */
 }
 
+.banner {
+  text-align: center;
+  height: 50vh;
+}
+
+.banner img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 /* Example media query for adjusting the logo size at different screen sizes */
 @media (max-width: 768px) {
   .logo {
@@ -75,6 +100,12 @@ p {
   overflow: visible;
 }
 
+.details-container-no-sizing {
+  opacity: 1;
+  transition: opacity 1s ease;
+  overflow: visible;
+}
+
 .details-container-no-fade {
   width: 40vw;
   padding-top: 7%;
@@ -111,6 +142,14 @@ p {
 }
 
 .details-container.fade-in {
+  opacity: 1;
+}
+
+.details-container-no-sizing.fade-out {
+  opacity: 0;
+}
+
+.details-container-no-sizing.fade-in {
   opacity: 1;
 }
 
