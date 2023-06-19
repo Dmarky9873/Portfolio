@@ -18,7 +18,7 @@ $(document).ready(function () {
         fadeElements.each(function () {
             var element = $(this);
             var elementRect = element[0].getBoundingClientRect();
-            if (elementRect.bottom <= 300 || elementRect.top >= $(window).innerHeight() - 300) {
+            if (elementRect.bottom <= 400 || elementRect.top >= $(window).innerHeight() - 175) {
                 element.addClass('fade-out').removeClass('fade-in');
             } else {
                 element.removeClass('fade-out').addClass('fade-in');
