@@ -6,6 +6,7 @@
   margin-left: 0;
   position: absolute;
   right: 0;
+  perspective: 900px;
 }
 
 .cubespinner {
@@ -80,16 +81,51 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .about-page .text-zone {
-    display: none;
-  }
-
+  $size: 15vw;
   .stage-cube-cont {
+    width: 55%;
+    height: auto;
+    padding-top: 1vh;
     position: relative;
-    overflow: visible;
-    padding-top: 7%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    perspective: 800px;
+  }
+  .cubespinner {
+    margin: 0; /* Remove desktop-specific offset */
+    transform-origin: $size $size 0;
+  }
+  .cubespinner div {
+    width: calc($size * 2);
+    height: $size * 2;
+    font-size: $size;
+  }
+
+  .cubespinner div.face1 {
+    transform: translateZ($size);
+    color: #dd0031;
+  }
+
+  .cubespinner div.face2 {
+    transform: rotateY(90deg) translateZ($size);
+    color: #f06529;
+  }
+  .cubespinner div.face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ($size);
+    color: #28a4d9;
+  }
+  .cubespinner div.face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ($size);
+    color: #5ed4f4;
+  }
+  .cubespinner div.face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ($size);
+    color: #efd81d;
+  }
+  .cubespinner div.face6 {
+    transform: rotateX(-90deg) translateZ($size);
+    color: #ec4d28;
   }
 }
 
