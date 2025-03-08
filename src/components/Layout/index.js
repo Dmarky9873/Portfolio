@@ -1,13 +1,29 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Sidebar from '../Sidebar/'
 import './index.scss'
+import { useEffect, useState } from 'react'
 
 const Layout = () => {
+  const location = useLocation()
+  const isAboutPage = location.pathname === '/about';
+
+  const [isWide, setIsWide] = useState(window.innerWidth > 1200)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWide(window.innerWidth > 1200)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <div className="App">
       <Sidebar />
       <div className="page">
-        <span className="tags top-tags">&lt;body&gt;</span>
+        {(!isAboutPage || isWide) && (
+          <span className="tags top-tags">&lt;body&gt;</span>
+        )}
 
         <Outlet />
         <span className="tags bottom-tags">
