@@ -81,11 +81,11 @@
 }
 
 @media screen and (max-width: 1200px) {
-  $size: 15vw;
+  $size: 10vh;
   .stage-cube-cont {
-    width: 55%;
+    width: 60%;
     height: auto;
-    padding-top: 1vh;
+    padding-top: 4vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -129,7 +129,7 @@
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-height: 715px) {
   .stage-cube-cont {
     display: none;
   }
