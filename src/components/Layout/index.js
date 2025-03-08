@@ -5,7 +5,16 @@ import { useEffect, useState } from 'react'
 
 const Layout = () => {
   const location = useLocation()
-  const isAboutPage = location.pathname === '/about';
+  const nonTopTagPages = ['/about', '/contact']
+  let isNonTopTagPage = false;
+  for (let i = 0; i < nonTopTagPages.length; i++) {
+    console.log(nonTopTagPages[i])
+    if (location.pathname === nonTopTagPages[i]) {
+      isNonTopTagPage = true
+      break
+    }
+  }
+  console.log(isNonTopTagPage)
 
   const [isWide, setIsWide] = useState(window.innerWidth > 1200)
 
@@ -21,7 +30,7 @@ const Layout = () => {
     <div className="App">
       <Sidebar />
       <div className="page">
-        {(!isAboutPage || isWide) && (
+        {(!isNonTopTagPage || isWide) && (
           <span className="tags top-tags">&lt;body&gt;</span>
         )}
 
