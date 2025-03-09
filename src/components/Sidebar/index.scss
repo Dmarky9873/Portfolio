@@ -2,7 +2,7 @@
   background: #181818;
   width: 60px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 3;
   min-height: 500px;
@@ -58,7 +58,7 @@
       }
 
       &:after {
-        content: '';
+        content: "";
         font-size: 9px;
         letter-spacing: 2px;
         position: absolute;
@@ -73,20 +73,20 @@
 
       &:first-child {
         &:after {
-          content: 'HOME';
+          content: "HOME";
         }
       }
     }
 
     a.about-link {
       &:after {
-        content: 'ABOUT';
+        content: "ABOUT";
       }
     }
 
     a.contact-link {
       &:after {
-        content: 'CONTACT';
+        content: "CONTACT";
       }
     }
 
@@ -131,6 +131,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .container {
+    padding-top: 80px;
+  }
   .nav-bar .logo img:not(.sub-logo) {
     margin: 8px 0 8px 30px;
   }
@@ -142,7 +145,7 @@
   .nav-bar {
     width: 100%;
     background: #181818;
-    position: relative;
+    position: fixed;
     height: auto;
     min-height: auto;
 

@@ -1,10 +1,32 @@
+.container.about-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  align-items: center;
+}
+
+.about-title-cube-container {
+  display: flex;
+  justify-content: end;
+  width: 99%;
+  min-height: 90vh;
+}
+
+.about-title-cube-container .text-zone {
+  flex: 1; // take up available space
+  position: relative; // remove any absolute positioning if present
+  /* Optionally, set a max-width or width */
+  /* width: 50%; */
+}
+
 .stage-cube-cont {
   width: 50%;
-  height: 100%;
+  min-height: 300px;
   top: 0;
   padding-top: 18%;
   margin-left: 0;
-  position: absolute;
+  position: relative;
   right: 0;
   perspective: 900px;
 }
@@ -81,55 +103,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  $size: 10vh;
-  .stage-cube-cont {
-    width: 50%;
-    height: auto;
-    padding-top: 4vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 800px;
-  }
-  .cubespinner {
-    margin: 0; /* Remove desktop-specific offset */
-    transform-origin: $size $size 0;
-  }
-  .cubespinner div {
-    width: calc($size * 2);
-    height: $size * 2;
-    font-size: $size;
-  }
-
-  .cubespinner div.face1 {
-    transform: translateZ($size);
-    color: #dd0031;
-  }
-
-  .cubespinner div.face2 {
-    transform: rotateY(90deg) translateZ($size);
-    color: #f06529;
-  }
-  .cubespinner div.face3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ($size);
-    color: #28a4d9;
-  }
-  .cubespinner div.face4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ($size);
-    color: #5ed4f4;
-  }
-  .cubespinner div.face5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ($size);
-    color: #efd81d;
-  }
-  .cubespinner div.face6 {
-    transform: rotateX(-90deg) translateZ($size);
-    color: #ec4d28;
-  }
-}
-
-@media screen and (max-height: 715px) {
   .stage-cube-cont {
     display: none;
   }
