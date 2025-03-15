@@ -55,4 +55,11 @@ $max-width: 700px;
       max-width: $max-width;
     }
   }
+
+  .image-text-container {
+    img {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }

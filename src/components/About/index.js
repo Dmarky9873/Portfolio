@@ -6,7 +6,8 @@ import { faBasketball, faDrum, faDumbbell, faLaptopCode, faSquareRootVariable, f
 import LoadingAnimation from '../LoadingAnimation'
 import RoboCupLookingAway from '../../assets/images/about/robocup-looking-away.jpg'
 import ImageText from '../ImageText'
-import VideoText from '../VideoText'
+import RoboticHand from '../../assets/images/about/robotic-hand.gif'
+import BasketballFreethrow from '../../assets/images/about/basketball-freethrow.jpg'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -71,9 +72,12 @@ const About = () => {
                 <ImageText imgAlt="At the RoboCup Looking Away" textLocation='right' imageSource={RoboCupLookingAway} >
                     Whether I’m leading elaborate robotics teams or crafting a cool website (like this one!), I love bringing ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
                 </ImageText>
-                <VideoText videoSource="https://www.youtube.com/embed/RK5hj7nNRrc" textLocation="left">
-                    hello
-                </VideoText>
+                <ImageText imgAlt="Robotic hand being controlled by glove" textLocation='left' imageSource={RoboticHand} >
+                    Maybe it’s the hacker aesthetic it gives off or the creativity I can express through code, but something about computer science completely hooked me. I love exploring it—whether through formal coursework or diving into self-directed projects—and I’m always finding ways to apply what I learn to my other passions. After all, problem-solving is a skill that fits just about anywhere.
+                </ImageText>
+                <ImageText imgAlt="Daniel shooting a freethrow in a basketball game" textLocation='right' imageSource={BasketballFreethrow} >
+                    When I’m not programming, you’ll probably find me on the basketball court or at the gym. I’ve been at it for nearly a decade, and I love the balance it brings—there’s something refreshing about lifting heavy weights after staring at a screen all day. Juggling my bench press, three-point percentage, and GPA has no doubt sharpened my time-management skills.
+                </ImageText>
 
             </div>
             <LoadingAnimation />
