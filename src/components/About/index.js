@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketball, faDrum, faDumbbell, faLaptopCode, faSquareRootVariable, faBook } from '@fortawesome/free-solid-svg-icons'
 import LoadingAnimation from '../LoadingAnimation'
-import UofTPano from '../../assets/images/about/uoft-pano.jpg'
-import FullLineImage from '../FullLineImage'
+import RoboCupLookingAway from '../../assets/images/about/robocup-looking-away.jpg'
+import ImageText from '../ImageText'
+import VideoText from '../VideoText'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -32,16 +33,14 @@ const About = () => {
                             />
                         </h1>
                         <p>
-                            I am a reliable and hard-working programmer, recognized with awards for my accomplishments. I consider myself a
-                            creative, out-of-the-box thinker who is self-motivated and enthusiastic
-                            about collaborating with others.
+                            Whether I’m leading elaborate robotics teams or crafting a cool website (like this one!), I love bringing ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
+                        </p>
+                        {/* <p>
+                            Maybe it’s the hacker aesthetic it gives off or the creativity I can express through code, but something about computer science completely hooked me. I love exploring it—whether through formal coursework or diving into self-directed projects—and I’m always finding ways to apply what I learn to my other passions. After all, problem-solving is a skill that fits just about anywhere.
                         </p>
                         <p>
-                            Being incredibly passionate about programming, I am constantly driven to enhance my skills through formal coursework and self-directed study.
-                        </p>
-                        <p>
-                            Participating in a host of different extracurricular activities, I pride myself on my time management skills and scheduling abilities.
-                        </p>
+                            When I’m not programming, you’ll probably find me on the basketball court or at the gym. I’ve been at it for nearly a decade, and I love the balance it brings—there’s something refreshing about lifting heavy weights after staring at a screen all day. Juggling my bench press, three-point percentage, and GPA has no doubt sharpened my time-management skills.
+                        </p> */}
 
                     </div>
 
@@ -69,7 +68,13 @@ const About = () => {
                     </div>
                 </div>
 
-                <FullLineImage imageSource={UofTPano} />
+                <ImageText imgAlt="At the RoboCup Looking Away" textLocation='right' imageSource={RoboCupLookingAway} >
+                    Whether I’m leading elaborate robotics teams or crafting a cool website (like this one!), I love bringing ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
+                </ImageText>
+                <VideoText videoSource="https://www.youtube.com/embed/RK5hj7nNRrc" textLocation="left">
+                    hello
+                </VideoText>
+
             </div>
             <LoadingAnimation />
         </>
