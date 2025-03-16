@@ -8,6 +8,7 @@ import RoboCupLookingAway from '../../assets/images/about/robocup-looking-away.j
 import ImageText from '../ImageText'
 import RoboticHand from '../../assets/images/about/robotic-hand.gif'
 import BasketballFreethrow from '../../assets/images/about/basketball-freethrow.jpg'
+import Footer from '../Footer'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -72,7 +73,7 @@ const About = () => {
                 <ImageText imgAlt="Daniel shooting a freethrow in a basketball game" textLocation='right' imageSource={BasketballFreethrow} >
                     When I’m not programming, you’ll probably find me on the basketball court or at the gym. I’ve been at it for nearly a decade, and I love the balance it brings—there’s something refreshing about lifting heavy weights after staring at a screen all day. Juggling my bench press, three-point percentage, and GPA has no doubt sharpened my time-management skills.
                 </ImageText>
-
+                <Footer />
             </div>
             <LoadingAnimation />
         </>
