@@ -36,12 +36,6 @@ const About = () => {
                         <p>
                             Whether I’m leading elaborate robotics teams or crafting a cool website (like this one!), I love bringing ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
                         </p>
-                        {/* <p>
-                            Maybe it’s the hacker aesthetic it gives off or the creativity I can express through code, but something about computer science completely hooked me. I love exploring it—whether through formal coursework or diving into self-directed projects—and I’m always finding ways to apply what I learn to my other passions. After all, problem-solving is a skill that fits just about anywhere.
-                        </p>
-                        <p>
-                            When I’m not programming, you’ll probably find me on the basketball court or at the gym. I’ve been at it for nearly a decade, and I love the balance it brings—there’s something refreshing about lifting heavy weights after staring at a screen all day. Juggling my bench press, three-point percentage, and GPA has no doubt sharpened my time-management skills.
-                        </p> */}
 
                     </div>
 

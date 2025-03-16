@@ -14,10 +14,8 @@
 }
 
 .about-title-cube-container .text-zone {
-  flex: 1; // take up available space
-  position: relative; // remove any absolute positioning if present
-  /* Optionally, set a max-width or width */
-  /* width: 50%; */
+  flex: 1;
+  position: relative;
 }
 
 .stage-cube-cont {
@@ -102,8 +100,12 @@
   }
 }
 
+.about-page .bottom-tags {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .stage-cube-cont {
-    display: none;
+    display: none !important;
   }
 }

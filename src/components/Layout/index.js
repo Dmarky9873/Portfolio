@@ -8,13 +8,20 @@ const Layout = () => {
   const nonTopTagPages = ['/about', '/contact']
   let isNonTopTagPage = false;
   for (let i = 0; i < nonTopTagPages.length; i++) {
-    console.log(nonTopTagPages[i])
     if (location.pathname === nonTopTagPages[i]) {
       isNonTopTagPage = true
       break
     }
   }
-  console.log(isNonTopTagPage)
+
+  const nonBottomTagPages = ['/about']
+  let isNonBottompage = false;
+  for (let i = 0; i < nonBottomTagPages.length; i++) {
+    if (location.pathname === nonBottomTagPages[i]) {
+      isNonBottompage = true;
+      break;
+    }
+  }
 
   const [isWide, setIsWide] = useState(window.innerWidth > 1200)
 
@@ -34,11 +41,11 @@ const Layout = () => {
           <span className="tags top-tags">&lt;body&gt;</span>
         )}
         <Outlet />
-        <span className="tags bottom-tags">
+        {(!isNonBottompage) && (<span className="tags bottom-tags">
           &lt;/body&gt;
           <br />
           <span className="bottom-tag-html">&lt;/html&gt;</span>
-        </span>
+        </span>)}
       </div>
     </div>
   )
