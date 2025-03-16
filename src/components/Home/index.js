@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import LogoTitle from '../../assets/images/logo-d.png'
+import LogoTitle from '../../assets/images/logos/logo-d.png'
 import Logo from './Logo'
 import LoadingAnimation from '../LoadingAnimation'
 import './index.scss'

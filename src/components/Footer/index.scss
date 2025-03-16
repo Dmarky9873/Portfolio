@@ -1,0 +1,20 @@
+footer {
+  width: 100vw;
+  padding: 15px;
+  background-color: #181818;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer-text {
+    font-size: 14px;
+  }
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+}
