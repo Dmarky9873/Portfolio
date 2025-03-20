@@ -3,6 +3,9 @@ import UofTPano from '../../assets/images/portfolio/uoft-pano.jpeg'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react';
 import Paragraph from '../Paragraph';
+import TitleImageText from '../TitleImageText';
+import Footer from '../Footer'
+import AdvancedRobotics from '../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
 
 
 const Portfolio = () => {
@@ -29,6 +32,13 @@ const Portfolio = () => {
             <Paragraph textAlign="center">
                 Here, you'll find projects that I've completed, clubs and groups I've been a part of, and various other cool things I've done. To learn more about a particular endeavour, click on its title.
             </Paragraph>
+
+            <TitleImageText textLocation='right' image={AdvancedRobotics} imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich" link="/portfolio/advanced-robotics" title="The Advanced Robotics Club" date="2022-present">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+            </TitleImageText>
+            <Footer />
         </div>
     )
 }
