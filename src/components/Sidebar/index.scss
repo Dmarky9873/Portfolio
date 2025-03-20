@@ -1,3 +1,12 @@
+.logo-border {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.with-border {
+  border: 3px solid green;
+}
+
 .nav-bar {
   background: #181818;
   width: 60px;
@@ -8,7 +17,7 @@
   min-height: 500px;
 
   .logo {
-    display: block;
+    display: inline-block;
     padding: 8px 0;
 
     img {
@@ -130,6 +139,11 @@
   display: none;
 }
 
+.hamburger-icon,
+.close-icon:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     padding-top: 80px;
@@ -138,7 +152,6 @@
     margin: 8px 0 8px 30px;
   }
 
-  /* Adjust the sub-logo as desired */
   .nav-bar .logo img.sub-logo {
     margin: 8px 0 8px 15px;
   }
@@ -173,6 +186,7 @@
       top: 15px;
       right: 15px;
       display: block;
+      padding: 15px;
     }
 
     ul {

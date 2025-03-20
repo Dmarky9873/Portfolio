@@ -1,5 +1,5 @@
 import './index.scss'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import LogoS from '../../assets/images/logos/logo-d.png'
 import LogoSubtitle from '../../assets/images/logos/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,16 +20,32 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showNav && navRef.current && !navRef.current.contains(event.target)) {
+        setShowNav(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showNav]);
 
   return (
-    <div className="nav-bar">
-      <Link
-        className="logo"
-        to="/"
-        onClick={() => setShowNav(false)}>
-        <img src={LogoS} alt="Logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="Daniel" />
-      </Link>
+    <div className="nav-bar" ref={navRef}>
+      <div className='logo-border'>
+        <Link
+          className="logo"
+          to="/"
+          onClick={() => setShowNav(false)}>
+          <img src={LogoS} alt="Logo" />
+          <img className="sub-logo" src={LogoSubtitle} alt="Daniel" />
+        </Link>
+      </div>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink
           exact="true"
