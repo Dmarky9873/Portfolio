@@ -5,6 +5,8 @@ import Paragraph from '../../elements/Paragraph';
 import TitleImageText from '../../elements/TitleImageText';
 import Footer from '../../elements/Footer'
 import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
+import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG'
+import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png'
 import Placeholder from '../../../assets/images/portfolio/placeholder.png'
 
 
@@ -34,12 +36,13 @@ const Portfolio = () => {
             </Paragraph>
 
             <TitleImageText image={AdvancedRobotics} imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich" link="/portfolio/advanced-robotics" title="Advanced Robotics Club" date="2022-present">
-                How did three highschoolers end up representing their country on the international stage? I don't know either. But somehow, against all odds, Hayden Patience, Luke Hartford, and I were chosen to represent Canada during the 2023 RoboCup Junior International finals in Bordeaux France. It all stemmed from a fateful grade eleven engineering class class wherein we made autonomous soccer-playing robots. Late nights, early mornings, and an amazing french teacher—this story has it all.             </TitleImageText>
-            <TitleImageText image={Placeholder} imageAlt="Placeholder" link="/in-progress" title="Placeholder" date="Placeholder">
-                Work in progress.
+                How did three highschoolers end up representing their country on the international stage? I don't know either. But somehow, against all odds, Hayden Patience, Luke Hartford, and I were chosen to represent Canada during the 2023 RoboCup Junior International finals in Bordeaux France. It all stemmed from a fateful grade eleven engineering class class wherein we made autonomous soccer-playing robots. Late nights, early mornings, and an amazing french teacher—this story has it all.
             </TitleImageText>
-            <TitleImageText image={Placeholder} imageAlt="Placeholder" link="/in-progress" title="Placeholder" date="Placeholder">
-                Work in progress
+            <TitleImageText image={STLGroupPhoto} imageAlt="Group photo with members of the RBC Summer Tech Labs" link="/portfolio/rbc-internship" title="Royal Bank of Canada Internship" date="2024">
+                In the summer of 2024, I was selected to be one of forty highschoolers given an opportunity to intern at the Royal Bank of Canada, and to say it has been fantastic would be an understatement. Working with Aricia Chan, Diya Mehta, and Divy Shah was an absolute pleasure. Over the summer, we created an interactive onboarding guide for new developers joining RBC, ensuring that our instructions were accurate and easy to follow. We, naturally, had some obstacles along the way, but we never failed to work as a team and solve whatever challenge we came across.
+            </TitleImageText>
+            <TitleImageText image={MachineLearningImage} imageAlt="Machine Learning Fancy" link="/portfolio/a-minimal-approach-to-fake-news-detection" title="A Minimal Approach to Fake News Detection" date="2024">
+                Over six months, I wrote a research paper on machine learning approaches to fake news detection. The paper delves into various ways that others have used machine learning to identify fake news, along with presenting a novel approach to the problem. My goal with this was to create something that used as few textual features as possible, and it worked! Read on to find out how it works and what the results were. I found the academic process to be immensely fulfilling. I learned so much about natural language processing and machine learning in general and can safely say that my skills in the field have improved thanks to it.
             </TitleImageText>
             <Footer />
         </div >
