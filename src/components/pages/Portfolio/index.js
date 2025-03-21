@@ -1,12 +1,11 @@
 import './index.scss';
-import UofTPano from '../../assets/images/portfolio/uoft-pano.jpeg'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters from '../../elements/AnimatedLetters'
 import { useEffect, useState } from 'react';
-import Paragraph from '../Paragraph';
-import TitleImageText from '../TitleImageText';
-import Footer from '../Footer'
-import AdvancedRobotics from '../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
-import Placeholder from '../../assets/images/portfolio/placeholder.png'
+import Paragraph from '../../elements/Paragraph';
+import TitleImageText from '../../elements/TitleImageText';
+import Footer from '../../elements/Footer'
+import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
+import Placeholder from '../../../assets/images/portfolio/placeholder.png'
 
 
 const Portfolio = () => {

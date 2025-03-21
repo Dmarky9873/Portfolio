@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.scss'
-import Resume from '../../assets/files/resume-daniel-markusson.pdf'
+import Resume from '../../../assets/files/resume-daniel-markusson.pdf'
 
 const Footer = () => {
     return (

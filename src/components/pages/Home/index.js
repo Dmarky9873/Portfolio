@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
-import LogoTitle from '../../assets/images/logos/logo-d.png'
+import AnimatedLetters from '../../elements/AnimatedLetters'
+import LogoTitle from '../../../assets/images/logos/logo-d.png'
 import Logo from './Logo'
-import LoadingAnimation from '../LoadingAnimation'
+import LoadingAnimation from '../../elements/LoadingAnimation'
 import './index.scss'
 
 const Home = () => {

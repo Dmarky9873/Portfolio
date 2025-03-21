@@ -1,14 +1,14 @@
 import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters from '../../elements/AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketball, faDrum, faDumbbell, faLaptopCode, faSquareRootVariable, faBook } from '@fortawesome/free-solid-svg-icons'
-import LoadingAnimation from '../LoadingAnimation'
-import RoboCupLookingAway from '../../assets/images/about/robocup-looking-away.jpg'
-import ImageText from '../ImageText'
-import RoboticHand from '../../assets/images/about/robotic-hand.gif'
-import BasketballFreethrow from '../../assets/images/about/basketball-freethrow.jpg'
-import Footer from '../Footer'
+import LoadingAnimation from '../../elements/LoadingAnimation'
+import RoboCupLookingAway from '../../../assets/images/about/robocup-looking-away.jpg'
+import ImageText from '../../elements/ImageText'
+import RoboticHand from '../../../assets/images/about/robotic-hand.gif'
+import BasketballFreethrow from '../../../assets/images/about/basketball-freethrow.jpg'
+import Footer from '../../elements/Footer'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')

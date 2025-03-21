@@ -1,11 +1,7 @@
 import './index.scss';
-import UofTPano from '../../assets/images/portfolio/uoft-pano.jpeg'
-import AnimatedLetters from '../AnimatedLetters'
+import AnimatedLetters from '../../elements/AnimatedLetters'
 import { useEffect, useState } from 'react';
-import Paragraph from '../Paragraph';
-import TitleImageText from '../TitleImageText';
-import Footer from '../Footer'
-import AdvancedRobotics from '../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
+import Paragraph from '../../elements/Paragraph';
 
 
 const PageNotFound = () => {
@@ -24,7 +20,7 @@ const PageNotFound = () => {
                 <h1>
                     <AnimatedLetters
                         strArray={'Page Not Found'.split('')}
-                        idx={13}
+                        idx={8}
                         letterClass={letterClass}
                     />
                 </h1>

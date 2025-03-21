@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
+import Home from './components/pages/Home'
 import Layout from './components/Layout'
 import './App.scss'
-import About from './components/About'
-import Contact from './components/Contact'
-import Portfolio from './components/Portfolio'
-import PageNotFound from './components/PageNotFound'
+import About from './components/pages/About'
+import Contact from './components/pages/Contact'
+import Portfolio from './components/pages/Portfolio'
+import PageNotFound from './components/pages/PageNotFound'
 
 function App() {
   return (

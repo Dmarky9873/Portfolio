@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom'
-import Sidebar from '../Sidebar/'
+import Sidebar from '../elements/Sidebar/'
 import './index.scss'
 import { useEffect, useState } from 'react'
 
