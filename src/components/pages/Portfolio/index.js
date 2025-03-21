@@ -5,6 +5,7 @@ import Paragraph from '../../elements/Paragraph';
 import TitleImageText from '../../elements/TitleImageText';
 import Footer from '../../elements/Footer'
 import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
+import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG'
 import Placeholder from '../../../assets/images/portfolio/placeholder.png'
 
 
@@ -35,7 +36,7 @@ const Portfolio = () => {
 
             <TitleImageText image={AdvancedRobotics} imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich" link="/portfolio/advanced-robotics" title="Advanced Robotics Club" date="2022-present">
                 How did three highschoolers end up representing their country on the international stage? I don't know either. But somehow, against all odds, Hayden Patience, Luke Hartford, and I were chosen to represent Canada during the 2023 RoboCup Junior International finals in Bordeaux France. It all stemmed from a fateful grade eleven engineering class class wherein we made autonomous soccer-playing robots. Late nights, early mornings, and an amazing french teacher—this story has it all.             </TitleImageText>
-            <TitleImageText image={Placeholder} imageAlt="Placeholder" link="/in-progress" title="Placeholder" date="Placeholder">
+            <TitleImageText image={STLGroupPhoto} imageAlt="Group photo with members of the RBC Summer Tech Labs" link="/portfolio/rbc-internship" title="Royal Bank of Canada Internship" date="2024">
                 Work in progress.
             </TitleImageText>
             <TitleImageText image={Placeholder} imageAlt="Placeholder" link="/in-progress" title="Placeholder" date="Placeholder">
