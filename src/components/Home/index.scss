@@ -83,6 +83,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .home-page {
+    overflow: visible;
+  }
   .tags,
   .home-page h1:before,
   .home-page h1:after {
