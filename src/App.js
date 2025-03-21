@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import './App.scss'
 import About from './components/About'
 import Contact from './components/Contact'
+import Portfolio from './components/Portfolio'
+import PageNotFound from './components/PageNotFound'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
+          <Route path='portfolio' element={<Portfolio />} />
+          <Route path='*' element={<PageNotFound />} />
         </Route>
       </Routes>
     </>

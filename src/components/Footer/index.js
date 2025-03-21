@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='footer-text'>
-                You made it to the bottom. <Link to={Resume} target="_blank" download='resume-daniel-markusson.pdf'>Download my resume</Link>
+                You made it to the bottom! While you're here, why don't you <Link to={Resume} target="_blank" download='resume-daniel-markusson.pdf'>download my resume</Link>.
             </div>
         </footer>
     )

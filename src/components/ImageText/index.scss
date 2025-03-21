@@ -46,7 +46,8 @@ $max-width: 700px;
 
 @media screen and (max-width: 1200px) {
   .image-text-container.x.left,
-  .image-text-container.x.right {
+  .image-text-container.x.right,
+  .image-text-container.y {
     text-align: center;
     width: 90%;
     display: block;

@@ -1,0 +1,20 @@
+.paragraph-container {
+  width: 70%;
+  display: block;
+}
+
+.paragraph-container.center {
+  text-align: center;
+}
+
+.paragraph-container.left {
+  text-align: left;
+}
+
+.paragraph-container.right {
+  text-align: right;
+}
+
+.paragraph-container.justify {
+  text-align: justify;
+}

@@ -35,7 +35,7 @@ const About = () => {
                             />
                         </h1>
                         <p>
-                            Whether I’m leading elaborate robotics teams or crafting a cool website (like this one!), I love bringing ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
+                            I bring ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
                         </p>
 
                     </div>
@@ -65,14 +65,11 @@ const About = () => {
                 </div>
 
                 <ImageText imgAlt="At the RoboCup Looking Away" textLocation='right' imageSource={RoboCupLookingAway} >
-                    Whether I’m leading elaborate robotics teams or crafting a cool website (like this one!), I love bringing ideas to life. Hard work and self-motivation drive me, but collaboration makes the journey even better. And these aren’t just words—through this site, you’ll discover the communities I’ve contributed to, the teams I’ve led, and the projects I’ve brought to completion.
-                </ImageText>
+                    Bringing ideas to life isn’t just about execution—it’s about vision, persistence, and the ability to adapt. Whether leading a team, solving a complex technical challenge, or refining a project until it meets the highest standards, I approach each endeavour with a commitment to excellence. I've learned that passion in a subject begets success; as such, I throw myself into everything I do, bringing a relentless drive and intellectual curiosity that is matched by few.                </ImageText>
                 <ImageText imgAlt="Robotic hand being controlled by glove" textLocation='left' imageSource={RoboticHand} >
-                    Maybe it’s the hacker aesthetic it gives off or the creativity I can express through code, but something about computer science completely hooked me. I love exploring it—whether through formal coursework or diving into self-directed projects—and I’m always finding ways to apply what I learn to my other passions. After all, problem-solving is a skill that fits just about anywhere.
-                </ImageText>
+                    The precision, the creativity, and the endless possibilities for innovation engendered by computer science hooked me. Beyond formal coursework, I immerse myself in self-directed projects, constantly seeking ways to refine my skills and apply them to broader challenges. The ability to break down complex problems, devise efficient solutions, and build something tangible from abstract ideas is what drives me. More than just a technical discipline, computer science is a mindset—a unique brand of analytical thinking that I bring to all areas of my life.                </ImageText>
                 <ImageText imgAlt="Daniel shooting a freethrow in a basketball game" textLocation='right' imageSource={BasketballFreethrow} >
-                    When I’m not programming, you’ll probably find me on the basketball court or at the gym. I’ve been at it for nearly a decade, and I love the balance it brings—there’s something refreshing about lifting heavy weights after staring at a screen all day. Juggling my bench press, three-point percentage, and GPA has no doubt sharpened my time-management skills.
-                </ImageText>
+                    Outside of programming, I spend much of my time playing basketball and weightlifting at the gym, activities I’ve pursued consistently for nearly a decade. Balancing athletics with academic responsibilities has significantly strengthened my discipline and improved my ability to manage my time effectively over the years, skills that have proven valuable in all areas of my life.                </ImageText>
                 <Footer />
             </div>
             <LoadingAnimation />
