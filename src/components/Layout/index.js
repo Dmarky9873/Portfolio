@@ -14,7 +14,7 @@ const Layout = () => {
     }
   }
 
-  const nonBottomTagPages = ['/about', '/portfolio']
+  const nonBottomTagPages = ['/about', '/portfolio', '/contact']
   let isNonBottompage = false;
   for (let i = 0; i < nonBottomTagPages.length; i++) {
     if (location.pathname === nonBottomTagPages[i]) {
