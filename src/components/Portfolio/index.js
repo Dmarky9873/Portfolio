@@ -6,6 +6,7 @@ import Paragraph from '../Paragraph';
 import TitleImageText from '../TitleImageText';
 import Footer from '../Footer'
 import AdvancedRobotics from '../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg'
+import Placeholder from '../../assets/images/portfolio/placeholder.png'
 
 
 const Portfolio = () => {
@@ -35,11 +36,11 @@ const Portfolio = () => {
 
             <TitleImageText image={AdvancedRobotics} imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich" link="/portfolio/advanced-robotics" title="Advanced Robotics Club" date="2022-present">
                 How did three highschoolers end up representing their country on the international stage? I don't know either. But somehow, against all odds, Hayden Patience, Luke Hartford, and I were chosen to represent Canada during the 2023 RoboCup Junior International finals in Bordeaux France. It all stemmed from a fateful grade eleven engineering class class wherein we made autonomous soccer-playing robots. Late nights, early mornings, and an amazing french teacher—this story has it all.             </TitleImageText>
-            <TitleImageText image={AdvancedRobotics} imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich" link="/portfolio/advanced-robotics" title="Advanced Robotics Club" date="2022-present">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <TitleImageText image={Placeholder} imageAlt="Placeholder" link="/in-progress" title="Placeholder" date="Placeholder">
+                Work in progress.
             </TitleImageText>
-            <TitleImageText image={AdvancedRobotics} imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich" link="/portfolio/advanced-robotics" title="Advanced Robotics Club" date="2022-present">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <TitleImageText image={Placeholder} imageAlt="Placeholder" link="/in-progress" title="Placeholder" date="Placeholder">
+                Work in progress
             </TitleImageText>
             <Footer />
         </div >
