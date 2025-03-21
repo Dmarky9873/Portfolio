@@ -1,25 +1,126 @@
+@use "../../variables" as *;
+
 .title-image-text-container {
   width: 80%;
   display: flex;
-  gap: 15px;
   text-align: left;
-  align-items: center;
-  .title-image-container {
-    display: flex;
-    width: 35%;
-    height: auto;
-    flex-direction: column;
-    gap: 5vh;
-    align-items: left;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Added transition
+  padding: 10px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); // Adds a soft shadow for a floating effect
+
+    .text-mask {
+      transform: translateX(0);
+    }
+    .text-overlay {
+      transform: translateX(0);
+    }
+
+    cursor: pointer;
   }
-  .date-container {
-    position: relative;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: fit-content;
-    min-width: 90px;
-    text-align: right;
-    z-index: 1;
+
+  .title-date-container {
+    display: flex;
+    justify-content: space-between;
+    .date-container {
+      min-width: fit-content;
+      text-align: right;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+  p {
+    width: 100%;
+  }
+  a {
+    color: white;
+  }
+  .body-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 5vh;
+    align-items: center;
+    img {
+      width: 35%;
+    }
+  }
+}
+
+.title-container {
+  position: relative;
+  overflow: hidden;
+}
+.text-mask,
+.text-overlay {
+  transition: all ease-in-out 500ms;
+}
+
+.text-visible {
+  opacity: 1;
+}
+
+.text-mask {
+  position: absolute;
+  transform: translateX(-100%);
+  overflow: hidden;
+  h3 {
+    color: $primary-color;
+  }
+}
+
+.text-overlay {
+  transform: translateX(100%);
+}
+
+h3 {
+  font-size: 50px;
+  color: white;
+  font-family: "Coolvetica", sans-serif;
+  min-width: fit-content;
+  font-weight: 300;
+}
+
+h3:hover {
+  cursor: pointer;
+  // color: $primary-color;
+}
+
+h4 {
+  font-size: 15px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1200px) {
+  .title-image-text-container {
+    .body-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+      img {
+        width: 80%;
+      }
+    }
+    .title-date-container {
+      flex-direction: column;
+      max-height: fit-content;
+      text-align: center;
+      align-items: center;
+      gap: 0vh;
+      h3 {
+        margin: 0;
+      }
+      .date-container {
+        text-align: center;
+        max-width: fit-content;
+        margin-bottom: 15px;
+      }
+    }
   }
 }
