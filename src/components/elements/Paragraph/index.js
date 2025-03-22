@@ -1,12 +1,12 @@
 import './index.scss';
 
 
-const Paragraph = ({ children, textAlign }) => {
+const Paragraph = ({ children, textAlign, width }) => {
 
     return (
-        <div className={`paragraph-container ${textAlign}`}>
+        <div className={`paragraph-container ${textAlign}`} style={{ width }}>
             <p>{children}</p>
-        </div>
+        </div >
     )
 }
 

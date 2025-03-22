@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 const Layout = () => {
   const location = useLocation()
-  const nonTopTagPages = ['/about', '/contact', '/portfolio']
+  const nonTopTagPages = ['/about', '/contact', '/portfolio', '/portfolio/advanced-robotics']
   let isNonTopTagPage = false;
   for (let i = 0; i < nonTopTagPages.length; i++) {
     if (location.pathname === nonTopTagPages[i]) {
@@ -14,7 +14,7 @@ const Layout = () => {
     }
   }
 
-  const nonBottomTagPages = ['/about', '/portfolio', '/contact']
+  const nonBottomTagPages = ['/about', '/portfolio', '/contact', '/portfolio/advanced-robotics']
   let isNonBottompage = false;
   for (let i = 0; i < nonBottomTagPages.length; i++) {
     if (location.pathname === nonBottomTagPages[i]) {

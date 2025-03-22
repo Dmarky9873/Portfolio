@@ -26,12 +26,12 @@ const Portfolio = () => {
                 <h1>
                     <AnimatedLetters
                         strArray={'Portfolio'.split('')}
-                        idx={13}
+                        idx={10}
                         letterClass={letterClass}
                     />
                 </h1>
             </div>
-            <Paragraph textAlign="center">
+            <Paragraph textAlign="center" width="70%">
                 Here, you'll find projects that I've completed, clubs and groups I've been a part of, and various other cool things I've done. To learn more about a particular endeavour, click on it.
             </Paragraph>
 
