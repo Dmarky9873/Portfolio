@@ -23,11 +23,21 @@ const AdvancedRobotics = () => {
     <>
       <div className="advanced-robotics container">
         <h1>
-          <AnimatedLetters
-            strArray={'Advanced Robotics'.split('')}
-            idx={5}
-            letterClass={letterClass}
-          />
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Advanced '.split('')}
+              idx={5}
+              letterClass={letterClass}
+            />
+          </span>
+          <br className="mobile-break" />
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Robotics'.split('')}
+              idx={5}
+              letterClass={letterClass}
+            />
+          </span>
         </h1>
 
         <div className="text-area">

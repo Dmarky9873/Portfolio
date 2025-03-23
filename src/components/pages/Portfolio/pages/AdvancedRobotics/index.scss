@@ -15,12 +15,19 @@
   }
 }
 
+.mobile-break {
+  display: none;
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 475px) {
   .advanced-robotics.container {
-  .text-area {
-    width: 90%;
+    .text-area {
+      width: 90%;
+    }
+  }
+  .mobile-break {
+    display: block;
   }
 }
-}
+
 
