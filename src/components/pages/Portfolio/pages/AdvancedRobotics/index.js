@@ -3,7 +3,6 @@ import AnimatedLetters from '../../../../elements/AnimatedLetters';
 import Paragraph from '../../../../elements/Paragraph';
 import OldRobot from '../../../../../assets/images/portfolio/advanced-robotics/old-robot.gif';
 import FullLineImage from '../../../../elements/FullLineImage';
-import ImageText from '../../../../elements/ImageText';
 import './index.scss';
 
 const AdvancedRobotics = () => {
