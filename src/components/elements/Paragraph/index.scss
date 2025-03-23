@@ -17,3 +17,13 @@
 .paragraph-container.justify {
   text-align: justify;
 }
+
+@media screen and (max-width: 1200px) {
+  .paragraph-container.left,
+  .paragraph-container.right {
+    text-align: center;
+  }
+}
+
+
+

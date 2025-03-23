@@ -7,5 +7,7 @@
   img {
     height: auto;
     display: block;
+    max-height: 30vh;
+    object-fit: contain; 
   }
 }

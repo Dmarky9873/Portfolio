@@ -1,5 +1,26 @@
 .advanced-robotics.container {
   position: relative;
-  width: 80%;
-  margin-top: 10vh;
+  h1 {
+    margin-left: 10vw;
+    margin-top: 10vh;
+  }
+  .text-area {
+    margin: auto;
+    width: 70%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin-bottom: 10vh;
+  }
 }
+
+
+@media screen and (max-width: 1200px) {
+  .advanced-robotics.container {
+  .text-area {
+    width: 90%;
+  }
+}
+}
+
