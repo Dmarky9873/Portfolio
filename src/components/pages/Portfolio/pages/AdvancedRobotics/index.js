@@ -7,6 +7,7 @@ import MessyWires from '../../../../../assets/images/portfolio/advanced-robotics
 import Team from '../../../../../assets/images/portfolio/advanced-robotics/team.jpg';
 import FullLineImage from '../../../../elements/FullLineImage';
 import Footer from '../../../../elements/Footer';
+import LoadingAnimation from '../../../../elements/LoadingAnimation';
 import './index.scss';
 
 const AdvancedRobotics = () => {
@@ -127,6 +128,7 @@ const AdvancedRobotics = () => {
         </div>
         <Footer />
       </div>
+      <LoadingAnimation />
     </>
   );
 };
