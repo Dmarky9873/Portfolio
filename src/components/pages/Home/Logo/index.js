@@ -1,16 +1,16 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import DrawSVGPlugin from 'gsap/DrawSVGPlugin'
-import LogoS from '../../../../assets/images/logos/logo-d.png'
-import './index.scss'
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import DrawSVGPlugin from 'gsap/DrawSVGPlugin';
+import LogoS from '../../../../assets/images/logos/logo-d.png';
+import './index.scss';
 
 const Logo = () => {
-  const bgRef = useRef()
-  const outlineLogoRef = useRef()
-  const solidLogoRef = useRef()
+  const bgRef = useRef();
+  const outlineLogoRef = useRef();
+  const solidLogoRef = useRef();
 
   useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin)
+    gsap.registerPlugin(DrawSVGPlugin);
 
     gsap
       .timeline()
@@ -21,7 +21,7 @@ const Logo = () => {
       .from(outlineLogoRef.current, {
         drawSVG: 0,
         duration: 20,
-      })
+      });
 
     gsap.fromTo(
       solidLogoRef.current,
@@ -33,13 +33,13 @@ const Logo = () => {
         delay: 4,
         duration: 4,
       }
-    )
+    );
     gsap.to(outlineLogoRef.current, {
       opacity: 0,
       delay: 5,
       duration: 4,
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <div className="logo-container" ref={bgRef}>
@@ -75,12 +75,11 @@ const Logo = () => {
 			c0-46.61-5.23-88.69-15.67-126.25c-10.45-37.56-25.47-69.39-45.05-95.52c-19.59-26.11-43.55-46.19-71.89-60.22
 			s-60.61-21.05-96.8-21.05H268.59V815.9h126.44c36.19,0,68.45-7.02,96.8-21.05s52.3-34.09,71.89-60.22
 			c19.58-26.11,34.59-57.94,45.05-95.5C619.2,601.57,624.44,559.27,624.44,512.21z"
-
           />
         </g>
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

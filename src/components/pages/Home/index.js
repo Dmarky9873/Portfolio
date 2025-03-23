@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react'
-import AnimatedLetters from '../../elements/AnimatedLetters'
-import LogoTitle from '../../../assets/images/logos/logo-d.png'
-import Logo from './Logo'
-import LoadingAnimation from '../../elements/LoadingAnimation'
-import './index.scss'
+import { useEffect, useState } from 'react';
+import AnimatedLetters from '../../elements/AnimatedLetters';
+import LogoTitle from '../../../assets/images/logos/logo-d.png';
+import Logo from './Logo';
+import LoadingAnimation from '../../elements/LoadingAnimation';
+import './index.scss';
 
 const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate');
 
-  const nameArray = "aniel".split("")
-  const jobArray = "I'm a developer.".split("")
+  const nameArray = 'aniel'.split('');
+  const jobArray = "I'm a developer.".split('');
 
   useEffect(() => {
     return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
+      setLetterClass('text-animate-hover');
+    }, 4000);
+  }, []);
 
   return (
     <>
@@ -29,10 +29,7 @@ const Home = () => {
             <span className={`${letterClass} _12`}>I</span>
             <span className={`${letterClass} _13`}>'</span>
             <span className={`${letterClass} _14`}>m</span>
-            <img
-              src={LogoTitle}
-              alt="Developer Name First Letter"
-            />
+            <img src={LogoTitle} alt="Developer Name First Letter" />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -50,9 +47,8 @@ const Home = () => {
         <Logo />
       </div>
       <LoadingAnimation />
-
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
