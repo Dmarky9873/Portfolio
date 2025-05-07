@@ -2,6 +2,8 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from '../elements/Sidebar/';
 import './index.scss';
 import { useEffect, useState } from 'react';
+import ScrollToTop from '../elements/ScrollToTop'
+
 
 const Layout = () => {
   const location = useLocation();
@@ -47,6 +49,7 @@ const Layout = () => {
     <div className="App">
       <Sidebar />
       <div className="page">
+        <ScrollToTop />
         {(!isNonTopTagPage || isWide) && (
           <span className="tags top-tags">&lt;body&gt;</span>
         )}

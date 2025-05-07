@@ -23,11 +23,12 @@ const PageNotFound = () => {
           />
         </h1>
       </div>
-      <Paragraph textAlign="center">
-        This website is very much a work in progress, and you have likely
-        pressed on a link that hasn't been built yet. Please use the navbar to
-        your left to navigate somewhere else. Apologies!
-      </Paragraph>
+      <div className="error-404-paragraph">
+        <Paragraph textAlign="center">
+          This website is very much a work in progress, and you have likely
+          pressed on a link that hasn't been built yet.
+        </Paragraph>
+      </div>
     </div>
   );
 };
