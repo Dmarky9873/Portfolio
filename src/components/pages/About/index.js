@@ -89,15 +89,14 @@ const About = () => {
           textLocation="left"
           imageSource={RoboticHand}
         >
-          The precision, the creativity, and the endless possibilities for
-          innovation engendered by computer science hooked me. Beyond formal
-          coursework, I immerse myself in self-directed projects, constantly
-          seeking ways to refine my skills and apply them to broader challenges.
-          The ability to break down complex problems, devise efficient
-          solutions, and build something tangible from abstract ideas is what
-          drives me. More than just a technical discipline, computer science is
-          a mindset—a unique brand of analytical thinking that I bring to all
-          areas of my life.{' '}
+          The precision and ability to create anything engendered by computer
+          science hooked me. Beyond formal coursework, I immerse myself in
+          self-directed projects, constantly seeking ways to refine my skills
+          and apply them to broader challenges. The ability to break down
+          complex problems, devise efficient solutions, and build something
+          tangible from abstract ideas is what drives me. More than just a
+          technical discipline, computer science is a mindset—a unique brand of
+          analytical thinking that I bring to all areas of my life.{' '}
         </ImageText>
         <ImageText
           imgAlt="Daniel shooting a freethrow in a basketball game"
