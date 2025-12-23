@@ -42,7 +42,7 @@ const Portfolio = () => {
           imageAlt="Robotics in Bordeaux with Luke, Hayden, and Mr. Koaich"
           link="/portfolio/advanced-robotics"
           title="Advanced Robotics Club"
-          date="2022-2025"
+          date="2022 — 2025"
         >
           How did three highschoolers end up representing their country on the
           international stage? I don't know either. But somehow, against all
@@ -55,7 +55,7 @@ const Portfolio = () => {
         <TitleImageText
           image={STLGroupPhoto}
           imageAlt="Group photo with members of the RBC Summer Tech Labs"
-          link="/portfolio/rbc-internship"
+          link="/portfolio/first-rbc-internship"
           title="RBC Summer Tech Labs First Internship"
           date="2024"
         >

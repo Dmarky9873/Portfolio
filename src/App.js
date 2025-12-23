@@ -7,6 +7,7 @@ import Contact from './components/pages/Contact';
 import Portfolio from './components/pages/Portfolio';
 import PageNotFound from './components/pages/PageNotFound';
 import AdvancedRobotics from './components/pages/Portfolio/pages/AdvancedRobotics';
+import FirstRBCInternship from './components/pages/Portfolio/pages/FirstRBCInternship';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             path="portfolio/advanced-robotics"
             element={<AdvancedRobotics />}
           />
+          <Route path="portfolio/first-rbc-internship" element={<FirstRBCInternship />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
