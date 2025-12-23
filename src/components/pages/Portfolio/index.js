@@ -49,8 +49,9 @@ const Portfolio = () => {
           odds, Hayden Patience, Luke Hartford, and I were chosen to represent
           Canada during the 2023 RoboCup Junior International finals in Bordeaux
           France. It all stemmed from a fateful grade eleven engineering class
-          class wherein we made autonomous soccer-playing robots. Late nights,
-          early mornings, and an amazing french teacher—this story has it all.
+          class wherein we made autonomous soccer-playing robots. Later on, we
+          grew the club to be one of the largest in the entire highschool,
+          representing the country again during our senior year.
         </TitleImageText>
         <TitleImageText
           image={STLGroupPhoto}
