@@ -121,19 +121,46 @@ const AdvancedRobotics = () => {
             />
           </div>
           <Paragraph textAlign="left" width="100%">
-            Now, when prospective students visit our robotics lab, intrigued by
-            the same chaos of wires and machinery that once fascinated me, I
-            strive to ignite their passion just as Mr. Wan did for me. I'm proud
-            of my journey from an uncertain freshman to a confident senior and
-            will take the lessons I learned into every single one of my future
-            endeavours.
+            2025 saw a lot of improvements to the robot. We were all in grade
+            twelve, and safe to say we were peaking at the right time. We made
+            the tough decision to scrap our previous years' design and start
+            a-new. This decision ended up paying dividends, as you will soon
+            find out. Counterintuitively, we also had a lot more free time, as
+            once we got into our respective Universities, we could dedicate a
+            lot more time to the robots as school moved to the back-burner. Our
+            robot was performing amazingly to say the least, which led us to
+            dominating the national competition and another invitation to
+            compete internationally. During the national competition, we named
+            our robots after the meals we had for lunch (which will explain the
+            stickers you may see on video): Crispy Chicken and Montreal Smoked
+            Meat.
           </Paragraph>
           <div className="img-container">
             <FullLineImage
               imageSource={Team}
-              width="100%"
               imageAlt="Team photo with everyone circa 2024."
             />
+          </div>
+          <Paragraph textAlign="left" width="100%">
+            The location for internationals was released and we were ecstatic:
+            we would be spending a week during the summer in Brazil. We ended up
+            performing much better than we had at France two years prior, but
+            most importantly, we met amazing people, had an amazing time, and
+            learned a lot. Below this, you can see some video of the final
+            version of our robot performing at its best. The time in Brazil was
+            the highlight of my summer! Check out some video of our robot below:
+          </Paragraph>
+          <div className="img-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/videoseries?si=JmzJbmrBJ3HKNz8h&amp;list=PLLjR-m9oUah_GIAkYu5iZuuBbOm_w8b6B"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
         <Footer />
