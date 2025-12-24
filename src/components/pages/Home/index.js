@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../elements/AnimatedLetters';
-import LogoTitle from '../../../assets/images/logos/logo-d.png';
 import Logo from './Logo';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 import './index.scss';
@@ -8,8 +7,8 @@ import './index.scss';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
-  const nameArray = 'aniel'.split('');
-  const jobArray = "I'm a generalist.".split('');
+  const nameArray = ' Daniel'.split('');
+  const jobArray = "I bridge tech and finance.".split('');
 
   useEffect(() => {
     return setTimeout(() => {
@@ -23,26 +22,25 @@ const Home = () => {
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
-            <span className={`${letterClass} _9`}>i</span>
-            <span className={`${letterClass} _10`}>,</span>
+            <span className={`${letterClass} _7`}>i</span>
+            <span className={`${letterClass} _8`}>,</span>
             <br />
-            <span className={`${letterClass} _11`}>I</span>
-            <span className={`${letterClass} _12`}>'</span>
-            <span className={`${letterClass} _13`}>m</span>
-            <img src={LogoTitle} alt="Developer Name First Letter" />
+            <span className={`${letterClass} _9`}>I</span>
+            <span className={`${letterClass} _10`}>'</span>
+            <span className={`${letterClass} _11`}>m</span>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
-              idx={14}
+              idx={12}
             />
             <br />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={19}
+              idx={10}
             />
           </h1>
-          <h2>n. gen·er·al·ist: a person competent in several different fields or activities.</h2>
+          <h2>I design things that perform under pressure.</h2>
         </div>
         <Logo />
       </div>
