@@ -55,7 +55,7 @@ const Portfolio = () => {
         <TitleImageText
           image={STLGroupPhoto}
           imageAlt="Group photo with members of the RBC Summer Tech Labs"
-          link="/portfolio/first-rbc-internship"
+          link="/portfolio/first-innovation-developer-internship"
           title="RBC Summer Tech Labs First Internship"
           date="2024"
         >

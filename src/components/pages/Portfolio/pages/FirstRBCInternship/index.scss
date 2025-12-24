@@ -1,0 +1,42 @@
+.first-rbc-internship-page.container {
+  position: relative;
+  h1 {
+    margin-left: 10vw;
+    margin-top: 10vh;
+  }
+  .text-area {
+    margin: auto;
+    width: 70%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      iframe {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media screen and (max-width: 475px) {
+  .first-rbc-internship-page.container {
+    .text-area {
+      width: 90%;
+    }
+  }
+  .mobile-break {
+    display: block;
+  }
+}
+
+

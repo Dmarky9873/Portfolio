@@ -22,7 +22,7 @@ function App() {
             path="portfolio/advanced-robotics"
             element={<AdvancedRobotics />}
           />
-          <Route path="portfolio/first-rbc-internship" element={<FirstRBCInternship />} />
+          <Route path="portfolio/first-innovation-developer-internship" element={<FirstRBCInternship />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

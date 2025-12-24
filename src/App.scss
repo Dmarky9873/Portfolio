@@ -1,39 +1,39 @@
-@use "./_variables" as *;
+@use './_variables' as *;
 
-@import "animate.css";
-@import "~loaders.css/src/animations/pacman.scss";
-@import "~loaders.css/src/animations/ball-scale-ripple-multiple.scss";
-@import "~loaders.css/src/animations/ball-beat.scss";
-@import "~loaders.css/src/animations/line-scale-random.scss";
-@import "~loaders.css/src/animations/cube-transition.scss";
-@import "~loaders.css/src/animations/semi-circle-spin.scss";
+@import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/ball-scale-ripple-multiple.scss';
+@import '~loaders.css/src/animations/ball-beat.scss';
+@import '~loaders.css/src/animations/line-scale-random.scss';
+@import '~loaders.css/src/animations/cube-transition.scss';
+@import '~loaders.css/src/animations/semi-circle-spin.scss';
 
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("./assets/fonts/helvetica-neu.ttf") format("ttf");
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "La Belle Aurore";
-  src: url("./assets/fonts/LaBelleAurore.woff2") format("woff2"),
-    url("./assets/fonts/LaBelleAurore.woff") format("woff");
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2'),
+    url('./assets/fonts/LaBelleAurore.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Coolvetica";
-  src: url("./assets/fonts/CoolveticaRg-Regular.woff2") format("woff2"),
-    url("./assets/fonts/CoolveticaRg-Regular.woff") format("woff");
+  font-family: 'Coolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
+    url('./assets/fonts/CoolveticaRg-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 input,
 textarea {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .loader-hidden {
@@ -52,4 +52,12 @@ textarea {
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+}
+
+a {
+  text-decoration: underline;
+  color: white;
+}
+a:hover {
+  cursor: pointer;
 }

@@ -26,6 +26,7 @@ const Layout = () => {
     '/portfolio',
     '/contact',
     '/portfolio/advanced-robotics',
+    '/portfolio/first-innovation-developer-internship',
   ];
   let isNonBottompage = false;
   for (let i = 0; i < nonBottomTagPages.length; i++) {
