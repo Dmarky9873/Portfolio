@@ -1,3 +1,5 @@
+@import '../../../../_variables.scss';
+
 .logo-container {
   z-index: 0;
   width: 400px;
@@ -33,7 +35,7 @@
 }
 
 .svg-container {
-  stroke: #ffd700;
+  stroke: $primary-color;
   stroke-width: 10;
 }
 

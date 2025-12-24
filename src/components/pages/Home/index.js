@@ -9,7 +9,7 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   const nameArray = 'aniel'.split('');
-  const jobArray = "I'm a developer.".split('');
+  const jobArray = "I'm a generalist.".split('');
 
   useEffect(() => {
     return setTimeout(() => {
@@ -23,26 +23,26 @@ const Home = () => {
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
-            <span className={`${letterClass} _10`}>i</span>
-            <span className={`${letterClass} _11`}>,</span>
+            <span className={`${letterClass} _9`}>i</span>
+            <span className={`${letterClass} _10`}>,</span>
             <br />
-            <span className={`${letterClass} _12`}>I</span>
-            <span className={`${letterClass} _13`}>'</span>
-            <span className={`${letterClass} _14`}>m</span>
+            <span className={`${letterClass} _11`}>I</span>
+            <span className={`${letterClass} _12`}>'</span>
+            <span className={`${letterClass} _13`}>m</span>
             <img src={LogoTitle} alt="Developer Name First Letter" />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
-              idx={15}
+              idx={14}
             />
             <br />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={20}
+              idx={19}
             />
           </h1>
-          <h2>Computer Scientist / Athlete / Entrepreneur</h2>
+          <h2>n. gen·er·al·ist: a person competent in several different fields or activities.</h2>
         </div>
         <Logo />
       </div>

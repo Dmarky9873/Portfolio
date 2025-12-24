@@ -23,12 +23,10 @@ const FirstRBCInternship = () => {
           />
         </h1>
       </div>
-      <div className="error-404-paragraph">
-        <Paragraph textAlign="center">
-          This website is very much a work in progress, and you have likely
-          pressed on a link that hasn't been built yet.
-        </Paragraph>
-      </div>
+      <Paragraph textAlign="center">
+        This website is very much a work in progress, and you have likely
+        pressed on a link that hasn't been built yet.
+      </Paragraph>
     </div>
   );
 };

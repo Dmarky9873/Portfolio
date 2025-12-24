@@ -8,7 +8,6 @@ import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux
 import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG';
 import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png';
 import LoadingAnimation from '../../elements/LoadingAnimation';
-// import Placeholder from '../../../assets/images/portfolio/placeholder.png';
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate');

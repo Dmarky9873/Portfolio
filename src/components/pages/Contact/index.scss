@@ -1,3 +1,5 @@
+@import '../../../_variables.scss';
+
 .contact-form {
   width: 100%;
   margin-top: 20px;
@@ -57,12 +59,12 @@
   }
 
   .flat-button {
-    color: #ffd700;
+    color: $primary-color;
     font-size: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #ffd700;
+    border: 1px solid $primary-color;
     float: left;
     border-radius: 4px;
     background: 0 0;
@@ -71,7 +73,7 @@
     text-align: center;
     margin-right: 10px;
     &:hover {
-      background-color: #ffd700;
+      background-color: $primary-color;
       color: #115173;
       cursor: pointer;
     }
@@ -115,7 +117,7 @@
     font-size: 16px;
 
     span {
-      color: #ffd700;
+      color: $primary-color;
     }
   }
 }
