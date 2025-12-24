@@ -8,7 +8,6 @@ const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   const nameArray = ' Daniel'.split('');
-  const jobArray = "I bridge tech and finance.".split('');
 
   useEffect(() => {
     return setTimeout(() => {
@@ -21,24 +20,58 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _7`}>i</span>
-            <span className={`${letterClass} _8`}>,</span>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={['H', 'i', ',']}
+              idx={9}
+            />
             <br />
-            <span className={`${letterClass} _9`}>I</span>
-            <span className={`${letterClass} _10`}>'</span>
-            <span className={`${letterClass} _11`}>m</span>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={['I', "'", 'm']}
+              idx={12}
+            />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
               idx={12}
             />
             <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={jobArray}
-              idx={10}
-            />
+            <span style={{ whiteSpace: 'nowrap' }}>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={'I'.split('')}
+                idx={10}
+              />
+            </span>{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={'bridge'.split('')}
+                idx={11}
+              />
+            </span>{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={'tech'.split('')}
+                idx={17}
+              />
+            </span>{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={'and'.split('')}
+                idx={21}
+              />
+            </span>{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={'finance.'.split('')}
+                idx={24}
+              />
+            </span>
           </h1>
           <h2>I design things that perform under pressure.</h2>
         </div>
