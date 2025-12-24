@@ -39,11 +39,10 @@ const About = () => {
               />
             </h1>
             <p>
-              I bring ideas to life. Hard work and self-motivation drive me, but
-              collaboration makes the journey even better. And these aren’t just
-              words—through this site, you’ll discover the communities I’ve
-              contributed to, the teams I’ve led, and the projects I’ve brought
-              to completion.
+              I love creating. Whether it's programming, writing music, or
+              athletics, I let my creativity run the show. Collaboration makes
+              the process even sweeter. Roam this site to see learn about me and
+              check out some things I've worked on.
             </p>
           </div>
 
@@ -76,39 +75,40 @@ const About = () => {
           textLocation="right"
           imageSource={RoboCupLookingAway}
         >
-          Bringing ideas to life isn’t just about execution—it’s about vision,
-          persistence, and the ability to adapt. Whether leading a team, solving
-          a complex technical challenge, or refining a project until it meets
-          the highest standards, I approach each endeavour with a commitment to
-          excellence. I've learned that passion in a subject begets success; as
-          such, I throw myself into everything I do, bringing a relentless drive
-          and intellectual curiosity that is matched by few.{' '}
+          I’m drawn to turning ideas into real things. Sometimes that looks like
+          code, sometimes music, sometimes a project that starts as a
+          half-formed thought and slowly sharpens through iteration. I enjoy the
+          process as much as the outcome: experimenting, adapting, and refining
+          until something clicks. I’ve learned that genuine curiosity carries
+          you further than force ever could, so I follow what excites me and let
+          the work grow from there.
         </ImageText>
         <ImageText
           imgAlt="Robotic hand being controlled by glove"
           textLocation="left"
           imageSource={RoboticHand}
         >
-          The precision and ability to create anything engendered by computer
-          science hooked me. Beyond formal coursework, I immerse myself in
-          self-directed projects, constantly seeking ways to refine my skills
-          and apply them to broader challenges. The ability to break down
-          complex problems, devise efficient solutions, and build something
-          tangible from abstract ideas is what drives me. More than just a
-          technical discipline, computer science is a mindset—a unique brand of
-          analytical thinking that I bring to all areas of my life.{' '}
+          Computer science became a natural outlet for that mindset. I love how
+          abstract ideas can be broken down, reassembled, and transformed into
+          something tangible. Outside of classes, I love to always build. Small
+          experiments, side projects, and tools always push my understanding a
+          little further. To me, computer science isn’t just technical; it’s a
+          way of thinking that seeps into how I approach problems everywhere
+          else.
         </ImageText>
         <ImageText
           imgAlt="Daniel shooting a freethrow in a basketball game"
           textLocation="right"
           imageSource={BasketballFreethrow}
         >
-          Outside of programming, I spend much of my time playing basketball and
-          weightlifting at the gym, activities I’ve pursued consistently for
-          nearly a decade. Balancing athletics with academic responsibilities
-          has significantly strengthened my discipline and improved my ability
-          to manage my time effectively over the years, skills that have proven
-          valuable in all areas of my life.{' '}
+          When I’m not at a keyboard, I’m usually on a basketball court, in the
+          gym, or playing either the drums or bass. Athletics have been a
+          constant in my life for years, teaching me consistency, focus, and how
+          to show up even on days when motivation dips. Music was my first love.
+          I have had the pleasure of playing in a plethora of bands throughout
+          high school and university. My favourite genres are jazz, prog rock,
+          jazz fusion, and heavy metal (yes I'm a King Crimson fan, how'd you
+          know?).
         </ImageText>
         <Footer />
       </div>
