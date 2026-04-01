@@ -36,11 +36,12 @@ const Currently = () => {
         </h1>
 
         <div className="current-places-container">
-          {currentPlaces.map((place) => (
+          {currentPlaces.map((place, index) => (
             <CurrentPlace
               key={place.title}
               category={place.category}
               title={place.title}
+              index={index}
             />
           ))}
         </div>

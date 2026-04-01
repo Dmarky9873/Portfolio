@@ -6,6 +6,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
+  animation: currently-enter 0.85s 2.2s backwards;
 
   .background {
     background-color: var(--surface-color, $secondary-color);
@@ -17,6 +18,7 @@
     border-radius: 24px;
     border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
     box-shadow: 0 18px 36px var(--card-shadow, rgba(0, 0, 0, 0.35));
+    animation: fadeIn 0.7s 2.3s backwards;
 
     .current-places-container {
       display: flex;
@@ -33,6 +35,18 @@
     margin: 0 0 4px;
     font-family: 'Coolvetica';
     font-weight: 400;
+  }
+}
+
+@keyframes currently-enter {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
