@@ -33,6 +33,9 @@
 
 :root {
   --page-background: #022c43;
+  --page-background-secondary: #0a405f;
+  --page-background-glow: rgba(255, 215, 0, 0.16);
+  --page-background-glow-soft: rgba(17, 81, 115, 0.24);
   --panel-background: #{$secondary-color};
   --surface-color: rgba(24, 24, 24, 0.9);
   --accent-color: #{$tertiary-color};
@@ -41,6 +44,8 @@
   --muted-text-color: #dcdcdc;
   --input-background: #115173;
   --card-shadow: rgba(0, 0, 0, 0.35);
+  --logo-accent: #{$tertiary-color};
+  --logo-subtitle: #{$title-text-color};
 }
 
 input,

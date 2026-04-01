@@ -20,19 +20,42 @@
   box-shadow: 14px 0 40px rgba(0, 0, 0, 0.18);
 
   .logo {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     padding: 8px 0;
     padding-left: 12px;
 
-    img {
+    .logo-mark,
+    .logo-subtitle {
       display: block;
-      margin: 8px auto;
-      width: 24px;
-      height: auto;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
 
-      &.sub-logo {
-        width: 50px;
-      }
+    .logo-mark {
+      width: 24px;
+      height: 34px;
+      background: linear-gradient(
+        180deg,
+        var(--logo-accent, var(--accent-color, $tertiary-color)),
+        var(--page-background-secondary, #0a405f)
+      );
+      filter: drop-shadow(
+        0 0 14px var(--page-background-glow, rgba(255, 215, 0, 0.16))
+      );
+    }
+
+    .logo-subtitle {
+      width: 50px;
+      height: 12px;
+      background: var(--logo-subtitle, var(--text-color, #fff));
+      opacity: 0.95;
     }
   }
 
@@ -188,20 +211,23 @@
 
     .logo {
       padding: 0;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
 
-      img {
+      .logo-mark,
+      .logo-subtitle {
         margin: 0;
       }
 
-      img:not(.sub-logo) {
+      .logo-mark {
         width: 30px;
+        height: 42px;
       }
 
-      img.sub-logo {
+      .logo-subtitle {
         width: 58px;
+        height: 14px;
       }
     }
 

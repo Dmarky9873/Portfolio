@@ -1,7 +1,7 @@
 import './index.scss';
 import { useState, useEffect, useRef } from 'react';
-import LogoS from '../../../assets/images/logos/logo-d.png';
-import LogoSubtitle from '../../../assets/images/logos/logo_sub.png';
+import LogoMark from '../../../assets/images/logos/logo-d-svg.svg';
+import LogoSubtitleMask from '../../../assets/images/logos/logo_sub.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
@@ -41,9 +41,28 @@ const Sidebar = () => {
   return (
     <div className="nav-bar" ref={navRef}>
       <div className="logo-border">
-        <Link className="logo" to="/" onClick={() => setShowNav(false)}>
-          <img src={LogoS} alt="Logo" />
-          <img className="sub-logo" src={LogoSubtitle} alt="Daniel" />
+        <Link
+          className="logo"
+          to="/"
+          aria-label="Daniel Markusson home"
+          onClick={() => setShowNav(false)}
+        >
+          <span
+            className="logo-mark"
+            aria-hidden="true"
+            style={{
+              WebkitMaskImage: `url(${LogoMark})`,
+              maskImage: `url(${LogoMark})`,
+            }}
+          />
+          <span
+            className="logo-subtitle"
+            aria-hidden="true"
+            style={{
+              WebkitMaskImage: `url(${LogoSubtitleMask})`,
+              maskImage: `url(${LogoSubtitleMask})`,
+            }}
+          />
         </Link>
       </div>
       <nav className={showNav ? 'mobile-show' : ''}>

@@ -10,7 +10,22 @@ body {
   color: var(--text-color, #fff);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--page-background, #022c43);
+  background-color: var(--page-background, #022c43);
+  background-image: radial-gradient(
+      circle at top right,
+      var(--page-background-glow, rgba(255, 215, 0, 0.16)),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      var(--page-background-glow-soft, rgba(17, 81, 115, 0.24)),
+      transparent 34%
+    ),
+    linear-gradient(
+      140deg,
+      var(--page-background, #022c43),
+      var(--page-background-secondary, #0a405f)
+    );
   overflow-x: hidden;
   display: block;
   transition: background-color 0.35s ease, color 0.35s ease;

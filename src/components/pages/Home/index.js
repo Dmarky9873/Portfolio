@@ -5,10 +5,10 @@ import './index.scss';
 import Currently from './CurrentlySection';
 
 const Home = ({
-  palettes,
-  activePalette,
-  onPaletteChange,
-  onRandomizePalette,
+  activeTheme,
+  themePreview,
+  onRandomizeTheme,
+  onResetTheme,
 }) => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
@@ -85,47 +85,35 @@ const Home = ({
 
             <section className="palette-picker" aria-label="Color palette controls">
               <div className="palette-picker__header">
-                <div>
-                  <p className="palette-picker__eyebrow">Palette Lab</p>
-                  <p className="palette-picker__title">
-                    Choose a look for the site or shuffle to a new one.
-                  </p>
+                <div className="palette-picker__summary">
+                  <p className="palette-picker__eyebrow">Palette</p>
+                  <div className="palette-picker__swatches" aria-hidden="true">
+                    {themePreview.map((swatch, index) => (
+                      <span
+                        key={`${activeTheme.id}-${index}`}
+                        style={{ backgroundColor: swatch }}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <button
-                  type="button"
-                  className="randomize-button"
-                  onClick={onRandomizePalette}
-                >
-                  Randomize
-                </button>
-              </div>
 
-              <div className="palette-picker__grid">
-                {palettes.map((palette) => (
+                <div className="palette-picker__actions">
                   <button
                     type="button"
-                    key={palette.id}
-                    className={`palette-option${
-                      palette.id === activePalette.id ? ' is-active' : ''
-                    }`}
-                    onClick={() => onPaletteChange(palette.id)}
+                    className="palette-picker__action"
+                    onClick={onRandomizeTheme}
                   >
-                    <span className="palette-option__swatches" aria-hidden="true">
-                      {palette.swatches.map((swatch, index) => (
-                        <span
-                          key={`${palette.id}-${index}`}
-                          style={{ backgroundColor: swatch }}
-                        />
-                      ))}
-                    </span>
-                    <span className="palette-option__label">{palette.label}</span>
+                    Randomize
                   </button>
-                ))}
+                  <button
+                    type="button"
+                    className="palette-picker__action palette-picker__action--ghost"
+                    onClick={onResetTheme}
+                  >
+                    Reset
+                  </button>
+                </div>
               </div>
-
-              <p className="palette-picker__description">
-                {activePalette.description}
-              </p>
             </section>
           </div>
         </div>
