@@ -54,6 +54,13 @@ $max-width: 700px;
   }
 }
 
+.image-text-container img.image-text__portrait {
+  width: min(34%, 360px);
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media screen and (max-width: 1200px) {
   .image-text-container.x.left,
   .image-text-container.x.right,
@@ -69,5 +76,10 @@ $max-width: 700px;
       max-width: $max-width;
       padding: 0;
     }
+  }
+
+  .image-text-container img.image-text__portrait {
+    width: min(100%, 420px);
+    max-height: none;
   }
 }

@@ -21,6 +21,7 @@ import {
   isValidTheme,
   lightTheme,
 } from './theme/palettes';
+import { applyThemeFavicon } from './theme/favicon';
 
 const getInitialTheme = () => {
   if (typeof window === 'undefined') {
@@ -61,6 +62,7 @@ function App() {
       element.style.backgroundImage = backgroundStyles.backgroundImage;
     });
 
+    applyThemeFavicon(activeTheme);
     window.localStorage.setItem('portfolio-theme', JSON.stringify(activeTheme));
   }, [activeTheme]);
 

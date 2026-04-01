@@ -12,9 +12,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 import RoboCupLookingAway from '../../../assets/images/about/robocup-looking-away.jpg';
+import NightWaterfront from '../../../assets/images/about/night-waterfront.jpg';
 import ImageText from '../../elements/ImageText';
 import RoboticHand from '../../../assets/images/about/robotic-hand.gif';
 import BasketballFreethrow from '../../../assets/images/about/basketball-freethrow.jpg';
+import DrummingStage from '../../../assets/images/about/drumming-stage.jpeg';
 import Footer from '../../elements/Footer';
 
 const About = () => {
@@ -82,44 +84,76 @@ const About = () => {
         </div>
 
         <ImageText
-          imgAlt="At the RoboCup Looking Away"
+          imgAlt="Daniel standing by the waterfront at night"
           textLocation="right"
-          imageSource={RoboCupLookingAway}
+          imageSource={NightWaterfront}
+          imgClassName="image-text__portrait"
         >
           I’m drawn to turning ideas into real things. Sometimes that looks like
-          code, sometimes music, sometimes a project that starts as a
-          thought and slowly takes shape over time. I enjoy the
-          process as much as the outcome: experimenting, adapting, and refining
-          until something clicks. I’ve learned that genuine curiosity carries
-          you further than force ever could, so I follow what excites me and let
-          the work grow from there.
+          coding, sometimes writing music, sometimes hand-carving a wooden
+          crossbow. I enjoy the process MORE than the outcome, to be quite
+          honest. I’ve learned that genuine curiosity carries you further than
+          "discipline" ever could; not that I'm against having discipline, but
+          that can only take you so far.
         </ImageText>
         <ImageText
           imgAlt="Robotic hand being controlled by glove"
           textLocation="left"
           imageSource={RoboticHand}
         >
-          Computer science became a natural outlet for that mindset. I love how
-          abstract ideas can be broken down, reassembled, and transformed into
-          something tangible. Outside of classes, I love to always build. Small
-          experiments, side projects, and tools always push my understanding a
-          little further. To me, computer science isn’t just technical; it’s a
-          way of thinking that seeps into how I approach problems everywhere
-          else.
+          Computer science became a natural outlet for that mindset. I really
+          find the idea of layers of abstraction fascinating. You don't need to
+          know how an entire computer works to be able to use it, program it,
+          work with it. Similarly, you don't need to know every granular detail
+          in order to run a team—in fact, you can't after a certain size.
+        </ImageText>
+        <ImageText
+          imgAlt="At the RoboCup Looking Away"
+          textLocation="right"
+          imageSource={RoboCupLookingAway}
+        >
+          I find that mindset really pushes places to the next level—it's what I
+          implement whenever I am in charge of a team—with the small caveat that
+          you have to know you've got good people first (I've been lucky enough
+          to almost always have good people around me).
         </ImageText>
         <ImageText
           imgAlt="Daniel shooting a freethrow in a basketball game"
-          textLocation="right"
+          textLocation="left"
           imageSource={BasketballFreethrow}
         >
-          When I’m not at a keyboard, I’m usually on a basketball court, in the
-          gym, or playing either the drums or bass. Athletics have been a
-          constant in my life for years, teaching me consistency, focus, and how
-          to show up even on days when motivation dips. Music was my first love.
-          I have had the pleasure of playing in a plethora of bands throughout
-          high school and university. My favourite genres are jazz, prog rock,
-          jazz fusion, and heavy metal (yes I'm a King Crimson fan, how'd you
-          know?).
+          When I’m not at a keyboard, I’m usually on a basketball court, MMA
+          gym, lifting weights, playing the drums or bass with a band, or
+          (sometimes) studying. Athletics have been a constant in my life for
+          years, really teaching me how to work hard.
+        </ImageText>
+        <ImageText
+          imgAlt="Daniel playing drums on stage"
+          textLocation="right"
+          imageSource={DrummingStage}
+          imgClassName="image-text__portrait"
+        >
+          Music was my first love. I have had the pleasure of playing in a
+          plethora of bands throughout high school and university. My favourite
+          genres are jazz, prog rock, jazz fusion, and heavy metal (yes I'm a
+          King Crimson fan, how'd you know?). I genuinely think I could give a
+          Ted Talk on the life of the drummer{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Vinnie_Colaiuta"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Vinnie Colaiuta
+          </a>{' '}
+          (I specifically am in love with his work on Frank Zappa's{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Joe%27s_Garage"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Joe&apos;s Garage
+          </a>{' '}
+          album).
         </ImageText>
         <Footer />
       </div>
