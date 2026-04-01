@@ -8,6 +8,8 @@ const Home = ({
   activeTheme,
   themePreview,
   onRandomizeTheme,
+  onSetDarkTheme,
+  onSetLightTheme,
   onResetTheme,
 }) => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -104,6 +106,20 @@ const Home = ({
                     onClick={onRandomizeTheme}
                   >
                     Randomize
+                  </button>
+                  <button
+                    type="button"
+                    className="palette-picker__action"
+                    onClick={onSetDarkTheme}
+                  >
+                    Just gimme dark mode
+                  </button>
+                  <button
+                    type="button"
+                    className="palette-picker__action"
+                    onClick={onSetLightTheme}
+                  >
+                    Just gimmie light mode
                   </button>
                   <button
                     type="button"

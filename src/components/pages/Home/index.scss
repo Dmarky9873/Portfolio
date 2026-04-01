@@ -2,11 +2,15 @@
 
 .home-page {
   overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: clamp(30px, 4vw, 70px);
+  min-height: 100vh;
+  height: 100vh;
+  top: 0;
   padding: clamp(120px, 16vh, 160px) clamp(24px, 5vw, 64px) 40px;
   box-sizing: border-box;
   .text-zone {
@@ -76,14 +80,14 @@
   .palette-picker {
     margin-top: 32px;
     padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
   }
 
   .palette-picker__header {
     display: flex;
-    gap: 16px;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
   }
 
   .palette-picker__summary,
@@ -113,24 +117,26 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
     }
   }
 
   .palette-picker__actions {
-    gap: 10px;
-    justify-content: flex-end;
+    gap: 8px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .palette-picker__action {
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
     border-radius: 999px;
-    min-height: 40px;
-    padding: 0 16px;
-    background: rgba(255, 255, 255, 0.04);
+    min-height: 36px;
+    padding: 0 14px;
+    background: var(--surface-color, rgba(255, 255, 255, 0.04));
     color: var(--text-color, #fff);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 500;
+    font-family: 'Helvetica Neue', sans-serif;
     transition: transform 0.2s ease, border-color 0.2s ease,
       background-color 0.2s ease, color 0.2s ease;
 
@@ -171,6 +177,10 @@
   .home-page {
     flex-direction: column;
     align-items: stretch;
+    min-height: auto;
+    height: auto;
+    top: auto;
+    overflow-y: visible;
     padding: 28px 0 20px;
     gap: 28px;
     .text-zone {
@@ -207,7 +217,6 @@
   }
 
   .home-page .palette-picker__header {
-    flex-direction: column;
     align-items: stretch;
   }
 

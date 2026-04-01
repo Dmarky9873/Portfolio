@@ -6,6 +6,10 @@
     margin-top: clamp(48px, 10vh, 10vh);
   }
 
+  .title-word {
+    white-space: nowrap;
+  }
+
   .text-area {
     margin: auto;
     width: min(1020px, 82%);
@@ -25,6 +29,10 @@
 
 @media screen and (max-width: 768px) {
   .minimal-fake-news-page.container {
+    h1 {
+      max-width: min(100%, 12ch);
+    }
+
     .text-area {
       width: 100%;
       padding: 0 20px;

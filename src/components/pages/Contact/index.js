@@ -9,9 +9,11 @@ const Contact = () => {
   const refForm = useRef();
 
   useEffect(() => {
-    return setTimeout(() => {
+    const timeoutId = window.setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 2500);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const sendEmail = (e) => {
@@ -47,9 +49,15 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I would love to hear from you, especially if you are looking to get
-            involved in a project. Please feel free to use this form to get in
-            touch.
+            This literally goes straight to my email so{' '}
+            <a
+              href="https://en.wikipedia.org/wiki/Streisand_effect"
+              target="_blank"
+              rel="noreferrer"
+            >
+              don't spam
+            </a>
+            .
           </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>

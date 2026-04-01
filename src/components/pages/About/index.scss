@@ -21,7 +21,21 @@
 .about-title-cube-container .text-zone {
   flex: 1;
   position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  width: min(52%, 560px);
+  display: block;
+  max-height: none;
   min-width: 0;
+
+  h1 {
+    white-space: nowrap;
+  }
+
+  .title-word {
+    white-space: nowrap;
+  }
 }
 
 .stage-cube-cont {
@@ -127,5 +141,10 @@
   }
   .about-title-cube-container .text-zone {
     width: 100%;
+
+    h1,
+    .title-word {
+      white-space: normal;
+    }
   }
 }

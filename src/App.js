@@ -12,9 +12,12 @@ import FirstRBCInternship from './components/pages/Portfolio/pages/FirstRBCInter
 import MinimalApproachToFakeNewsDetection from './components/pages/Portfolio/pages/MinimalApproachToFakeNewsDetection';
 import {
   createRandomTheme,
+  darkTheme,
   defaultTheme,
+  getThemeBackgroundStyles,
   getThemePreview,
   isValidTheme,
+  lightTheme,
 } from './theme/palettes';
 
 const getInitialTheme = () => {
@@ -43,15 +46,25 @@ function App() {
 
   useEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
+    const backgroundStyles = getThemeBackgroundStyles(activeTheme);
 
     Object.entries(activeTheme.colors).forEach(([variableName, value]) => {
       root.style.setProperty(variableName, value);
+      body.style.setProperty(variableName, value);
+    });
+
+    [root, body].forEach((element) => {
+      element.style.backgroundColor = backgroundStyles.backgroundColor;
+      element.style.backgroundImage = backgroundStyles.backgroundImage;
     });
 
     window.localStorage.setItem('portfolio-theme', JSON.stringify(activeTheme));
   }, [activeTheme]);
 
   const handleRandomizeTheme = () => setActiveTheme(createRandomTheme());
+  const handleSetDarkTheme = () => setActiveTheme(darkTheme);
+  const handleSetLightTheme = () => setActiveTheme(lightTheme);
   const handleResetTheme = () => setActiveTheme(defaultTheme);
 
   return (
@@ -65,6 +78,8 @@ function App() {
                 activeTheme={activeTheme}
                 themePreview={themePreview}
                 onRandomizeTheme={handleRandomizeTheme}
+                onSetDarkTheme={handleSetDarkTheme}
+                onSetLightTheme={handleSetLightTheme}
                 onResetTheme={handleResetTheme}
               />
             }

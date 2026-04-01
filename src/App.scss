@@ -36,6 +36,7 @@
   --page-background-secondary: #0a405f;
   --page-background-glow: rgba(255, 215, 0, 0.16);
   --page-background-glow-soft: rgba(17, 81, 115, 0.24);
+  --border-color: rgba(255, 255, 255, 0.1);
   --panel-background: #{$secondary-color};
   --surface-color: rgba(24, 24, 24, 0.9);
   --accent-color: #{$tertiary-color};
@@ -49,6 +50,7 @@
 }
 
 input,
+button,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
 }

@@ -21,9 +21,11 @@ const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
-    return setTimeout(() => {
+    const timeoutId = window.setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 2500);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -32,11 +34,20 @@ const About = () => {
         <div className="about-title-cube-container">
           <div className="text-zone">
             <h1>
-              <AnimatedLetters
-                strArray={'About me'.split('')}
-                idx={15}
-                letterClass={letterClass}
-              />
+              <span className="title-word">
+                <AnimatedLetters
+                  strArray={'About'.split('')}
+                  idx={15}
+                  letterClass={letterClass}
+                />
+              </span>{' '}
+              <span className="title-word">
+                <AnimatedLetters
+                  strArray={'me'.split('')}
+                  idx={21}
+                  letterClass={letterClass}
+                />
+              </span>
             </h1>
             <p>
               I love creating. Whether it's programming, writing music, or
@@ -77,7 +88,7 @@ const About = () => {
         >
           I’m drawn to turning ideas into real things. Sometimes that looks like
           code, sometimes music, sometimes a project that starts as a
-          half-formed thought and slowly sharpens through iteration. I enjoy the
+          thought and slowly takes shape over time. I enjoy the
           process as much as the outcome: experimenting, adapting, and refining
           until something clicks. I’ve learned that genuine curiosity carries
           you further than force ever could, so I follow what excites me and let

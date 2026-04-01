@@ -24,23 +24,51 @@ const MinimalApproachToFakeNewsDetection = () => {
         <h1>
           <span className="title-word">
             <AnimatedLetters
-              strArray={'A Minimal '.split('')}
-              idx={5}
+              strArray={'A'.split('')}
+              idx={1}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Minimal'.split('')}
+              idx={2}
               letterClass={letterClass}
             />
           </span>
           <br className="mobile-break" />
           <span className="title-word">
             <AnimatedLetters
-              strArray={'Approach to '.split('')}
-              idx={14}
+              strArray={'Approach'.split('')}
+              idx={9}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'to'.split('')}
+              idx={17}
               letterClass={letterClass}
             />
           </span>
           <br className="mobile-break" />
           <span className="title-word">
             <AnimatedLetters
-              strArray={'Fake News Detection'.split('')}
+              strArray={'Fake'.split('')}
+              idx={19}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'News'.split('')}
+              idx={23}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Detection'.split('')}
               idx={27}
               letterClass={letterClass}
             />
