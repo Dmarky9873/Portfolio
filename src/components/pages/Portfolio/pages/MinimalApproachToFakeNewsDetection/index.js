@@ -32,44 +32,44 @@ const MinimalApproachToFakeNewsDetection = () => {
           <span className="title-word">
             <AnimatedLetters
               strArray={'Minimal'.split('')}
-              idx={2}
+              idx={3}
               letterClass={letterClass}
             />
-          </span>
+          </span>{' '}
           <br className="mobile-break" />
           <span className="title-word">
             <AnimatedLetters
               strArray={'Approach'.split('')}
-              idx={9}
+              idx={11}
               letterClass={letterClass}
             />
           </span>{' '}
           <span className="title-word">
             <AnimatedLetters
               strArray={'to'.split('')}
-              idx={17}
+              idx={20}
               letterClass={letterClass}
             />
-          </span>
+          </span>{' '}
           <br className="mobile-break" />
           <span className="title-word">
             <AnimatedLetters
               strArray={'Fake'.split('')}
-              idx={19}
-              letterClass={letterClass}
-            />
-          </span>{' '}
-          <span className="title-word">
-            <AnimatedLetters
-              strArray={'News'.split('')}
               idx={23}
               letterClass={letterClass}
             />
           </span>{' '}
           <span className="title-word">
             <AnimatedLetters
+              strArray={'News'.split('')}
+              idx={28}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
               strArray={'Detection'.split('')}
-              idx={27}
+              idx={33}
               letterClass={letterClass}
             />
           </span>

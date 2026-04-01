@@ -8,6 +8,11 @@
   overflow-x: hidden;
 }
 
+.page.page--home {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .top-tags {
   bottom: auto;
   top: 35px;
@@ -117,6 +122,11 @@
     min-height: auto;
     margin-left: 0;
     position: initial;
+  }
+
+  .page.page--home {
+    height: auto;
+    overflow: visible;
   }
 
   .container {

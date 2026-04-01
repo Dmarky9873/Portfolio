@@ -21,6 +21,12 @@ body {
   display: block;
 }
 
+@media screen and (min-width: 1201px) {
+  body.route-home {
+    overflow-y: hidden;
+  }
+}
+
 #root {
   min-height: 100vh;
 }

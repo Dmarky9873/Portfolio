@@ -32,16 +32,16 @@ const About = () => {
     <>
       <div className="container about-page">
         <div className="about-title-cube-container">
-          <div className="text-zone">
-            <h1>
-              <span className="title-word">
+          <div className="about-intro">
+            <h1 className="about-title">
+              <span className="title-word" aria-label="About">
                 <AnimatedLetters
                   strArray={'About'.split('')}
                   idx={15}
                   letterClass={letterClass}
                 />
-              </span>{' '}
-              <span className="title-word">
+              </span>
+              <span className="title-word" aria-label="me">
                 <AnimatedLetters
                   strArray={'me'.split('')}
                   idx={21}

@@ -6,6 +6,7 @@ import ScrollToTop from '../elements/ScrollToTop';
 
 const Layout = () => {
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const nonTopTagPages = [
     '/about',
     '/contact',
@@ -47,10 +48,18 @@ const Layout = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle('route-home', isHomePage);
+
+    return () => {
+      document.body.classList.remove('route-home');
+    };
+  }, [isHomePage]);
+
   return (
     <div className="App">
       <Sidebar />
-      <div className="page">
+      <div className={`page${isHomePage ? ' page--home' : ''}`}>
         <ScrollToTop />
         {(!isNonTopTagPage || isWide) && (
           <span className="tags top-tags">&lt;body&gt;</span>

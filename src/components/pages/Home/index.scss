@@ -7,20 +7,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(30px, 4vw, 70px);
+  gap: clamp(24px, 3vw, 52px);
   min-height: 100vh;
   height: 100vh;
   top: 0;
-  padding: clamp(120px, 16vh, 160px) clamp(24px, 5vw, 64px) 40px;
+  padding: clamp(84px, 11vh, 118px) clamp(24px, 5vw, 64px) 24px;
   box-sizing: border-box;
+
   .text-zone {
     padding-left: clamp(10px, 2vw, 24px);
-    width: min(58%, 760px);
+    width: min(60%, 760px);
     max-height: none;
     padding-top: 0;
 
     .home-copy {
-      max-width: 720px;
+      max-width: 760px;
     }
 
     h1 {
@@ -67,7 +68,7 @@
 
   h2 {
     color: var(--muted-text-color, #dcdcdc);
-    margin-top: 25px;
+    margin-top: 18px;
     font-weight: 400;
     font-size: clamp(1.6rem, 2vw, 1.9rem);
     font-family: sans-serif;
@@ -78,26 +79,29 @@
   }
 
   .palette-picker {
-    margin-top: 32px;
-    padding-top: 18px;
+    margin-top: 24px;
+    padding-top: 16px;
     border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+    width: min(100%, 620px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .palette-picker__header {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
+    display: block;
   }
 
   .palette-picker__summary,
+  .palette-picker__swatches,
   .palette-picker__actions {
     display: flex;
-    align-items: center;
   }
 
   .palette-picker__summary {
+    align-items: center;
     gap: 14px;
+    flex-wrap: wrap;
   }
 
   .palette-picker__eyebrow {
@@ -109,47 +113,46 @@
   }
 
   .palette-picker__swatches {
-    display: inline-flex;
     align-items: center;
     gap: 8px;
 
     span {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
       border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
     }
   }
 
   .palette-picker__actions {
-    gap: 8px;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .palette-picker__action {
-    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+    min-height: 42px;
+    padding: 0 16px;
     border-radius: 999px;
-    min-height: 36px;
-    padding: 0 14px;
-    background: var(--surface-color, rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.14));
+    text-align: center;
     color: var(--text-color, #fff);
-    font-size: 1.15rem;
-    font-weight: 500;
-    font-family: 'Helvetica Neue', sans-serif;
+    background: rgba(255, 255, 255, 0.04);
+    font-weight: 400;
+    font-size: 1.65rem;
+    line-height: 1;
+    font-family: 'Coolvetica', sans-serif;
+    letter-spacing: 0.04rem;
+    box-shadow: 0 12px 24px var(--card-shadow, rgba(0, 0, 0, 0.24));
     transition: transform 0.2s ease, border-color 0.2s ease,
-      background-color 0.2s ease, color 0.2s ease;
+      box-shadow 0.2s ease;
 
     &:hover {
       transform: translateY(-2px);
       cursor: pointer;
       border-color: var(--accent-color, $tertiary-color);
+      box-shadow: 0 16px 28px var(--card-shadow, rgba(0, 0, 0, 0.28));
     }
-  }
-
-  .palette-picker__action--ghost {
-    background: transparent;
-    color: var(--muted-text-color, #dcdcdc);
   }
 
   .flat-button {
@@ -183,6 +186,7 @@
     overflow-y: visible;
     padding: 28px 0 20px;
     gap: 28px;
+
     .text-zone {
       width: 100%;
       padding: 0 24px;
@@ -196,11 +200,13 @@
       }
     }
   }
+
   .tags,
   .home-page h1:before,
   .home-page h1:after {
     position: absolute;
   }
+
   .home-page h1::after {
     margin-left: 0;
     margin-top: 40px;
@@ -216,24 +222,11 @@
     width: 100%;
   }
 
-  .home-page .palette-picker__header {
-    align-items: stretch;
-  }
-
-  .home-page .palette-picker__summary,
-  .home-page .palette-picker__actions {
-    justify-content: space-between;
-  }
-
   .home-page .palette-picker__summary {
     justify-content: flex-start;
   }
 
   .home-page .palette-picker__actions {
-    flex-wrap: wrap;
-  }
-
-  .home-page .palette-picker__action {
-    flex: 1 1 140px;
+    gap: 8px;
   }
 }

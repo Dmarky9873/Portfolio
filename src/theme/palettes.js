@@ -120,7 +120,7 @@ const createTheme = ({
 
 export const defaultTheme = {
   id: 'default',
-  label: 'Default',
+  label: 'Classic',
   colors: {
     '--page-background': '#022c43',
     '--page-background-secondary': '#0a405f',
@@ -153,6 +153,51 @@ export const createRandomTheme = () => {
     accentLightness: randomInt(58, 76),
   });
 };
+
+export const emberTheme = createTheme({
+  id: 'ember',
+  label: 'Ember',
+  baseHue: 8,
+  accentHue: 30,
+  backgroundLightness: 11,
+  accentLightness: 64,
+});
+
+export const tideTheme = createTheme({
+  id: 'tide',
+  label: 'Tide',
+  baseHue: 188,
+  accentHue: 156,
+  backgroundLightness: 10,
+  accentLightness: 60,
+});
+
+export const mossTheme = createTheme({
+  id: 'moss',
+  label: 'Moss',
+  baseHue: 142,
+  accentHue: 88,
+  backgroundLightness: 10,
+  accentLightness: 58,
+});
+
+export const signalTheme = createTheme({
+  id: 'signal',
+  label: 'Signal',
+  baseHue: 332,
+  accentHue: 18,
+  backgroundLightness: 12,
+  accentLightness: 68,
+});
+
+export const studioTheme = createTheme({
+  id: 'studio',
+  label: 'Studio',
+  baseHue: 252,
+  accentHue: 192,
+  backgroundLightness: 11,
+  accentLightness: 68,
+});
 
 export const darkTheme = {
   id: 'dark-mode',
@@ -197,6 +242,15 @@ export const lightTheme = {
     '--logo-subtitle': '#191510',
   },
 };
+
+export const presetThemes = [
+  defaultTheme,
+  emberTheme,
+  tideTheme,
+  mossTheme,
+  signalTheme,
+  studioTheme,
+];
 
 export const isValidTheme = (theme) => {
   if (!theme || typeof theme !== 'object' || !theme.colors) {

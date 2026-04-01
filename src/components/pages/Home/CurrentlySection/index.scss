@@ -1,7 +1,7 @@
 @import '../../../../_variables.scss';
 
 .currently-section {
-  width: min(100%, 420px);
+  width: min(100%, 390px);
   height: auto;
   display: flex;
   align-items: stretch;
@@ -9,7 +9,7 @@
 
   .background {
     background-color: var(--surface-color, $secondary-color);
-    padding: 22px;
+    padding: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;

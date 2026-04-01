@@ -15,6 +15,32 @@ const Home = ({
   const [letterClass, setLetterClass] = useState('text-animate');
 
   const nameArray = ' Daniel'.split('');
+  const paletteActions = [
+    {
+      id: 'randomize',
+      label: 'Randomize',
+      className: 'palette-picker__action--randomize',
+      onClick: onRandomizeTheme,
+    },
+    {
+      id: 'dark',
+      label: 'Just gimme dark mode',
+      className: 'palette-picker__action--dark',
+      onClick: onSetDarkTheme,
+    },
+    {
+      id: 'light',
+      label: 'Just gimmie light mode',
+      className: 'palette-picker__action--light',
+      onClick: onSetLightTheme,
+    },
+    {
+      id: 'reset',
+      label: 'Reset',
+      className: 'palette-picker__action--reset',
+      onClick: onResetTheme,
+    },
+  ];
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
@@ -98,37 +124,19 @@ const Home = ({
                     ))}
                   </div>
                 </div>
+              </div>
 
-                <div className="palette-picker__actions">
+              <div className="palette-picker__actions">
+                {paletteActions.map((action) => (
                   <button
+                    key={action.id}
                     type="button"
-                    className="palette-picker__action"
-                    onClick={onRandomizeTheme}
+                    className={`palette-picker__action ${action.className}`}
+                    onClick={action.onClick}
                   >
-                    Randomize
+                    {action.label}
                   </button>
-                  <button
-                    type="button"
-                    className="palette-picker__action"
-                    onClick={onSetDarkTheme}
-                  >
-                    Just gimme dark mode
-                  </button>
-                  <button
-                    type="button"
-                    className="palette-picker__action"
-                    onClick={onSetLightTheme}
-                  >
-                    Just gimmie light mode
-                  </button>
-                  <button
-                    type="button"
-                    className="palette-picker__action palette-picker__action--ghost"
-                    onClick={onResetTheme}
-                  >
-                    Reset
-                  </button>
-                </div>
+                ))}
               </div>
             </section>
           </div>
