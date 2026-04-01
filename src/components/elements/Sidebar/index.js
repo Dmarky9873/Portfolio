@@ -16,6 +16,7 @@ import {
   faBars,
   faClose,
   faBriefcase,
+  faFileLines,
 } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -82,6 +83,14 @@ const Sidebar = () => {
           onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faBriefcase} />
+        </NavLink>
+        <NavLink
+          aria-label="Writing"
+          className={getNavLinkClassName('writing-link')}
+          to="/writing"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faFileLines} />
         </NavLink>
         <NavLink
           aria-label="About"

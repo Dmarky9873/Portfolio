@@ -6,12 +6,14 @@ import './App.scss';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Portfolio from './components/pages/Portfolio';
+import Writing from './components/pages/Writing';
 import PageNotFound from './components/pages/PageNotFound';
 import AdvancedRobotics from './components/pages/Portfolio/pages/AdvancedRobotics';
 import FirstRBCInternship from './components/pages/Portfolio/pages/FirstRBCInternship';
 import MinimalApproachToFakeNewsDetection from './components/pages/Portfolio/pages/MinimalApproachToFakeNewsDetection';
 import SecondRBCInternship from './components/pages/Portfolio/pages/SecondRBCInternship';
 import VexoLabs from './components/pages/Portfolio/pages/VexoLabs';
+import WritingArticle from './components/pages/Writing/pages/WritingArticle';
 import {
   createRandomTheme,
   darkTheme,
@@ -22,6 +24,7 @@ import {
   lightTheme,
 } from './theme/palettes';
 import { applyThemeFavicon } from './theme/favicon';
+import { writingItems } from './data/writing';
 
 const getInitialTheme = () => {
   if (typeof window === 'undefined') {
@@ -91,6 +94,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="portfolio" element={<Portfolio />} />
+          <Route path="writing" element={<Writing />} />
           <Route
             path="portfolio/advanced-robotics"
             element={<AdvancedRobotics />}
@@ -108,6 +112,13 @@ function App() {
             path="portfolio/a-minimal-approach-to-fake-news-detection"
             element={<MinimalApproachToFakeNewsDetection />}
           />
+          {writingItems.map((item) => (
+            <Route
+              key={item.slug}
+              path={`writing/${item.slug}`}
+              element={<WritingArticle article={item} />}
+            />
+          ))}
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>

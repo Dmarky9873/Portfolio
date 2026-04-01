@@ -11,8 +11,13 @@ const Layout = () => {
     '/about',
     '/contact',
     '/portfolio',
+    '/writing',
     '/portfolio/advanced-robotics',
     '/portfolio/a-minimal-approach-to-fake-news-detection',
+    '/writing/hume-on-violations-of-the-laws-of-nature',
+    '/writing/rlg211-paper-1',
+    '/writing/rlg211-paper-2',
+    '/writing/rlg211-paper-3',
   ];
   let isNonTopTagPage = false;
   for (let i = 0; i < nonTopTagPages.length; i++) {
@@ -25,12 +30,17 @@ const Layout = () => {
   const nonBottomTagPages = [
     '/about',
     '/portfolio',
+    '/writing',
     '/contact',
     '/portfolio/advanced-robotics',
     '/portfolio/first-innovation-developer-internship',
     '/portfolio/second-innovation-developer-internship',
     '/portfolio/vexo-labs',
     '/portfolio/a-minimal-approach-to-fake-news-detection',
+    '/writing/hume-on-violations-of-the-laws-of-nature',
+    '/writing/rlg211-paper-1',
+    '/writing/rlg211-paper-2',
+    '/writing/rlg211-paper-3',
   ];
   let isNonBottompage = false;
   for (let i = 0; i < nonBottomTagPages.length; i++) {
