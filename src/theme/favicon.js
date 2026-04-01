@@ -14,16 +14,9 @@ const createThemeFavicon = (theme) => {
     theme.colors['--page-background-secondary'] ||
     theme.colors['--panel-background'] ||
     '#115173';
-  const backgroundColor =
-    theme.colors['--panel-background'] ||
-    theme.colors['--page-background'] ||
-    '#022c43';
-  const borderColor =
-    theme.colors['--border-color'] || 'rgba(255,255,255,0.12)';
 
   return encodeSvg(`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 896 896">
-      <rect x="48" y="48" width="800" height="800" rx="224" fill="${backgroundColor}" stroke="${borderColor}" stroke-width="18" />
       <g transform="translate(82 28) scale(0.88)">
         <path fill="${shadowColor}" d="${LOGO_BACK_PATH}" />
         <path fill="${accentColor}" d="${LOGO_FRONT_PATH}" />

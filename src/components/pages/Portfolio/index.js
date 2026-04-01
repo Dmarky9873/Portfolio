@@ -13,6 +13,8 @@ import LoadingAnimation from '../../elements/LoadingAnimation';
 
 const RESEARCH_GATE_URL =
   'https://www.researchgate.net/publication/394957216_A_Minimal_Approach_to_Fake_News_Detection';
+const VEXO_LABS_URL = 'https://www.vexo.gg/';
+const ACCELERATOR_CENTRE_URL = 'https://www.acceleratorcentre.com/';
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -96,10 +98,17 @@ const Portfolio = () => {
           title="Vexo Labs"
           date="2025"
         >
-          This is a placeholder for a future Vexo Labs write-up. I&apos;ll swap
-          in the actual story, visuals, and technical details later, but for now
-          the page is set up in the portfolio so the structure is already there
-          when I&apos;m ready to fill it in properly.
+          In late 2025, I founded{' '}
+          <a href={VEXO_LABS_URL} target="_blank" rel="noreferrer">
+            Vexo Labs
+          </a>{' '}
+          with some friends. We aim to help democratize investing and building
+          wealth. I&apos;m proud to have had this start-up accepted into
+          Canada&apos;s top accelerator, Waterloo&apos;s{' '}
+          <a href={ACCELERATOR_CENTRE_URL} target="_blank" rel="noreferrer">
+            Accelerator Centre
+          </a>
+          . We are currently about to start beta testing with volunteer users.
         </TitleImageText>
         <TitleImageText
           image={MachineLearningImage}
