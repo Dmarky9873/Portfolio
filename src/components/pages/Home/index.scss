@@ -51,8 +51,8 @@
         color: var(--accent-color, $tertiary-color);
         font-size: 18px;
         position: absolute;
-        margin-top: 18px;
-        margin-left: 20px;
+        top: calc(100%);
+        left: 20px;
         opacity: 0.6;
       }
 
@@ -162,7 +162,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: none;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
     animation: home-chip-enter 0.55s var(--palette-action-delay) backwards;
 
     &:hover {
@@ -251,8 +253,8 @@
 
       h1 {
         &:after {
-          margin-top: 40px;
-          margin-left: 8px;
+          top: calc(100% + 28px);
+          left: 8px;
         }
       }
     }
@@ -265,8 +267,7 @@
   }
 
   .home-page h1::after {
-    margin-left: 0;
-    margin-top: 40px;
+    top: calc(100% + 28px);
     left: -10px;
   }
 
@@ -365,7 +366,9 @@
       opacity: 0;
       pointer-events: none;
       transform: translateY(10px) scale(0.98);
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
       animation: none;
     }
 
