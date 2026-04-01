@@ -4,7 +4,7 @@ import LoadingAnimation from '../../../../elements/LoadingAnimation';
 import AnimatedLetters from '../../../../elements/AnimatedLetters';
 import Paragraph from '../../../../elements/Paragraph';
 import FullLineImage from '../../../../elements/FullLineImage';
-import PlaceholderOne from '../../../../../assets/images/portfolio/first-rbc-internship/at-the-desk.JPG';
+import SecondRBCInternshipCover from '../../../../../assets/images/portfolio/second-rbc-internship/cover-upright.jpg';
 import PlaceholderTwo from '../../../../../assets/images/portfolio/first-rbc-internship/breakfast.JPG';
 import PlaceholderThree from '../../../../../assets/images/portfolio/first-rbc-internship/in-the-food-court.JPG';
 import PlaceholderFour from '../../../../../assets/images/portfolio/first-rbc-internship/nice-view.JPG';
@@ -82,9 +82,9 @@ const SecondRBCInternship = () => {
           </Paragraph>
           <div className="img-container">
             <FullLineImage
-              imageSource={PlaceholderOne}
+              imageSource={SecondRBCInternshipCover}
               width="100%"
-              imageAlt="Placeholder image for the second RBC Summer Tech Labs internship page."
+              imageAlt="Group selfie from the second RBC Summer Tech Labs internship."
             />
           </div>
           <Paragraph textAlign="left" width="100%">

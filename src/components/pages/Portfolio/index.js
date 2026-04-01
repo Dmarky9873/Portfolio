@@ -7,7 +7,7 @@ import Footer from '../../elements/Footer';
 import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg';
 import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG';
 import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png';
-import PlaceholderInternshipImage from '../../../assets/images/portfolio/first-rbc-internship/nice-view.JPG';
+import SecondRBCInternshipCover from '../../../assets/images/portfolio/second-rbc-internship/cover-upright.jpg';
 import VexoLabsImage from '../../../assets/images/portfolio/first-rbc-internship/in-the-food-court.JPG';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 
@@ -74,17 +74,20 @@ const Portfolio = () => {
           failed to work as a team and solve whatever challenge we came across.
         </TitleImageText>
         <TitleImageText
-          image={PlaceholderInternshipImage}
-          imageAlt="Placeholder image for the second RBC Summer Tech Labs internship page"
+          image={SecondRBCInternshipCover}
+          imageAlt="Group selfie from the second RBC Summer Tech Labs internship"
           link="/portfolio/second-innovation-developer-internship"
           title="RBC Summer Tech Labs Second Internship"
           date="2025"
         >
-          This page is a placeholder for my second RBC Summer Tech Labs
-          internship. I&apos;ll replace this summary with the real story, the
-          team I worked with, the project we built, and the lessons that stood
-          out most from returning for a second term. For now, it exists so the
-          full structure is ready and easy to update later.
+          After completing my first internship in the summer of 2024, I received
+          a return offer for the next summer (the summer between grade 12 and
+          first-year university). Coming into the internship with an idea of how
+          it was going to work and what I was going to do, I made it my goal to
+          meet as many people and to do the best possible work for the team to
+          which I was assigned. I met the first goal, evidenced by a return
+          offer I got for first year summer. I met the second goal by winning
+          RBC Summer Tech Labs "Most Innovative Solution."
         </TitleImageText>
         <TitleImageText
           image={VexoLabsImage}
@@ -94,9 +97,9 @@ const Portfolio = () => {
           date="2025"
         >
           This is a placeholder for a future Vexo Labs write-up. I&apos;ll swap
-          in the actual story, visuals, and technical details later, but for
-          now the page is set up in the portfolio so the structure is already
-          there when I&apos;m ready to fill it in properly.
+          in the actual story, visuals, and technical details later, but for now
+          the page is set up in the portfolio so the structure is already there
+          when I&apos;m ready to fill it in properly.
         </TitleImageText>
         <TitleImageText
           image={MachineLearningImage}
