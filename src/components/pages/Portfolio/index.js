@@ -7,7 +7,7 @@ import Footer from '../../elements/Footer';
 import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg';
 import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG';
 import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png';
-import SecondRBCInternshipCover from '../../../assets/images/portfolio/second-rbc-internship/cover-upright.jpg';
+import SecondRBCInternshipCover from '../../../assets/images/portfolio/second-rbc-internship/team-selfie-downtown.jpg';
 import VexoLabsImage from '../../../assets/images/portfolio/first-rbc-internship/in-the-food-court.JPG';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 

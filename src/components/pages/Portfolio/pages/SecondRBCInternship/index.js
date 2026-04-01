@@ -4,10 +4,11 @@ import LoadingAnimation from '../../../../elements/LoadingAnimation';
 import AnimatedLetters from '../../../../elements/AnimatedLetters';
 import Paragraph from '../../../../elements/Paragraph';
 import FullLineImage from '../../../../elements/FullLineImage';
-import SecondRBCInternshipCover from '../../../../../assets/images/portfolio/second-rbc-internship/cover-upright.jpg';
-import PlaceholderTwo from '../../../../../assets/images/portfolio/first-rbc-internship/breakfast.JPG';
-import PlaceholderThree from '../../../../../assets/images/portfolio/first-rbc-internship/in-the-food-court.JPG';
-import PlaceholderFour from '../../../../../assets/images/portfolio/first-rbc-internship/nice-view.JPG';
+import AwardCertificate from '../../../../../assets/images/portfolio/second-rbc-internship/award-certificate.jpg';
+import DadSelfie from '../../../../../assets/images/portfolio/second-rbc-internship/dad-selfie.jpg';
+import TeamDinner from '../../../../../assets/images/portfolio/second-rbc-internship/team-dinner.jpg';
+import TeamSelfieDowntown from '../../../../../assets/images/portfolio/second-rbc-internship/team-selfie-downtown.jpg';
+import TeamSelfiePark from '../../../../../assets/images/portfolio/second-rbc-internship/team-selfie-park.jpg';
 
 import './index.scss';
 
@@ -39,7 +40,7 @@ const SecondRBCInternship = () => {
               idx={9}
               letterClass={letterClass}
             />
-          </span>
+          </span>{' '}
           <br className="mobile-break" />
           <span className="title-word">
             <AnimatedLetters
@@ -74,59 +75,75 @@ const SecondRBCInternship = () => {
 
         <div className="text-area">
           <Paragraph textAlign="left" width="100%">
-            This page is a placeholder for my second RBC Summer Tech Labs
-            internship. I&apos;ll replace this section with the real write-up
-            later, including what team I joined, what I built, and how the role
-            evolved compared with my first internship. For now, the goal is
-            simply to have the full page structure ready to go.
+            Over the summer of 2025, I had the pleasure of working with Kaibo
+            Huang, Divya Sivaram, and Roshan Iruku at RBC as a high school
+            intern. While there, we were tasked with developing a tool for
+            Apollo SREs to improve their deployment of API proxies. Yeah
+            that&apos;s a mouthful, but I&apos;ll try and explain.
           </Paragraph>
           <div className="img-container">
             <FullLineImage
-              imageSource={SecondRBCInternshipCover}
+              imageSource={TeamSelfieDowntown}
               width="100%"
-              imageAlt="Group selfie from the second RBC Summer Tech Labs internship."
+              imageAlt="Outdoor group selfie with the second RBC Summer Tech Labs internship team."
             />
           </div>
           <Paragraph textAlign="left" width="100%">
-            I plan to use this section to talk about the work itself: the
-            project area, the technologies involved, the people I collaborated
-            with, and the kinds of engineering decisions I got to participate
-            in. I also want to capture what felt different about returning with
-            more context and confidence the second time around.
+            For a bank, security is everything. This includes their APIs. For
+            the uninitiated, an API is how the frontend and backend of a product
+            communicate; for example, if you want to check your bank account
+            balance on your RBC bank app, the app doesn&apos;t just have this
+            data locally stored; it has to retrieve it USING AN API, from
+            RBC&apos;s backend servers.
           </Paragraph>
           <div className="img-container">
             <FullLineImage
-              imageSource={PlaceholderTwo}
+              imageSource={DadSelfie}
               width="100%"
-              imageAlt="Placeholder image for the second RBC Summer Tech Labs internship page."
+              imageAlt="Photo from the second RBC Summer Tech Labs internship."
             />
           </div>
           <Paragraph textAlign="left" width="100%">
-            Another part of the final version will focus on the day-to-day
-            experience: how the internship was structured, how the pod worked,
-            and what I learned from working through a full summer of design,
-            implementation, iteration, and review. This filler copy is just
-            standing in until I add the real details.
+            Now, back to security. As I said, security is everything for a bank.
+            You don&apos;t want to take any risks of some bad actor reading your
+            bank account information. This is where API proxies come in. They
+            act as an in-house protective layer that goes on top of the API
+            vendor that RBC uses (which itself is already pentagon-level secure,
+            RBC just wants to add its own touch).
           </Paragraph>
           <div className="img-container">
             <FullLineImage
-              imageSource={PlaceholderThree}
+              imageSource={TeamSelfiePark}
               width="100%"
-              imageAlt="Placeholder image for the second RBC Summer Tech Labs internship page."
+              imageAlt="Team photo from an outing during the second RBC Summer Tech Labs internship."
             />
           </div>
           <Paragraph textAlign="left" width="100%">
-            The images throughout this page are temporary placeholders as well.
-            I&apos;ll swap them out for the actual screenshots and photos I want
-            to keep in the portfolio once I&apos;ve chosen the final set. The
-            finished page will keep this same overall structure, just with the
-            proper content in place.
+            These proxies are a pain in the ass to use and deploy, however; we
+            calculated that for all SREs (the people in charge of API
+            deployments) in any given week, they lose around 9 hours of time
+            just setting up these API proxies for testing/deployment. Through
+            the dashboard we built, we cut this down by 83%, bringing that 9
+            hour number to just 90 mins.
           </Paragraph>
           <div className="img-container">
             <FullLineImage
-              imageSource={PlaceholderFour}
+              imageSource={TeamDinner}
               width="100%"
-              imageAlt="Placeholder image for the second RBC Summer Tech Labs internship page."
+              imageAlt="Team dinner during the second RBC Summer Tech Labs internship."
+            />
+          </div>
+          <Paragraph textAlign="left" width="100%">
+            This huge improvement is how we won the most innovative solution for
+            the 2025 Innovation Developer cohort. It was a blast to build and
+            &quot;innovate&quot; with everyone this year, and I am super
+            grateful for the return offer I got for my first year summer!
+          </Paragraph>
+          <div className="img-container">
+            <FullLineImage
+              imageSource={AwardCertificate}
+              width="100%"
+              imageAlt="Certificate for most innovative solution at RBC Summer Tech Labs."
             />
           </div>
         </div>
