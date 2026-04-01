@@ -40,13 +40,24 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .current-place-container {
+    animation: none;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .current-place-container {
     grid-template-columns: 1fr;
     gap: 6px;
+    padding: 14px 0;
 
     .current-place-category {
       font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 1.9rem;
     }
   }
 }

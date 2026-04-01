@@ -8,7 +8,7 @@ import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux
 import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG';
 import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png';
 import SecondRBCInternshipCover from '../../../assets/images/portfolio/second-rbc-internship/team-selfie-downtown.jpg';
-import VexoLabsImage from '../../../assets/images/portfolio/first-rbc-internship/in-the-food-court.JPG';
+import VexoLabsImage from '../../../assets/images/portfolio/vexo-labs/preview.png';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 
 const RESEARCH_GATE_URL =
@@ -20,9 +20,11 @@ const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
-    return setTimeout(() => {
+    const timeoutId = window.setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 2500);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -93,7 +95,7 @@ const Portfolio = () => {
         </TitleImageText>
         <TitleImageText
           image={VexoLabsImage}
-          imageAlt="Placeholder image for the Vexo Labs page"
+          imageAlt="Vexo Labs logo preview"
           link="/portfolio/vexo-labs"
           title="Vexo Labs"
           date="2025"

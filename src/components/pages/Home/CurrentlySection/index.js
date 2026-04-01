@@ -3,7 +3,7 @@ import AnimatedLetters from '../../../elements/AnimatedLetters';
 import './index.scss';
 import CurrentPlace from './CurrentPlace';
 
-const Currently = () => {
+const Currently = ({ isMobileOpen, onToggleMobile }) => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const currentPlaces = [
     {
@@ -25,8 +25,27 @@ const Currently = () => {
   }, []);
 
   return (
-    <div className="currently-section">
-      <div className="background">
+    <div
+      className={`currently-section${
+        isMobileOpen ? ' currently-section--mobile-open' : ''
+      }`}
+    >
+      <button
+        type="button"
+        className="currently-section__toggle"
+        onClick={onToggleMobile}
+        aria-expanded={isMobileOpen}
+        aria-controls="mobile-currently-panel"
+      >
+        <span>Currently</span>
+        <span className="currently-section__toggle-count">
+          {currentPlaces.length}
+        </span>
+      </button>
+      <div className="background" id="mobile-currently-panel">
+        <div className="currently-section__panel-header">
+          <p className="currently-section__eyebrow">Current</p>
+        </div>
         <h1>
           <AnimatedLetters
             letterClass={letterClass}

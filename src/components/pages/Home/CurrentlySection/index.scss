@@ -8,6 +8,11 @@
   justify-content: center;
   animation: currently-enter 0.85s 2.2s backwards;
 
+  .currently-section__toggle,
+  .currently-section__panel-header {
+    display: none;
+  }
+
   .background {
     background-color: var(--surface-color, $secondary-color);
     padding: 20px;
@@ -58,8 +63,87 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .currently-section {
+    width: auto;
+    padding: 0;
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 2;
+    animation: none;
+
+    .currently-section__toggle {
+      min-height: 48px;
+      padding: 0 16px;
+      border: 1px solid var(--border-color, rgba(255, 255, 255, 0.14));
+      border-radius: 999px;
+      background: var(--surface-color, rgba(24, 24, 24, 0.9));
+      color: var(--text-color, $title-text-color);
+      font-family: 'Coolvetica', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.04rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 18px 36px var(--card-shadow, rgba(0, 0, 0, 0.35));
+    }
+
+    .currently-section__toggle-count {
+      color: var(--accent-color, $tertiary-color);
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .background {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 12px);
+      width: min(calc(100vw - 32px), 320px);
+      padding: 16px;
+      gap: 14px;
+      border-radius: 24px;
+      box-shadow: 0 18px 36px var(--card-shadow, rgba(0, 0, 0, 0.35));
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px) scale(0.98);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      animation: none;
+    }
+
+    .currently-section__panel-header {
+      display: block;
+    }
+
+    .currently-section__eyebrow {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 0.24rem;
+      text-transform: uppercase;
+      color: var(--accent-color, $tertiary-color);
+    }
+
+    &.currently-section--mobile-open .background {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 4rem);
+      margin: 0;
+    }
+  }
+}
+
 @media screen and (max-width: 560px) {
-  .currently-section .background {
-    padding: 18px;
+  .currently-section {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+
+    .background {
+      width: min(calc(100vw - 24px), 300px);
+      padding: 16px;
+    }
   }
 }
