@@ -1,23 +1,27 @@
 $max-width: 700px;
 
 .image-text-container {
-  padding-left: 100px;
-  padding-right: 100px;
+  width: min(1120px, 100%);
+  padding-left: clamp(24px, 7vw, 100px);
+  padding-right: clamp(24px, 7vw, 100px);
+  box-sizing: border-box;
 }
 
 .image-text-container.y {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 90%;
+  width: min(1120px, 90%);
   justify-content: center;
   align-items: center;
   p {
     max-width: $max-width;
+    margin: 0;
   }
   img {
     width: 80%;
     max-width: $max-width;
+    border-radius: 22px;
   }
 }
 
@@ -26,10 +30,13 @@ $max-width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: clamp(24px, 4vw, 48px);
   img {
-    width: 70%;
+    width: min(50%, $max-width);
     max-width: $max-width;
-    padding-right: 50px;
+    padding-right: 0;
+    border-radius: 22px;
+    flex-shrink: 0;
   }
 }
 .image-text-container.x.left {
@@ -37,11 +44,21 @@ $max-width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: clamp(24px, 4vw, 48px);
   img {
-    width: 70%;
+    width: min(50%, $max-width);
     max-width: $max-width;
-    padding-left: 50px;
+    padding-left: 0;
+    border-radius: 22px;
+    flex-shrink: 0;
   }
+}
+
+.image-text-container img.image-text__portrait {
+  width: min(34%, 360px);
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -49,12 +66,20 @@ $max-width: 700px;
   .image-text-container.x.right,
   .image-text-container.y {
     text-align: center;
-    width: 90%;
-    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
     img {
-      width: 80%;
+      width: 100%;
       max-width: $max-width;
       padding: 0;
     }
+  }
+
+  .image-text-container img.image-text__portrait {
+    width: min(100%, 420px);
+    max-height: none;
   }
 }

@@ -1,7 +1,7 @@
 import './index.scss';
 import { useState, useEffect, useRef } from 'react';
-import LogoS from '../../../assets/images/logos/logo-d.png';
-import LogoSubtitle from '../../../assets/images/logos/logo_sub.png';
+import LogoMark from '../../../assets/images/logos/logo-d-svg.svg';
+import LogoSubtitleMask from '../../../assets/images/logos/logo_sub.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
@@ -16,12 +16,15 @@ import {
   faBars,
   faClose,
   faBriefcase,
+  faFileLines,
 } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
   const navRef = useRef(null);
+  const getNavLinkClassName = (baseClassName = '') => ({ isActive }) =>
+    `${baseClassName}${isActive ? ' active' : ''}`.trim();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -39,51 +42,80 @@ const Sidebar = () => {
   return (
     <div className="nav-bar" ref={navRef}>
       <div className="logo-border">
-        <Link className="logo" to="/" onClick={() => setShowNav(false)}>
-          <img src={LogoS} alt="Logo" />
-          <img className="sub-logo" src={LogoSubtitle} alt="Daniel" />
+        <Link
+          className="logo"
+          to="/"
+          aria-label="Daniel Markusson home"
+          onClick={() => setShowNav(false)}
+        >
+          <span
+            className="logo-mark"
+            aria-hidden="true"
+            style={{
+              WebkitMaskImage: `url(${LogoMark})`,
+              maskImage: `url(${LogoMark})`,
+            }}
+          />
+          <span
+            className="logo-subtitle"
+            aria-hidden="true"
+            style={{
+              WebkitMaskImage: `url(${LogoSubtitleMask})`,
+              maskImage: `url(${LogoSubtitleMask})`,
+            }}
+          />
         </Link>
       </div>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink
-          exact="true"
-          activeclassname="active"
+          end
+          aria-label="Home"
+          className={getNavLinkClassName()}
           to="/"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faHome} />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="portfolio-link"
+          aria-label="Portfolio"
+          className={getNavLinkClassName('portfolio-link')}
           to="/portfolio"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faBriefcase} />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="about-link"
+          aria-label="Writing"
+          className={getNavLinkClassName('writing-link')}
+          to="/writing"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faFileLines} />
+        </NavLink>
+        <NavLink
+          aria-label="About"
+          className={getNavLinkClassName('about-link')}
           to="/about"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faUser} />
         </NavLink>
         <NavLink
-          activeclassname="active"
-          className="contact-link"
+          aria-label="Contact"
+          className={getNavLinkClassName('contact-link')}
           to="/contact"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
-        <FontAwesomeIcon
+        <button
+          type="button"
+          className="nav-toggle close-icon"
           onClick={() => setShowNav(false)}
-          icon={faClose}
-          color="#ffd700"
-          size="3x"
-          className="close-icon"
-        />
+          aria-label="Close navigation"
+        >
+          <FontAwesomeIcon icon={faClose} />
+        </button>
       </nav>
       <ul>
         <li>
@@ -91,12 +123,9 @@ const Sidebar = () => {
             href="https://www.linkedin.com/in/daniel-markusson-61a4a8263/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
           >
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              color="#4d4d4e"
-              className="anchor-icon"
-            />
+            <FontAwesomeIcon icon={faLinkedin} className="anchor-icon" />
           </a>
         </li>
         <li>
@@ -104,12 +133,9 @@ const Sidebar = () => {
             href="https://github.com/Dmarky9873"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
           >
-            <FontAwesomeIcon
-              icon={faGithub}
-              color="#4d4d4e"
-              className="anchor-icon"
-            />
+            <FontAwesomeIcon icon={faGithub} className="anchor-icon" />
           </a>
         </li>
         <li>
@@ -117,12 +143,9 @@ const Sidebar = () => {
             href="https://www.youtube.com/@DanielMarkusson"
             rel="noreferrer"
             target="_blank"
+            aria-label="YouTube"
           >
-            <FontAwesomeIcon
-              icon={faYoutube}
-              color="#4d4d4e"
-              className="anchor-icon"
-            />
+            <FontAwesomeIcon icon={faYoutube} className="anchor-icon" />
           </a>
         </li>
         <li>
@@ -130,22 +153,20 @@ const Sidebar = () => {
             href="https://www.instagram.com/daniel_markusson/"
             rel="noreferrer"
             target="_blank"
+            aria-label="Instagram"
           >
-            <FontAwesomeIcon
-              icon={faInstagram}
-              color="#4d4d4e"
-              className="anchor-icon"
-            />
+            <FontAwesomeIcon icon={faInstagram} className="anchor-icon" />
           </a>
         </li>
       </ul>
-      <FontAwesomeIcon
+      <button
+        type="button"
+        className="nav-toggle hamburger-icon"
         onClick={() => setShowNav(true)}
-        icon={faBars}
-        color="#ffd700"
-        size="3x"
-        className="hamburger-icon"
-      />
+        aria-label="Open navigation"
+      >
+        <FontAwesomeIcon icon={faBars} />
+      </button>
     </div>
   );
 };

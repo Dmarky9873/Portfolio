@@ -5,7 +5,7 @@
   opacity: 0;
   animation: bounceIn;
   animation-duration: 1s;
-  animation-delay: 1s;
+  animation-delay: var(--letter-delay, 1s);
   animation-fill-mode: forwards;
   min-width: 10px;
 }
@@ -13,16 +13,11 @@
 .text-animate-hover {
   min-width: 10px;
   display: inline-block;
+  opacity: 1;
   animation-fill-mode: both;
 
   &:hover {
     animation: rubberBand 1s;
-    color: $primary-color;
-  }
-}
-
-@for $i from 1 through 35 {
-  .text-animate._#{$i} {
-    animation-delay: #{calc($i / 10)}s;
+    color: var(--accent-color, $tertiary-color);
   }
 }

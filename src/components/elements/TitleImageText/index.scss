@@ -1,20 +1,23 @@
-@use "../../../variables" as *;
-
 .title-image-text-container {
-  width: 80%;
+  width: min(1100px, 80%);
   display: flex;
   text-align: left;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; // Added transition
-  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: clamp(18px, 2vw, 28px);
+  box-sizing: border-box;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); // Adds a soft shadow for a floating effect
+    box-shadow: 0 18px 40px var(--card-shadow, rgba(0, 0, 0, 0.35));
 
     .text-mask {
       transform: translateX(0);
     }
+
     .text-overlay {
       transform: translateX(0);
     }
@@ -25,6 +28,8 @@
   .title-date-container {
     display: flex;
     justify-content: space-between;
+    gap: 18px;
+
     .date-container {
       min-width: fit-content;
       text-align: right;
@@ -33,20 +38,28 @@
       align-items: center;
     }
   }
+
   p {
     width: 100%;
+    margin: 0;
   }
+
   a {
     color: white;
   }
+
   .body-container {
     display: flex;
     width: 100%;
     height: auto;
-    gap: 5vh;
+    gap: clamp(24px, 4vw, 42px);
     align-items: center;
+
     img {
-      width: 35%;
+      width: min(35%, 320px);
+      min-width: 240px;
+      border-radius: 18px;
+      object-fit: cover;
     }
   }
 }
@@ -55,6 +68,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .text-mask,
 .text-overlay {
   transition: all ease-in-out 500ms;
@@ -68,8 +82,9 @@
   position: absolute;
   transform: translateX(-100%);
   overflow: hidden;
-  h3 {
-    color: $primary-color;
+
+  .text-overlay {
+    color: var(--accent-color, #ffd700);
   }
 }
 
@@ -77,45 +92,49 @@
   transform: translateX(100%);
 }
 
-h3 {
-  font-size: 50px;
-  color: white;
-  font-family: "Coolvetica", sans-serif;
+.title-image-text-container h3 {
+  font-size: clamp(3.6rem, 5vw, 5rem);
+  color: var(--text-color, white);
+  font-family: 'Coolvetica', sans-serif;
   min-width: fit-content;
   font-weight: 300;
+  margin: 0;
 }
 
-h3:hover {
-  cursor: pointer;
-  // color: $primary-color;
-}
-
-h4 {
-  font-size: 20px;
-  color: white;
+.title-image-text-container h4 {
+  font-size: 2rem;
+  color: var(--text-color, white);
   font-family: sans-serif;
   font-weight: 300;
+  margin: 0;
 }
 
 @media screen and (max-width: 1200px) {
   .title-image-text-container {
+    width: calc(100% - 48px);
+
     .body-container {
       flex-direction: column;
       text-align: center;
-      gap: 0;
+      gap: 20px;
+
       img {
-        width: 80%;
+        width: 100%;
+        min-width: 0;
       }
     }
+
     .title-date-container {
       flex-direction: column;
       max-height: fit-content;
       text-align: center;
       align-items: center;
-      gap: 0vh;
+      gap: 4px;
+
       h3 {
         margin: 0;
       }
+
       .date-container {
         text-align: center;
         max-width: fit-content;

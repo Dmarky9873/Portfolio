@@ -2,16 +2,22 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from '../elements/Sidebar/';
 import './index.scss';
 import { useEffect, useState } from 'react';
-import ScrollToTop from '../elements/ScrollToTop'
-
+import ScrollToTop from '../elements/ScrollToTop';
 
 const Layout = () => {
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const nonTopTagPages = [
     '/about',
     '/contact',
     '/portfolio',
+    '/writing',
     '/portfolio/advanced-robotics',
+    '/portfolio/a-minimal-approach-to-fake-news-detection',
+    '/writing/hume-on-violations-of-the-laws-of-nature',
+    '/writing/rlg211-paper-1',
+    '/writing/rlg211-paper-2',
+    '/writing/rlg211-paper-3',
   ];
   let isNonTopTagPage = false;
   for (let i = 0; i < nonTopTagPages.length; i++) {
@@ -24,9 +30,17 @@ const Layout = () => {
   const nonBottomTagPages = [
     '/about',
     '/portfolio',
+    '/writing',
     '/contact',
     '/portfolio/advanced-robotics',
     '/portfolio/first-innovation-developer-internship',
+    '/portfolio/second-innovation-developer-internship',
+    '/portfolio/vexo-labs',
+    '/portfolio/a-minimal-approach-to-fake-news-detection',
+    '/writing/hume-on-violations-of-the-laws-of-nature',
+    '/writing/rlg211-paper-1',
+    '/writing/rlg211-paper-2',
+    '/writing/rlg211-paper-3',
   ];
   let isNonBottompage = false;
   for (let i = 0; i < nonBottomTagPages.length; i++) {
@@ -46,10 +60,20 @@ const Layout = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle('route-home', isHomePage);
+    document.body.classList.toggle('route-home', isHomePage);
+
+    return () => {
+      document.documentElement.classList.remove('route-home');
+      document.body.classList.remove('route-home');
+    };
+  }, [isHomePage]);
+
   return (
     <div className="App">
       <Sidebar />
-      <div className="page">
+      <div className={`page${isHomePage ? ' page--home' : ''}`}>
         <ScrollToTop />
         {(!isNonTopTagPage || isWide) && (
           <span className="tags top-tags">&lt;body&gt;</span>

@@ -1,81 +1,147 @@
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../elements/AnimatedLetters';
-import Logo from './Logo';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 import './index.scss';
+import Currently from './CurrentlySection';
 
-const Home = () => {
+const Home = ({
+  activeTheme,
+  themePreview,
+  onRandomizeTheme,
+  onSetDarkTheme,
+  onSetLightTheme,
+  onResetTheme,
+}) => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   const nameArray = ' Daniel'.split('');
+  const paletteActions = [
+    {
+      id: 'randomize',
+      label: 'Randomize',
+      className: 'palette-picker__action--randomize',
+      onClick: onRandomizeTheme,
+    },
+    {
+      id: 'dark',
+      label: 'Just gimme dark mode',
+      className: 'palette-picker__action--dark',
+      onClick: onSetDarkTheme,
+    },
+    {
+      id: 'light',
+      label: 'Just gimmie light mode',
+      className: 'palette-picker__action--light',
+      onClick: onSetLightTheme,
+    },
+    {
+      id: 'reset',
+      label: 'Reset',
+      className: 'palette-picker__action--reset',
+      onClick: onResetTheme,
+    },
+  ];
 
   useEffect(() => {
-    return setTimeout(() => {
+    const timeoutId = window.setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 4000);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   return (
     <>
       <div className="container home-page">
         <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['H', 'i', ',']}
-              idx={9}
-            />
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={['I', "'", 'm']}
-              idx={12}
-            />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              idx={12}
-            />
-            <br />
-            <span style={{ whiteSpace: 'nowrap' }}>
+          <div className="home-copy">
+            <h1>
               <AnimatedLetters
                 letterClass={letterClass}
-                strArray={'I'.split('')}
-                idx={10}
+                strArray={['H', 'i', ',']}
+                idx={9}
               />
-            </span>{' '}
-            <span style={{ whiteSpace: 'nowrap' }}>
+              <br />
               <AnimatedLetters
                 letterClass={letterClass}
-                strArray={'bridge'.split('')}
-                idx={11}
+                strArray={['I', "'", 'm']}
+                idx={12}
               />
-            </span>{' '}
-            <span style={{ whiteSpace: 'nowrap' }}>
               <AnimatedLetters
                 letterClass={letterClass}
-                strArray={'tech'.split('')}
-                idx={17}
+                strArray={nameArray}
+                idx={12}
               />
-            </span>{' '}
-            <span style={{ whiteSpace: 'nowrap' }}>
-              <AnimatedLetters
-                letterClass={letterClass}
-                strArray={'and'.split('')}
-                idx={21}
-              />
-            </span>{' '}
-            <span style={{ whiteSpace: 'nowrap' }}>
-              <AnimatedLetters
-                letterClass={letterClass}
-                strArray={'finance.'.split('')}
-                idx={24}
-              />
-            </span>
-          </h1>
-          <h2>I design things that perform under pressure.</h2>
+              <br />
+              <span style={{ whiteSpace: 'nowrap' }}>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={'I'.split('')}
+                  idx={10}
+                />
+              </span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={'bridge'.split('')}
+                  idx={11}
+                />
+              </span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={'tech'.split('')}
+                  idx={17}
+                />
+              </span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={'and'.split('')}
+                  idx={21}
+                />
+              </span>{' '}
+              <span style={{ whiteSpace: 'nowrap' }}>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={'finance.'.split('')}
+                  idx={24}
+                />
+              </span>
+            </h1>
+            <h2>I design things that perform under pressure.</h2>
+
+            <section className="palette-picker" aria-label="Color palette controls">
+              <div className="palette-picker__header">
+                <div className="palette-picker__summary">
+                  <p className="palette-picker__eyebrow">Palette</p>
+                  <div className="palette-picker__swatches" aria-hidden="true">
+                    {themePreview.map((swatch, index) => (
+                      <span
+                        key={`${activeTheme.id}-${index}`}
+                        style={{ backgroundColor: swatch }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="palette-picker__actions">
+                {paletteActions.map((action) => (
+                  <button
+                    key={action.id}
+                    type="button"
+                    className={`palette-picker__action ${action.className}`}
+                    onClick={action.onClick}
+                  >
+                    {action.label}
+                  </button>
+                ))}
+              </div>
+            </section>
+          </div>
         </div>
-        <Logo />
+        <Currently />
       </div>
       <LoadingAnimation />
     </>

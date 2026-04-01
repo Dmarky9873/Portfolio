@@ -1,25 +1,30 @@
 .advanced-robotics.container {
   position: relative;
   h1 {
-    margin-left: 10vw;
-    margin-top: 10vh;
+    margin-left: clamp(24px, 8vw, 10vw);
+    margin-top: clamp(48px, 10vh, 10vh);
   }
   .text-area {
     margin: auto;
-    width: 70%;
-    margin-top: 150px;
+    width: min(960px, 78%);
+    margin-top: clamp(48px, 8vh, 150px);
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: clamp(24px, 5vh, 44px);
     margin-bottom: 10vh;
+    padding: 0 24px;
+    box-sizing: border-box;
 
     .img-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      
+
       iframe {
+        width: 100%;
         max-width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
       }
     }
   }
@@ -29,15 +34,15 @@
   display: none;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 640px) {
   .advanced-robotics.container {
     .text-area {
-      width: 90%;
+      width: 100%;
+      padding: 0 20px;
     }
   }
   .mobile-break {
     display: block;
   }
 }
-
 

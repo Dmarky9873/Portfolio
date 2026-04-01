@@ -1,0 +1,45 @@
+.minimal-fake-news-page.container {
+  position: relative;
+
+  h1 {
+    margin-left: clamp(24px, 8vw, 10vw);
+    margin-top: clamp(48px, 10vh, 10vh);
+  }
+
+  .title-word {
+    white-space: nowrap;
+  }
+
+  .text-area {
+    margin: auto;
+    width: min(1020px, 82%);
+    margin-top: clamp(48px, 8vh, 150px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, 5vh, 40px);
+    margin-bottom: 10vh;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .minimal-fake-news-page.container {
+    h1 {
+      max-width: min(100%, 12ch);
+    }
+
+    .text-area {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  .mobile-break {
+    display: block;
+  }
+}

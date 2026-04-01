@@ -1,4 +1,23 @@
 .title-area {
-  margin-top: 10vh;
-  width: 80%;
+  margin-top: clamp(48px, 10vh, 96px);
+  width: min(1100px, 80%);
+  padding: 0 clamp(24px, 5vw, 64px);
+  box-sizing: border-box;
+}
+
+.container.about-page > .paragraph-container {
+  padding: 0 clamp(24px, 5vw, 64px);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  .title-area {
+    width: 100%;
+    margin-top: 24px;
+    padding: 0 24px;
+  }
+
+  .container.about-page > .paragraph-container {
+    padding: 0 24px;
+  }
 }
