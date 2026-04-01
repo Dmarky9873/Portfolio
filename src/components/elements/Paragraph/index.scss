@@ -1,5 +1,12 @@
 .paragraph-container {
   display: block;
+  width: 100%;
+  max-width: var(--paragraph-max-width, 100%);
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+  }
 }
 
 .paragraph-container.center {
@@ -19,11 +26,14 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .paragraph-container {
+    max-width: 100%;
+  }
+
   .paragraph-container.left,
   .paragraph-container.right {
     text-align: center;
   }
 }
-
 
 

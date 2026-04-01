@@ -5,9 +5,17 @@
   display: flex;
   justify-content: center;
   img {
+    width: 100%;
     height: auto;
     display: block;
-    max-height: 30vh;
-    object-fit: contain; 
+    max-height: min(55vh, 540px);
+    object-fit: contain;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .full-line-image-container img {
+    max-height: none;
   }
 }

@@ -1,0 +1,119 @@
+@import '../../../../_variables.scss';
+
+.currently-section {
+  width: min(100%, 420px);
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  .background {
+    background-color: var(--surface-color, $secondary-color);
+    background-image: radial-gradient(
+        circle at top right,
+        rgba(255, 255, 255, 0.08),
+        transparent 42%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.02)
+      );
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 45px var(--card-shadow, rgba(0, 0, 0, 0.35));
+
+    .current-places-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+
+  .currently-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .currently-kicker,
+  .currently-description {
+    margin: 0;
+  }
+
+  .currently-kicker {
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: var(--accent-color, $tertiary-color);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    color: var(--text-color, $title-text-color);
+    font-size: clamp(3.2rem, 4vw, 5.6rem);
+    line-height: 0.95;
+    margin: 0;
+    font-family: 'Coolvetica';
+    font-weight: 400;
+  }
+
+  .currently-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color, $title-text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-color, $tertiary-color);
+      box-shadow: 0 0 12px var(--accent-color, $tertiary-color);
+    }
+  }
+
+  .currently-description {
+    font-size: 1.45rem;
+    line-height: 1.6;
+    color: var(--muted-text-color, #dcdcdc);
+    max-width: 34ch;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .currently-section {
+    width: 100%;
+    padding: 0 24px 24px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .currently-section {
+    .background {
+      padding: 20px;
+    }
+
+    .currently-heading {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

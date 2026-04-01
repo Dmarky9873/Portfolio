@@ -1,84 +1,206 @@
 @import '../../../_variables.scss';
 
 .home-page {
-  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 4vw, 70px);
+  padding: clamp(120px, 16vh, 160px) clamp(24px, 5vw, 64px) 40px;
+  box-sizing: border-box;
   .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
-    padding-top: 40px;
-  }
+    padding-left: clamp(10px, 2vw, 24px);
+    width: min(58%, 760px);
+    max-height: none;
+    padding-top: 0;
 
-  h1 {
-    color: #fff;
-    font-size: 56px;
-    line-height: 53px;
-    margin: 0;
-    font-family: "Coolvetica";
-    font-weight: 400;
-
-    &:before {
-      content: "<h1>";
-      font-family: "La Belle Aurore", cursive;
-      color: $primary-color;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: -10px;
-      opacity: 0.6;
+    .home-copy {
+      max-width: 720px;
     }
 
-    &:after {
-      content: "<h1/>";
-      font-family: "La Belle Aurore", cursive;
-      color: $primary-color;
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      opacity: 0.6;
-    }
+    h1 {
+      position: relative;
+      color: var(--text-color, #fff);
+      font-size: clamp(5.6rem, 7vw, 8rem);
+      line-height: 0.95;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: 400;
 
-    img {
-      margin-left: 20px;
-      opacity: 0;
-      width: 32px;
-      height: auto;
-      animation: rotateIn 1s linear both;
-      animation-delay: 1.4s;
+      &:before {
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
+        color: var(--accent-color, $tertiary-color);
+        font-size: 18px;
+        position: absolute;
+        top: -30px;
+        left: 0;
+        opacity: 0.6;
+      }
+
+      &:after {
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
+        color: var(--accent-color, $tertiary-color);
+        font-size: 18px;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: 20px;
+        opacity: 0.6;
+      }
+
+      img {
+        margin-left: 20px;
+        opacity: 0;
+        width: 32px;
+        height: auto;
+        animation: rotateIn 1s linear both;
+        animation-delay: 1.4s;
+      }
     }
   }
 
   h2 {
-    color: #dcdcdc;
+    color: var(--muted-text-color, #dcdcdc);
     margin-top: 25px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(1.6rem, 2vw, 1.9rem);
     font-family: sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 0.24rem;
+    max-width: 36ch;
     animation: fadeIn 1s 1.8s backwards;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
+  .palette-picker {
+    margin-top: 32px;
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px var(--card-shadow, rgba(0, 0, 0, 0.35));
+    backdrop-filter: blur(14px);
+  }
+
+  .palette-picker__header {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .palette-picker__eyebrow,
+  .palette-picker__title,
+  .palette-picker__description {
+    margin: 0;
+  }
+
+  .palette-picker__eyebrow {
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: var(--accent-color, $tertiary-color);
+    margin-bottom: 8px;
+  }
+
+  .palette-picker__title {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--text-color, #fff);
+  }
+
+  .palette-picker__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .palette-option,
+  .randomize-button {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-color, #fff);
+    transition: transform 0.2s ease, border-color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .palette-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 16px;
+    text-align: left;
+
+    &:hover {
+      transform: translateY(-2px);
+      cursor: pointer;
+      border-color: var(--accent-color, $tertiary-color);
+    }
+
+    &.is-active {
+      border-color: var(--accent-color, $tertiary-color);
+      background: rgba(255, 255, 255, 0.06);
+    }
+  }
+
+  .palette-option__swatches {
+    display: inline-flex;
+    gap: 8px;
+
+    span {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  .palette-option__label {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .palette-picker__description {
+    margin-top: 16px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--muted-text-color, #dcdcdc);
+  }
+
+  .randomize-button {
+    padding: 12px 16px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+      border-color: var(--accent-color, $tertiary-color);
+      color: var(--accent-color, $tertiary-color);
+    }
+  }
+
   .flat-button {
-    color: $primary-color;
+    color: var(--accent-color, $tertiary-color);
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
     padding: 10px 18px;
-    border: 1px solid $primary-color;
+    border: 1px solid var(--accent-color, $tertiary-color);
     margin-top: 25px;
     float: left;
     animation: fadeInAnimation 1s 1.8s backwards;
     white-space: nowrap;
 
     &:hover {
-      background: $primary-color;
+      background: var(--accent-color, $tertiary-color);
       color: #333;
     }
   }
@@ -86,7 +208,22 @@
 
 @media screen and (max-width: 1200px) {
   .home-page {
-    overflow: visible;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 28px 0 20px;
+    gap: 28px;
+    .text-zone {
+      width: 100%;
+      padding: 0 24px;
+      box-sizing: border-box;
+
+      h1 {
+        &:after {
+          margin-top: 40px;
+          margin-left: 8px;
+        }
+      }
+    }
   }
   .tags,
   .home-page h1:before,
@@ -105,16 +242,19 @@
   }
 
   .home-page .text-zone {
-    top: 150px;
-    position: absolute;
-    width: 90%;
-    transform: none;
+    width: 100%;
   }
-}
 
-@media screen and (max-width: 386px) {
-  .home-page .text-zone {
-    left: 15px;
-    width: 95%;
+  .home-page .palette-picker__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-page .palette-picker__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .randomize-button {
+    width: 100%;
   }
 }

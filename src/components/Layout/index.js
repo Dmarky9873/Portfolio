@@ -2,8 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from '../elements/Sidebar/';
 import './index.scss';
 import { useEffect, useState } from 'react';
-import ScrollToTop from '../elements/ScrollToTop'
-
+import ScrollToTop from '../elements/ScrollToTop';
 
 const Layout = () => {
   const location = useLocation();
@@ -12,6 +11,7 @@ const Layout = () => {
     '/contact',
     '/portfolio',
     '/portfolio/advanced-robotics',
+    '/portfolio/a-minimal-approach-to-fake-news-detection',
   ];
   let isNonTopTagPage = false;
   for (let i = 0; i < nonTopTagPages.length; i++) {
@@ -27,6 +27,7 @@ const Layout = () => {
     '/contact',
     '/portfolio/advanced-robotics',
     '/portfolio/first-innovation-developer-internship',
+    '/portfolio/a-minimal-approach-to-fake-news-detection',
   ];
   let isNonBottompage = false;
   for (let i = 0; i < nonBottomTagPages.length; i++) {

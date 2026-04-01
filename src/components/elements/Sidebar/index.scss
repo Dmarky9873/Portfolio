@@ -10,13 +10,14 @@
 }
 
 .nav-bar {
-  background: #181818;
+  background: var(--panel-background, $secondary-color);
   width: 75px;
   height: 100%;
   position: fixed;
   top: 0;
   z-index: 3;
   min-height: 500px;
+  box-shadow: 14px 0 40px rgba(0, 0, 0, 0.18);
 
   .logo {
     display: inline-block;
@@ -46,7 +47,7 @@
 
     a {
       font-size: 22px;
-      color: #4d4d4e;
+      color: var(--contrast-color, #4d4d4e);
       display: block;
       line-height: 51px;
       height: 51px;
@@ -58,7 +59,7 @@
       }
 
       &:hover {
-        color: $primary-color;
+        color: var(--accent-color, $tertiary-color);
 
         svg {
           opacity: 0;
@@ -108,8 +109,10 @@
     }
 
     a.active {
+      color: var(--accent-color, $tertiary-color);
+
       svg {
-        color: $primary-color;
+        color: inherit;
       }
     }
   }
@@ -130,25 +133,35 @@
         display: block;
         font-size: 15px;
         line-height: 16px;
-        color: #4d4d4e;
+        color: var(--contrast-color, #4d4d4e);
       }
 
       &:hover {
         .anchor-icon {
-          color: $primary-color;
+          color: var(--accent-color, $tertiary-color);
         }
       }
     }
   }
 }
 
+.nav-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--accent-color, $tertiary-color);
+  padding: 0;
+}
+
 .hamburger-icon,
-.close-icon {
+.close-icon,
+.nav-toggle {
   display: none;
 }
 
 .hamburger-icon,
-.close-icon:hover {
+.close-icon,
+.nav-toggle:hover {
   cursor: pointer;
 }
 
@@ -156,45 +169,117 @@
   .container {
     padding-top: 80px;
   }
-  .nav-bar .logo img:not(.sub-logo) {
-    margin: 8px 0 8px 30px;
-  }
 
-  .nav-bar .logo img.sub-logo {
-    margin: 8px 0 8px 15px;
-  }
   .nav-bar {
     width: 100%;
-    background: #181818;
+    background: var(--panel-background, $secondary-color);
     position: fixed;
     height: auto;
     min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    box-sizing: border-box;
+
+    .logo-border {
+      padding-right: 0;
+    }
+
+    .logo {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        margin: 0;
+      }
+
+      img:not(.sub-logo) {
+        width: 30px;
+      }
+
+      img.sub-logo {
+        width: 58px;
+      }
+    }
 
     nav {
       width: 100%;
       top: 0;
       left: 0;
-      background: #181818;
+      background: var(--panel-background, $secondary-color);
       margin: 0;
       z-index: 2;
       position: fixed;
-      height: auto;
-
+      min-height: 100vh;
+      padding: 86px 24px 28px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      align-content: start;
+      text-align: left;
       transform: translateY(-100%);
-      transition: transform 0.3s ease-out;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+
+      a {
+        min-height: 78px;
+        height: auto;
+        line-height: 1;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 24px;
+
+        &:hover {
+          svg {
+            opacity: 1;
+          }
+        }
+
+        &:after {
+          position: static;
+          opacity: 1;
+          letter-spacing: 1.5px;
+          font-size: 10px;
+          width: auto;
+        }
+      }
+
+      a.active {
+        border-color: var(--accent-color, $tertiary-color);
+        background: rgba(255, 255, 255, 0.06);
+      }
     }
 
     nav.mobile-show {
       transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .hamburger-icon,
+    .close-icon,
+    .nav-toggle {
+      display: block;
+      color: var(--accent-color, $tertiary-color);
+      font-size: 28px;
+    }
+
     .close-icon {
       position: absolute;
-      top: 15px;
-      right: 15px;
-      display: block;
-      padding: 15px;
+      top: 20px;
+      right: 18px;
+      z-index: 3;
     }
 
     ul {

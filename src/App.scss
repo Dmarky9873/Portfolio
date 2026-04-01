@@ -31,6 +31,18 @@
   font-style: normal;
 }
 
+:root {
+  --page-background: #022c43;
+  --panel-background: #{$secondary-color};
+  --surface-color: rgba(24, 24, 24, 0.9);
+  --accent-color: #{$tertiary-color};
+  --contrast-color: #{$contrast-color};
+  --text-color: #{$title-text-color};
+  --muted-text-color: #dcdcdc;
+  --input-background: #115173;
+  --card-shadow: rgba(0, 0, 0, 0.35);
+}
+
 input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
@@ -56,8 +68,11 @@ textarea {
 
 a {
   text-decoration: underline;
-  color: white;
+  color: var(--text-color, white);
+  transition: color 0.25s ease;
 }
+
 a:hover {
   cursor: pointer;
+  color: var(--accent-color, $tertiary-color);
 }

@@ -2,27 +2,33 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10vh;
+  gap: clamp(48px, 8vh, 88px);
   align-items: center;
+  padding-bottom: 32px;
 }
 
 .about-title-cube-container {
   display: flex;
-  justify-content: end;
-  width: 99%;
+  justify-content: space-between;
+  align-items: center;
+  width: min(1200px, 100%);
+  padding: 0 clamp(24px, 6vw, 64px);
+  box-sizing: border-box;
+  gap: clamp(24px, 4vw, 48px);
   margin-bottom: 70px;
 }
 
 .about-title-cube-container .text-zone {
   flex: 1;
   position: relative;
+  min-width: 0;
 }
 
 .stage-cube-cont {
-  width: 50%;
-  min-height: 300px;
+  width: min(46%, 420px);
+  min-height: 360px;
   top: 0;
-  padding-top: 18%;
+  padding-top: clamp(24px, 6vw, 56px);
   margin-left: 0;
   position: relative;
   right: 0;
@@ -110,6 +116,16 @@
   }
   .container.about-page {
     overflow-x: hidden;
-    gap: 2vh;
+    gap: 40px;
+  }
+  .about-title-cube-container {
+    width: 100%;
+    padding: 0 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+  .about-title-cube-container .text-zone {
+    width: 100%;
   }
 }

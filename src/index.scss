@@ -1,16 +1,23 @@
 html {
   font-size: 62.5%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  font: 300 11px/1.4 "Helvetica Neue", sans-serif;
-  color: #444;
+  min-height: 100vh;
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  color: var(--text-color, #fff);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #022c43;
-  overflow: scroll;
+  background: var(--page-background, #022c43);
+  overflow-x: hidden;
   display: block;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 .dashboard {

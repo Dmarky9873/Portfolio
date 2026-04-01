@@ -17,7 +17,7 @@
 
   &:hover {
     animation: rubberBand 1s;
-    color: $primary-color;
+    color: var(--accent-color, $tertiary-color);
   }
 }
 

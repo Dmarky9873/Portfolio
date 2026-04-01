@@ -1,32 +1,21 @@
-.advanced-robotics.container {
+.minimal-fake-news-page.container {
   position: relative;
+
   h1 {
     margin-left: clamp(24px, 8vw, 10vw);
     margin-top: clamp(48px, 10vh, 10vh);
   }
+
   .text-area {
     margin: auto;
-    width: min(960px, 78%);
+    width: min(1020px, 82%);
     margin-top: clamp(48px, 8vh, 150px);
     display: flex;
     flex-direction: column;
-    gap: clamp(24px, 5vh, 44px);
+    gap: clamp(24px, 5vh, 40px);
     margin-bottom: 10vh;
     padding: 0 24px;
     box-sizing: border-box;
-
-    .img-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      iframe {
-        width: 100%;
-        max-width: 100%;
-        aspect-ratio: 16 / 9;
-        height: auto;
-      }
-    }
   }
 }
 
@@ -34,15 +23,15 @@
   display: none;
 }
 
-@media screen and (max-width: 640px) {
-  .advanced-robotics.container {
+@media screen and (max-width: 768px) {
+  .minimal-fake-news-page.container {
     .text-area {
       width: 100%;
       padding: 0 20px;
     }
   }
+
   .mobile-break {
     display: block;
   }
 }
-
