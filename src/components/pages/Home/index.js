@@ -40,7 +40,7 @@ const Home = ({
     },
     {
       id: 'light',
-      label: 'Just gimmie light mode',
+      label: 'Just gimme light mode',
       className: 'palette-picker__action--light',
       onClick: () => {
         onSetLightTheme();
@@ -154,9 +154,8 @@ const Home = ({
 
             <section
               ref={palettePickerRef}
-              className={`palette-picker${
-                isPaletteMobileOpen ? ' palette-picker--mobile-open' : ''
-              }`}
+              className={`palette-picker${isPaletteMobileOpen ? ' palette-picker--mobile-open' : ''
+                }`}
               aria-label="Color palette controls"
             >
               <button
