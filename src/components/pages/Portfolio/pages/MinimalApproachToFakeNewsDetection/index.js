@@ -7,6 +7,9 @@ import PDFViewer from '../../../../elements/PDFViewer';
 import fakeNewsPaper from '../../../../../assets/files/papers/a-minimal-approach-to-fake-news-detection.pdf';
 import './index.scss';
 
+const RESEARCH_GATE_URL =
+  'https://www.researchgate.net/publication/394957216_A_Minimal_Approach_to_Fake_News_Detection';
+
 const MinimalApproachToFakeNewsDetection = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
@@ -77,16 +80,24 @@ const MinimalApproachToFakeNewsDetection = () => {
 
         <div className="text-area">
           <Paragraph textAlign="left" width="100%">
-            Over six months, I wrote a research paper on machine learning
-            approaches to fake news detection. The paper delves into various
-            ways that others have used machine learning to identify fake news,
-            along with presenting a novel approach to the problem. My goal with
-            this was to create something that used as few textual features as
-            possible, and it worked! Read on to find out how it works and what
-            the results were. I found the academic process to be immensely
-            fulfilling. I learned so much about natural language processing and
-            machine learning in general and can safely say that my skills in the
-            field have improved thanks to it.
+            Over six months, I{' '}
+            <a
+              href={RESEARCH_GATE_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              published
+            </a>{' '}
+            a research paper on machine learning approaches to fake news
+            detection. The paper delves into various ways that others have used
+            machine learning to identify fake news, along with presenting a
+            novel approach to the problem. My goal with this was to create
+            something that used as few textual features as possible, and it
+            worked! Read on to find out how it works and what the results were.
+            I found the academic process to be immensely fulfilling. I learned
+            so much about natural language processing and machine learning in
+            general and can safely say that my skills in the field have
+            improved thanks to it.
           </Paragraph>
 
           <PDFViewer

@@ -15,9 +15,11 @@ const FirstRBCInternship = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
-    return setTimeout(() => {
+    const timeoutId = window.setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 2500);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -26,16 +28,45 @@ const FirstRBCInternship = () => {
         <h1>
           <span className="title-word">
             <AnimatedLetters
-              strArray={'RBC Summer '.split('')}
+              strArray={'RBC'.split('')}
               idx={5}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Summer'.split('')}
+              idx={9}
               letterClass={letterClass}
             />
           </span>
           <br className="mobile-break" />
           <span className="title-word">
             <AnimatedLetters
-              strArray={'Tech Labs'.split('')}
-              idx={14}
+              strArray={'Tech'.split('')}
+              idx={16}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Labs'.split('')}
+              idx={21}
+              letterClass={letterClass}
+            />
+          </span>
+          <br className="mobile-break" />
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'First'.split('')}
+              idx={26}
+              letterClass={letterClass}
+            />
+          </span>{' '}
+          <span className="title-word">
+            <AnimatedLetters
+              strArray={'Internship'.split('')}
+              idx={32}
               letterClass={letterClass}
             />
           </span>
@@ -63,6 +94,13 @@ const FirstRBCInternship = () => {
             hitch. A couple nervous months later I received word that I was
             chosen to be an innovation developer the upcoming summer!
           </Paragraph>
+          <div className="img-container">
+            <FullLineImage
+              imageSource={AtTheDesk}
+              width="100%"
+              imageAlt="Working at a desk during the RBC Summer Tech Labs internship."
+            />
+          </div>
           <Paragraph textAlign="left" width="100%">
             When I first arrived I was admittedly nervous but soon got used to
             being surrounded by liked-minded individuals around the same age as
@@ -80,10 +118,26 @@ const FirstRBCInternship = () => {
             been very helpful for us during our FULL WEEK of onboarding (it
             takes a while).
           </Paragraph>
+          <div className="img-container">
+            <FullLineImage
+              imageSource={Breakfast}
+              width="100%"
+              imageAlt="Breakfast during the RBC Summer Tech Labs internship."
+            />
+          </div>
           <Paragraph textAlign="left" width="100%">
             The work was fun and rewarding. I counterintuitively loved the daily
             commute and getting to wear nice work clothes every day. I learned a
             lot about design and frontend development, especially React.
+          </Paragraph>
+          <div className="img-container">
+            <FullLineImage
+              imageSource={InTheFoodCourt}
+              width="100%"
+              imageAlt="Spending time in the food court during the internship."
+            />
+          </div>
+          <Paragraph textAlign="left" width="100%">
             Although everyone I met at RBC was beyond helpful, my pod manager{' '}
             <a href="https://www.linkedin.com/in/quinn-liddicoat-03174aa/">
               Quinn Liddicoat
@@ -91,37 +145,12 @@ const FirstRBCInternship = () => {
             deserves a special mention, as he made sure to fill any knowledge
             gaps we had with what we were working on every single day. Working
             at RBC was a blast, and the relationships I made are invaluable.
-            Here are some pictures from the internship:
           </Paragraph>
-          <div className="img-container">
-            <FullLineImage
-              imageSource={AtTheDesk}
-              width="100%"
-              imageAlt="The old robot homing onto the front of the goal."
-            />
-          </div>
-          <br />
-          <div className="img-container">
-            <FullLineImage
-              imageSource={Breakfast}
-              width="100%"
-              imageAlt="The old robot homing onto the front of the goal."
-            />
-          </div>
-          <br />
-          <div className="img-container">
-            <FullLineImage
-              imageSource={InTheFoodCourt}
-              width="100%"
-              imageAlt="The old robot homing onto the front of the goal."
-            />
-          </div>
-          <br />
           <div className="img-container">
             <FullLineImage
               imageSource={NiceView}
               width="100%"
-              imageAlt="The old robot homing onto the front of the goal."
+              imageAlt="A view from the RBC Summer Tech Labs internship."
             />
           </div>
         </div>

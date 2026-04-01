@@ -3,11 +3,37 @@ body {
   background-color: var(--page-background, #022c43);
   background-image: none;
   transition: background-color 0.35s ease, color 0.35s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #ffd700)
+    var(--surface-color, rgba(24, 24, 24, 0.9));
 }
 
 html {
   font-size: 62.5%;
   min-height: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--page-background, #022c43);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--accent-color, #ffd700),
+    var(--logo-accent, #ffd700)
+  );
+  border: 2px solid var(--page-background, #022c43);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color, #ffd700);
 }
 
 body {
@@ -22,7 +48,15 @@ body {
 }
 
 @media screen and (min-width: 1201px) {
+  html.route-home,
   body.route-home {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  body.route-home #root,
+  body.route-home #root > .App {
+    height: 100vh;
     overflow-y: hidden;
   }
 }

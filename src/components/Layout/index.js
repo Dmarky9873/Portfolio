@@ -28,6 +28,8 @@ const Layout = () => {
     '/contact',
     '/portfolio/advanced-robotics',
     '/portfolio/first-innovation-developer-internship',
+    '/portfolio/second-innovation-developer-internship',
+    '/portfolio/vexo-labs',
     '/portfolio/a-minimal-approach-to-fake-news-detection',
   ];
   let isNonBottompage = false;
@@ -49,9 +51,11 @@ const Layout = () => {
   }, []);
 
   useEffect(() => {
+    document.documentElement.classList.toggle('route-home', isHomePage);
     document.body.classList.toggle('route-home', isHomePage);
 
     return () => {
+      document.documentElement.classList.remove('route-home');
       document.body.classList.remove('route-home');
     };
   }, [isHomePage]);

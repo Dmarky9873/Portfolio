@@ -10,6 +10,8 @@ import PageNotFound from './components/pages/PageNotFound';
 import AdvancedRobotics from './components/pages/Portfolio/pages/AdvancedRobotics';
 import FirstRBCInternship from './components/pages/Portfolio/pages/FirstRBCInternship';
 import MinimalApproachToFakeNewsDetection from './components/pages/Portfolio/pages/MinimalApproachToFakeNewsDetection';
+import SecondRBCInternship from './components/pages/Portfolio/pages/SecondRBCInternship';
+import VexoLabs from './components/pages/Portfolio/pages/VexoLabs';
 import {
   createRandomTheme,
   darkTheme,
@@ -95,6 +97,11 @@ function App() {
             path="portfolio/first-innovation-developer-internship"
             element={<FirstRBCInternship />}
           />
+          <Route
+            path="portfolio/second-innovation-developer-internship"
+            element={<SecondRBCInternship />}
+          />
+          <Route path="portfolio/vexo-labs" element={<VexoLabs />} />
           <Route
             path="portfolio/a-minimal-approach-to-fake-news-detection"
             element={<MinimalApproachToFakeNewsDetection />}

@@ -9,8 +9,18 @@
 }
 
 .page.page--home {
+  min-height: 100vh;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.page.page--home > .container.home-page {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  min-height: 0;
+  height: 100%;
 }
 
 .top-tags {
@@ -52,6 +62,8 @@
 .container.portfolio,
 .container.advanced-robotics,
 .container.first-rbc-internship-page,
+.container.second-rbc-internship-page,
+.container.vexo-labs-page,
 .container.minimal-fake-news-page {
   h1 {
     font-size: 53px;
@@ -127,6 +139,13 @@
   .page.page--home {
     height: auto;
     overflow: visible;
+  }
+
+  .page.page--home > .container.home-page {
+    position: initial;
+    inset: auto;
+    min-height: auto;
+    height: auto;
   }
 
   .container {
