@@ -8,13 +8,10 @@ import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux
 import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG';
 import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png';
 import SecondRBCInternshipCover from '../../../assets/images/portfolio/second-rbc-internship/team-selfie-downtown.jpg';
-import VexoLabsImage from '../../../assets/images/portfolio/vexo-labs/preview.png';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 
 const RESEARCH_GATE_URL =
   'https://www.researchgate.net/publication/394957216_A_Minimal_Approach_to_Fake_News_Detection';
-const VEXO_LABS_URL = 'https://www.vexo.gg/';
-const ACCELERATOR_CENTRE_URL = 'https://www.acceleratorcentre.com/';
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -92,25 +89,6 @@ const Portfolio = () => {
           which I was assigned. I met the first goal, evidenced by a return
           offer I got for first year summer. I met the second goal by winning
           RBC Summer Tech Labs "Most Innovative Solution."
-        </TitleImageText>
-        <TitleImageText
-          image={VexoLabsImage}
-          imageAlt="Vexo Labs logo preview"
-          link="/portfolio/vexo-labs"
-          title="Vexo Labs"
-          date="2025"
-        >
-          In late 2025, I founded{' '}
-          <a href={VEXO_LABS_URL} target="_blank" rel="noreferrer">
-            Vexo Labs
-          </a>{' '}
-          with some friends. We aim to help democratize investing and building
-          wealth. I&apos;m proud to have had this start-up accepted into
-          Canada&apos;s top accelerator, Waterloo&apos;s{' '}
-          <a href={ACCELERATOR_CENTRE_URL} target="_blank" rel="noreferrer">
-            Accelerator Centre
-          </a>
-          . We are currently about to start beta testing with volunteer users.
         </TitleImageText>
         <TitleImageText
           image={MachineLearningImage}
