@@ -8,6 +8,7 @@ import AdvancedRobotics from '../../../assets/images/portfolio/robotics-bordeaux
 import STLGroupPhoto from '../../../assets/images/portfolio/stl-group-photo.JPG';
 import MachineLearningImage from '../../../assets/images/portfolio/machine-learning.png';
 import SecondRBCInternshipCover from '../../../assets/images/portfolio/second-rbc-internship/team-selfie-downtown.jpg';
+import SmearPreview from '../../../assets/images/portfolio/smear/1.png';
 import LoadingAnimation from '../../elements/LoadingAnimation';
 
 const RESEARCH_GATE_URL =
@@ -89,6 +90,20 @@ const Portfolio = () => {
           which I was assigned. I met the first goal, evidenced by a return
           offer I got for first year summer. I met the second goal by winning
           RBC Summer Tech Labs "Most Innovative Solution."
+        </TitleImageText>
+        <TitleImageText
+          image={SmearPreview}
+          imageAlt="Browser interface for the Smear card game project"
+          link="/portfolio/smear"
+          title="Smear"
+          date="Personal Project"
+        >
+          Smear began as a family card game and grew into a full browser-based
+          game, Python rules engine, FastAPI backend, React frontend, multiplayer
+          experience, and bot research environment. The project formalizes a
+          house-ruled Canadian prairie game into software, then uses simulation,
+          search, and self-play to explore strategy in a game with hidden
+          information.
         </TitleImageText>
         <TitleImageText
           image={MachineLearningImage}

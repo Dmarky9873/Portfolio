@@ -12,6 +12,7 @@ import AdvancedRobotics from './components/pages/Portfolio/pages/AdvancedRobotic
 import FirstRBCInternship from './components/pages/Portfolio/pages/FirstRBCInternship';
 import MinimalApproachToFakeNewsDetection from './components/pages/Portfolio/pages/MinimalApproachToFakeNewsDetection';
 import SecondRBCInternship from './components/pages/Portfolio/pages/SecondRBCInternship';
+import Smear from './components/pages/Portfolio/pages/Smear';
 import VexoLabs from './components/pages/Portfolio/pages/VexoLabs';
 import WritingArticle from './components/pages/Writing/pages/WritingArticle';
 import {
@@ -107,6 +108,7 @@ function App() {
             path="portfolio/second-innovation-developer-internship"
             element={<SecondRBCInternship />}
           />
+          <Route path="portfolio/smear" element={<Smear />} />
           <Route path="portfolio/vexo-labs" element={<VexoLabs />} />
           <Route
             path="portfolio/a-minimal-approach-to-fake-news-detection"

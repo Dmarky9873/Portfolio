@@ -154,7 +154,7 @@ const AdvancedRobotics = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/videoseries?si=JmzJbmrBJ3HKNz8h&amp;list=PLLjR-m9oUah_GIAkYu5iZuuBbOm_w8b6B"
+              src="https://www.youtube.com/embed/7X6UlA1FQRU?list=PLLjR-m9oUah_GIAkYu5iZuuBbOm_w8b6B&amp;index=7"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
