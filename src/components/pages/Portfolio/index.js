@@ -96,7 +96,7 @@ const Portfolio = () => {
           imageAlt="Browser interface for the Smear card game project"
           link="/portfolio/smear"
           title="Smear"
-          date="Personal Project"
+          date="2026"
         >
           Smear began as a family card game and grew into a full browser-based
           game, Python rules engine, FastAPI backend, React frontend, multiplayer
