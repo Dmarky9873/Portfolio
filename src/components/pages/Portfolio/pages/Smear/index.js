@@ -101,9 +101,8 @@ const Smear = () => {
           </div>
           <Paragraph textAlign="left" width="100%">
             The next thing I want to build is a live family tournament. We are
-            spread across multiple continents now, so getting everybody around
-            the same virtual table would mean a lot more than simply shipping
-            another feature.
+            spread across the country, so getting everybody around the same
+            "table" would mean a lot to everyone!
           </Paragraph>
           <div className="smear-play-actions" aria-label="Smear game links">
             <a
