@@ -67,12 +67,12 @@ const portfolioItems = [
       <>
         After completing my first internship in the summer of 2024, I received a
         return offer for the next summer (the summer between grade 12 and
-        first-year university). Coming into the internship with an idea of how it
-        was going to work and what I was going to do, I made it my goal to meet
-        as many people and to do the best possible work for the team to which I
-        was assigned. I met the first goal, evidenced by a return offer I got
-        for first year summer. I met the second goal by winning RBC Summer Tech
-        Labs "Most Innovative Solution."
+        first-year university). Coming into the internship with an idea of how
+        it was going to work and what I was going to do, I made it my goal to
+        meet as many people and to do the best possible work for the team to
+        which I was assigned. I met the first goal, evidenced by a return offer
+        I got for first year summer. I met the second goal by winning RBC Summer
+        Tech Labs "Most Innovative Solution."
       </>
     ),
   },
@@ -101,11 +101,10 @@ const portfolioItems = [
     link: '/portfolio/smear',
     description: (
       <>
-        My family has played Smear for generations, but its rules mostly lived
-        around the card table. I built a browser version so we could play from
-        anywhere, then went further: bots that learn through self-play, a
-        simulator for testing them, and a learning mode for seeing what they
-        would play with your hand.
+        My family has played Smear for generations. I built a browser version so
+        we could play from anywhere, then went further: bots that learn through
+        self-play, a simulator for testing them, and a learning mode for seeing
+        what they would play with your hand.
       </>
     ),
   },
@@ -128,9 +127,9 @@ const portfolioItems = [
         to the problem. My goal with this was to create something that used as
         few textual features as possible, and it worked! Read on to find out how
         it works and what the results were. I found the academic process to be
-        immensely fulfilling. I learned so much about natural language processing
-        and machine learning in general and can safely say that my skills in the
-        field have improved thanks to it.
+        immensely fulfilling. I learned so much about natural language
+        processing and machine learning in general and can safely say that my
+        skills in the field have improved thanks to it.
       </>
     ),
   },
