@@ -308,14 +308,22 @@
       }
 
       h1 {
-        font-size: clamp(4.8rem, 14vw, 7rem);
+        font-size: clamp(4.4rem, 12.8vw, 6.4rem);
+        line-height: 0.98;
+        margin-bottom: clamp(40px, 8vw, 46px);
         max-width: 8.2ch;
+
+        &:after {
+          top: calc(100% + 10px);
+          left: 0;
+        }
       }
     }
 
     h2 {
-      margin-top: 14px;
+      margin-top: 0;
       font-size: clamp(1.45rem, 4vw, 1.8rem);
+      line-height: 1.45;
       letter-spacing: 0.14rem;
       max-width: 24ch;
       text-shadow: none;
