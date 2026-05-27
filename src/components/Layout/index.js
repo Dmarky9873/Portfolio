@@ -37,6 +37,7 @@ const Layout = () => {
     '/portfolio/first-innovation-developer-internship',
     '/portfolio/second-innovation-developer-internship',
     '/portfolio/smear',
+    '/portfolio/shredr',
     '/portfolio/vexo-labs',
     '/portfolio/a-minimal-approach-to-fake-news-detection',
     '/writing/hume-on-violations-of-the-laws-of-nature',
