@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './components/pages/Home';
 import Layout from './components/Layout';
 import './App.scss';
@@ -126,6 +127,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
+      <Analytics />
     </>
   );
 }
