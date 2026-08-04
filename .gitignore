@@ -6,3 +6,4 @@
 /dist/
 /.astro/
 /.vercel/
+/.env.local
