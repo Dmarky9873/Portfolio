@@ -1,0 +1,13 @@
+build
+dist
+old-portfolio
+
+# The Astro rebuild serves optimized equivalents from public/media.
+src/assets/images/about
+src/assets/images/portfolio/advanced-robotics
+src/assets/images/portfolio/first-rbc-internship
+src/assets/images/portfolio/second-rbc-internship
+src/assets/images/portfolio/smear
+src/assets/images/portfolio/robotics-bordeaux-with-luke-hayden-koaich.jpeg
+src/assets/images/portfolio/stl-group-photo.JPG
+src/assets/images/portfolio/uoft-pano.jpeg
