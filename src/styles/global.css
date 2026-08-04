@@ -7,13 +7,13 @@
   --faint: #8f918b;
   --line: #d8d8d2;
   --line-strong: #b9bbb5;
-  --accent: #2457e6;
-  --accent-ink: #173fb5;
-  --accent-soft: #e8edff;
+  --accent: var(--ink);
+  --accent-ink: var(--muted);
+  --accent-soft: var(--line);
   --footer: #171817;
   --footer-ink: #f6f5ef;
   --header-bg: rgba(245, 244, 239, 0.9);
-  --selection: #cad6ff;
+  --selection: var(--line-strong);
   --shadow: 0 24px 70px rgba(24, 27, 20, 0.08);
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -27,6 +27,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
+    color-scheme: dark;
     --paper: #151615;
     --paper-raised: #1c1d1b;
     --ink: #f2f1eb;
@@ -34,16 +35,13 @@
     --faint: #858781;
     --line: #343632;
     --line-strong: #52554f;
-    --accent: #89a6ff;
-    --accent-ink: #b9c9ff;
-    --accent-soft: #202a49;
     --header-bg: rgba(21, 22, 21, 0.9);
-    --selection: #31447a;
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
   }
 }
 
 :root[data-theme='dark'] {
+  color-scheme: dark;
   --paper: #151615;
   --paper-raised: #1c1d1b;
   --ink: #f2f1eb;
@@ -51,11 +49,7 @@
   --faint: #858781;
   --line: #343632;
   --line-strong: #52554f;
-  --accent: #89a6ff;
-  --accent-ink: #b9c9ff;
-  --accent-soft: #202a49;
   --header-bg: rgba(21, 22, 21, 0.9);
-  --selection: #31447a;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
 }
 
@@ -351,22 +345,19 @@ p:last-child {
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .button--primary {
   border-color: var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--paper);
 }
 
 .button--primary:hover {
-  border-color: var(--accent-ink);
-  background: var(--accent-ink);
+  border-color: var(--ink);
+  background: transparent;
+  color: var(--ink);
 }
 
 .button--quiet {
@@ -1319,7 +1310,8 @@ p:last-child {
 }
 
 .site-footer .button--primary:hover {
-  background: #fff;
+  background: transparent;
+  color: var(--footer-ink);
 }
 
 .site-footer .button--quiet {

@@ -39,8 +39,8 @@ export interface AboutSection {
 }
 
 export const professionalBio = [
-  "I'm a Computer Science student at the University of Toronto and a software developer on RBC's RIG team in Toronto. My work spans enterprise front-end systems, full-stack internal tools, applied machine learning, and autonomous robotics.",
-  "I like turning ideas into real things, whether I'm programming, writing music, or building by hand. I care about the process, stay curious, and do my best work alongside people I trust.",
+  "I'm a Computer Science student at the University of Toronto and a software developer on RBC's RIG team. I've also built full-stack tools, published fake-news research, and competed internationally with autonomous soccer robots.",
+  "I like turning ideas into real things, whether I'm programming, writing music, or building by hand. I enjoy the process more than the finished product, especially when I get to work with people I trust.",
 ] as const;
 
 export const currentFacts = [
@@ -67,7 +67,7 @@ export const experienceMilestones = [
     organization: 'Royal Bank of Canada',
     location: 'Toronto, Canada',
     summary:
-      "I develop reusable React components within RBC's RIG design framework and refine production interfaces for consistency, accessibility, and reuse.",
+      "I build reusable React components for RBC's RIG design framework, fix production UI issues, and improve accessibility.",
   },
   {
     period: 'Expected 2029',
@@ -114,10 +114,10 @@ export const personalSections = [
   {
     id: 'making',
     eyebrow: 'Making',
-    title: 'The process is the point.',
+    title: 'I like making things.',
     body: [
       "I'm drawn to turning ideas into real things. Sometimes that means coding, sometimes writing music, and sometimes hand-carving a wooden crossbow.",
-      "I enjoy the process more than the outcome. Genuine curiosity has carried me further than discipline alone ever could, though I still value the discipline required to finish what I start.",
+      "I enjoy the process more than the result. Curiosity has taken me further than discipline alone, though finishing still takes discipline.",
     ],
     image: {
       src: '/media/optimized/about/night-waterfront.webp',
@@ -129,10 +129,10 @@ export const personalSections = [
   {
     id: 'abstraction',
     eyebrow: 'Computer science',
-    title: 'Abstraction makes ambitious work possible.',
+    title: 'Why computer science clicked for me.',
     body: [
       "Computer science became a natural outlet for the way I think. I'm fascinated by layers of abstraction: you do not need to understand an entire computer to use it, program it, and build useful things with it.",
-      "The same idea applies to organizations. Beyond a certain size, no one person can know every granular detail; good interfaces and clear ownership let people move together.",
+      "The same idea applies to organizations. Once a group gets large enough, no one person can know every detail. Clear ownership lets everyone focus on their part.",
     ],
     image: {
       src: '/media/optimized/about/robotic-hand-poster.webp',
@@ -148,9 +148,9 @@ export const personalSections = [
   {
     id: 'leadership',
     eyebrow: 'Leadership and robotics',
-    title: 'Trust capable people, then build together.',
+    title: 'What robotics taught me about teams.',
     body: [
-      "That model shapes how I lead teams: I do not need every granular detail to run a group, but I do need capable people I can trust. I've been fortunate to have them around me.",
+      "I try to give people room to own their part of the work. That only works when the team trusts one another, and I've been fortunate to work with people I trust.",
       "Robotics gave me a place to practice that approach. I founded Crestwood's Advanced Robotics Club and led teams representing Canada at RoboCup in France and Brazil.",
     ],
     image: {
@@ -162,7 +162,7 @@ export const personalSections = [
   {
     id: 'athletics',
     eyebrow: 'Athletics',
-    title: 'Hard work, made habitual.',
+    title: 'Basketball, MMA, and lifting.',
     body: [
       "When I'm away from a keyboard, I'm often on a basketball court, at an MMA gym, or lifting weights—and, sometimes, studying.",
       'Athletics have been a constant in my life for years. More than anything else, they taught me how to work hard.',
@@ -202,7 +202,7 @@ export const personalSections = [
 
 export const about = {
   eyebrow: 'About Daniel',
-  title: 'I build systems, teams, and things that move.',
+  title: 'I like making things and learning how they work.',
   bio: professionalBio,
   current: currentFacts,
   experience: experienceMilestones,

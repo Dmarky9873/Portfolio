@@ -108,29 +108,29 @@ export const projects: Project[] = [
     ],
     sections: [
       {
-        heading: 'Returning with a clearer goal',
+        heading: 'Back at RBC for a second summer',
         paragraphs: [
           'After my first RBC internship in 2024, I received a return offer for the summer between Grade 12 and university. I already understood the rhythm of Summer Tech Labs, so I set two goals: meet as many people as I could and do the strongest work possible for my team.',
           'I joined Kaibo Huang, Divya Sivaram and Roshan Iruku as a high-school intern. Our brief was to improve how Apollo site reliability engineers deploy API proxies.',
         ],
       },
       {
-        heading: 'Making a security workflow easier to use',
+        heading: 'Why API-proxy setup took nine hours',
         paragraphs: [
           'Banking applications use APIs to move information between their interfaces and backend systems. For example, the RBC app retrieves a bank balance from backend servers rather than keeping that information on the phone. RBC adds in-house API proxies over its already secure vendor platform as another protective layer around those exchanges.',
           'Those proxies were time-consuming to configure for testing and deployment. We estimated that SREs collectively spent about nine hours on the setup in a typical week, so we built a dashboard around the workflow.',
         ],
       },
       {
-        heading: 'Measurable time saved',
+        heading: 'From nine hours to 90 minutes',
         paragraphs: [
           'The dashboard brought the weekly estimate down from nine hours to 90 minutes, an 83% reduction. That result earned our team Most Innovative Solution for the 2025 Innovation Developer cohort.',
-          'The summer was as much about people as software. I left grateful for the team, the award and another return offer for my first-year university summer.',
+          'The award was exciting, but the team and another return offer mattered just as much to me.',
         ],
       },
     ],
     nextStep:
-      'Build on the project and relationships during the first-year summer return placement offered by RBC.',
+      'RBC invited me back for a third summer, where I now work on the RIG team.',
   },
   {
     slug: 'smear',
@@ -140,9 +140,9 @@ export const projects: Project[] = [
     featured: true,
     eyebrow: 'Independent project · 2026',
     summary:
-      'A browser version of a Canadian Prairie card game, backed by self-play bots, a match simulator, live lobbies and an interactive learning mode.',
+      'I brought my family’s card game online, then added bots, a match simulator, live lobbies, and a learning mode.',
     outcome:
-      'Turned a family game whose rules were mostly passed from person to person into an online system that can preserve the game, teach new players and evaluate competing bot strategies.',
+      'The site documents our family rules, lets people play online, and uses self-play to compare bot strategies.',
     role: 'Independent designer and developer',
     team: [],
     stack: ['Python', 'FastAPI', 'React'],
@@ -153,17 +153,17 @@ export const projects: Project[] = [
       },
     ],
     cover: {
-      path: '/media/optimized/portfolio/smear/1.webp',
-      alt: 'The first playable version of Smear running in a browser.',
+      path: '/media/optimized/portfolio/smear/cards-cover.webp',
+      alt: 'A small hand of worn playing cards fanned face-down on a warm tabletop.',
     },
     gallery: [
       {
         path: '/media/optimized/portfolio/smear/2.webp',
-        alt: 'A debugging view of the round state, legal actions and scoring details.',
+        alt: 'The Smear lobby and table setup screen.',
       },
       {
         path: '/media/optimized/portfolio/smear/3.webp',
-        alt: 'The continuous simulator ranking Smear bots through repeated self-play.',
+        alt: 'A Smear game in progress during the auction phase.',
       },
       {
         path: '/media/optimized/portfolio/smear/4.webp',
@@ -178,33 +178,33 @@ export const projects: Project[] = [
     ],
     sections: [
       {
-        heading: 'A family game worth keeping',
+        heading: 'Why I built it',
         paragraphs: [
           "My dad's side of the family has played Smear for as long as I can remember. It is a Canadian Prairie card game, and I spent years at the table waiting until I was old enough to join. Once I learned, I was hooked—and eventually began wondering how a computer could play a game whose rules were passed down rather than formally documented.",
         ],
       },
       {
-        heading: 'Turning house rules into software',
+        heading: 'Turning our house rules into code',
         paragraphs: [
           'I implemented the rules in Python, connected them to a FastAPI backend and built the interface in React. The game handles bidding, trump, jokers, hidden hands and scoring. Translating all of the house rules faithfully took repeated testing against the way my family expected each round to behave.',
         ],
       },
       {
-        heading: 'Learning without expert match data',
+        heading: 'Training bots without match data',
         paragraphs: [
           'There is no database of expert Smear matches, so the bots had to learn by playing. I started with random and greedy players, then built minimax and small neural bots trained through self-play.',
           'I also built a simulator that runs thousands of matches and tracks Elo. It rotates seats so a bot does not appear stronger simply because it received a favourable position.',
         ],
       },
       {
-        heading: 'Opening the table to other players',
+        heading: 'Taking it online',
         paragraphs: [
-          'I added live lobbies, real-time updates, games against bots and a learning mode in which players choose a move before seeing what the strongest bot would play. What began as an experiment now helps preserve the game, teach it to new people and test how far the bots can take a card game with almost no online footprint.',
+          'I added live lobbies, real-time updates, games against bots and a learning mode in which players choose a move before seeing what the strongest bot would play. What began as an experiment now documents our rules, lets other people learn the game and gives me a way to test bots against one another.',
         ],
       },
     ],
     nextStep:
-      'Build a live family tournament so relatives across the country can meet around the same virtual table.',
+      'Next I want to run a live tournament for relatives across the country.',
   },
   {
     slug: 'advanced-robotics',
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     summary:
       'Three Crestwood students built autonomous soccer robots, won nationally and represented Canada at RoboCup in France and Brazil.',
     outcome:
-      "After the first national win, I founded Crestwood's first Advanced Robotics Club and helped grow it into one of the school's most popular organizations before our team returned to the international stage in 2025.",
+      "After winning nationals in 2023, I founded Crestwood's first Advanced Robotics Club. Its first meeting filled two classrooms, and we returned to international competition in 2025.",
     role: 'Robot designer, builder and club founder',
     team: ['Daniel Markusson', 'Hayden Patience', 'Luke Hartford'],
     stack: ['Autonomous robotics', 'Electronics', 'Rapid prototyping'],
@@ -264,7 +264,7 @@ export const projects: Project[] = [
     ],
     sections: [
       {
-        heading: 'Finding a creative workshop',
+        heading: 'The classroom that got me into robotics',
         paragraphs: [
           "On my first visit to the high school I would later attend, Mr. Wan's engineering room immediately caught my attention: wires, circuits and metal parts covered the space. Its capstone project was RoboCup, where teams build one attacking and one defending robot to play autonomous soccer.",
           'Mr. Wan invited me into the Grade 11 engineering class while I was in Grade 10. The workshop became a creative studio where I learned by building increasingly capable robots with my peers.',
@@ -274,27 +274,26 @@ export const projects: Project[] = [
         heading: 'From Toronto to Bordeaux',
         paragraphs: [
           "Crestwood had never won the competition and had fewer resources than many established teams, but our work earned first place in Toronto and the chance to represent Canada at the 2023 RoboCup Junior International finals in Bordeaux, France.",
-          "Our quickly built robots stood beside designs that other teams had refined for years. The international community was generous rather than guarded: when our gyroscope failed, the Croatian team immediately lent us a spare. That act reshaped how I thought about competition, collaboration and sportsmanship.",
+          "Our quickly built robots stood beside designs that other teams had refined for years. When our gyroscope failed, the Croatian team immediately lent us a spare. That was my first glimpse of how generous the RoboCup community could be.",
         ],
       },
       {
         heading: 'Building a robotics community at Crestwood',
         paragraphs: [
           "Back at school, I founded Crestwood's first Advanced Robotics Club. I promoted it on the daily announcements for a week, and the first meeting filled two classrooms. Our principal became the first sponsor, promising to match every dollar we raised from other organizations.",
-          "We formed a media team, attracted external sponsors and gave more students the resources to compete. The club became one of Crestwood's most popular organizations, bringing together creative students interested in designing and prototyping ambitious systems.",
-          'RoboCup helped clarify the direction I wanted to take in computer science. It also taught me leadership, mentorship and resilience alongside the technical work.',
+          "We formed a media team, attracted external sponsors and gave more students a place to build robots and compete. The club became one of Crestwood's most popular organizations.",
+          'RoboCup convinced me to keep pursuing computer science. Founding the club taught me how to recruit, mentor and keep a team moving.',
         ],
       },
       {
         heading: 'Starting again for 2025',
         paragraphs: [
           "In Grade 12, we scrapped the previous design and rebuilt the robot from the ground up. After university admissions, we could dedicate more time to it, and the decision paid off with a dominant national performance and another invitation to represent Canada. At nationals, we named the robots after our lunches: Crispy Chicken and Montreal Smoked Meat.",
-          'The international event took us to Brazil for a week. We performed far better than we had in France, met remarkable teams and learned from the experience. The trip became the highlight of my summer and a fitting finish for the strongest version of our robot.',
+          'The international event took us to Brazil for a week. We performed far better than we had in France and met remarkable teams. Brazil was the highlight of my summer, and the rebuilt robot performed much better than our 2023 version.',
         ],
       },
     ],
-    nextStep:
-      'Watch the final 2025 robot compete and carry the lessons from RoboCup into future engineering work.',
+    nextStep: 'The final 2025 robot is on YouTube, linked above.',
   },
   {
     slug: 'first-innovation-developer-internship',
@@ -304,9 +303,9 @@ export const projects: Project[] = [
     featured: false,
     eyebrow: 'Innovation Developer Internship · 2024',
     summary:
-      'A from-scratch onboarding guide designed to help new RBC developers find accurate instructions and get productive faster.',
+      'An onboarding guide that helped new RBC developers find instructions and get set up faster.',
     outcome:
-      'The four-person pod delivered an interactive developer onboarding guide while I built practical skills in product design, frontend development and React.',
+      'Our four-person pod shipped the guide, and I learned React, frontend development, and product design on a working team.',
     role: 'Innovation Developer Intern',
     team: [
       'Daniel Markusson',
@@ -372,7 +371,7 @@ export const projects: Project[] = [
     ],
     sections: [
       {
-        heading: 'Earning the opportunity',
+        heading: 'Applying to Summer Tech Labs',
         paragraphs: [
           'During Grade 11 in 2024, I learned about the chance to spend a summer at RBC as an Innovation Developer. After the coding interview led to a recruiter interview, I practised possible questions with my dad every day. A nervous wait ended with an offer to join the cohort as one of 40 selected high-school students.',
         ],
@@ -387,13 +386,12 @@ export const projects: Project[] = [
       {
         heading: 'Learning how a product team works',
         paragraphs: [
-          'The project made design and frontend development tangible, especially the work in React. I also grew to enjoy the daily commute, the professional routine and getting dressed for the office.',
+          'I learned a lot about design, frontend development and React. I also grew to enjoy the daily commute, the professional routine and getting dressed for the office.',
           'People across RBC were generous with their time. Quinn deserves particular credit for checking in every day and filling the gaps in our knowledge. The work was rewarding, but the relationships were the most valuable part of the summer.',
         ],
       },
     ],
-    nextStep:
-      'Return to RBC Summer Tech Labs in 2025 with stronger product skills and an established network.',
+    nextStep: 'RBC invited me back to Summer Tech Labs in 2025.',
   },
   {
     slug: 'shredr',
@@ -403,9 +401,9 @@ export const projects: Project[] = [
     featured: false,
     eyebrow: 'Independent product · 2025',
     summary:
-      'A focused restaurant search tool that surfaces healthier menu options when users need to make a quick decision.',
+      'A restaurant search tool for comparing healthier menu options.',
     outcome:
-      'Created a short decision flow: choose a restaurant, compare its menu options and pick a healthier meal without guesswork.',
+      'Users choose a restaurant, compare healthier dishes, and pick a meal.',
     role: 'Independent product developer',
     team: [],
     stack: [],
@@ -425,12 +423,12 @@ export const projects: Project[] = [
       {
         heading: 'A faster meal decision',
         paragraphs: [
-          "Shredr helps people make smarter restaurant choices by surfacing healthier meals from restaurant menus. The experience stays deliberately direct: pick where you're eating, compare the available options and choose a better meal.",
-          'I built it as a practical tool for reducing the guesswork that often comes with comparing restaurant menus on the spot.',
+          "Shredr helps people compare healthier meals on restaurant menus. Choose a restaurant, compare the listed options and pick a meal.",
+          'I built it to make menu comparisons faster when choosing a restaurant meal.',
         ],
       },
     ],
-    nextStep: 'Use Shredr to compare healthier options at a restaurant.',
+    nextStep: 'Shredr is live at shredr.ca.',
   },
   {
     slug: 'a-minimal-approach-to-fake-news-detection',
@@ -440,9 +438,9 @@ export const projects: Project[] = [
     featured: false,
     eyebrow: 'Independent research paper · 2024',
     summary:
-      'A six-month investigation of machine-learning approaches to fake-news detection, centred on using as few textual features as possible.',
+      'A six-month research project testing whether five article-level features could distinguish fake news from real news.',
     outcome:
-      'Published a paper that reviews existing approaches and presents a novel, deliberately minimal method for detecting fake news.',
+      'The five-feature XGBoost model reached 71% test accuracy, and the paper was published in 2024.',
     role: 'Researcher and author',
     team: [],
     stack: ['Machine learning', 'Natural language processing'],
@@ -477,17 +475,17 @@ export const projects: Project[] = [
         heading: 'A deliberately small feature set',
         paragraphs: [
           'Over six months, I studied how other researchers had applied machine learning to fake-news detection. I wanted to find out whether a useful model could work with as few textual features as possible.',
-          'The resulting paper reviews established approaches and presents my own minimal method. The experiment worked well enough to support the central idea and became the basis of the published paper.',
+          'The resulting paper reviews established approaches and presents my own minimal method. The five-feature XGBoost model reached 71% test accuracy.',
         ],
       },
       {
         heading: 'Learning through publication',
         paragraphs: [
-          'I found the academic process immensely fulfilling. Researching, testing and writing the paper deepened my understanding of natural language processing and machine learning, and improved my practical skills in both.',
+          'Researching, testing and writing the paper gave me practical experience with natural-language processing and machine learning.',
         ],
       },
     ],
-    nextStep: 'Read the published paper for the method and full results.',
+    nextStep: 'The paper is published and available on ResearchGate.',
   },
 ];
 

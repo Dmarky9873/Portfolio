@@ -18,7 +18,7 @@ const personalSections = about.sections as readonly AboutSection[];
         <p class="eyebrow">{about.eyebrow}</p>
         <h1>{about.title}</h1>
       </div>
-      <p class="page-hero__intro">A professional story shaped by curiosity, collaboration, and the habit of making things real.</p>
+      <p class="page-hero__intro">I’m a software developer, Computer Science student, robotics club founder, musician, and athlete.</p>
     </div>
   </header>
 
@@ -40,7 +40,7 @@ const personalSections = about.sections as readonly AboutSection[];
 
   <section class="section section--tint">
     <div class="shell">
-      <SectionHeading eyebrow="Experience" title="A record of building and learning." />
+      <SectionHeading eyebrow="Experience" title="What I’ve worked on." />
       <div class="timeline">
         {about.experience.map((item) => (
           <article class="timeline__item">
@@ -57,8 +57,8 @@ const personalSections = about.sections as readonly AboutSection[];
     <div class="shell">
       <SectionHeading
         eyebrow="Outside the job title"
-        title="The interests behind the work."
-        description="Programming is one way I make things. Robotics, athletics, music, and hands-on projects exercise the same curiosity in different forms."
+        title="Away from the keyboard."
+        description="I also build robots, play basketball, train MMA, lift, and play drums and bass."
       />
       {personalSections.map((section) => (
         <article class:list={['personal-story', { 'personal-story--reverse': section.image.position === 'right' }]} id={section.id}>

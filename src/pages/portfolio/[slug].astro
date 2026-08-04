@@ -100,7 +100,7 @@ const creativeWorkSchema = {
     <section class:list={['section', { 'section--bordered': project.metrics.length === 0 }]}>
       <div class="shell case-story">
         <nav class="case-story__nav" aria-label="Case study sections">
-          <p class="eyebrow">In this story</p>
+          <p class="eyebrow">Case study</p>
           <ol>
             {project.sections.map((section, index) => (
               <li><a href={`#${sectionId(section.heading, index)}`}>{String(index + 1).padStart(2, '0')} · {section.heading}</a></li>
@@ -117,8 +117,8 @@ const creativeWorkSchema = {
             </section>
           ))}
           <section class="case-section">
-            <p class="eyebrow">Next step</p>
-            <h2>Where it goes from here.</h2>
+            <p class="eyebrow">Next</p>
+            <h2>What came next.</h2>
             <p>{project.nextStep}</p>
           </section>
         </div>

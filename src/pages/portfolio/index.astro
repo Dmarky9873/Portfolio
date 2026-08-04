@@ -15,10 +15,10 @@ const moreProjects = projects.filter((project) => !project.featured);
     <div class="shell page-hero__grid">
       <div>
         <p class="eyebrow">Work · 2022–present</p>
-        <h1>Built to be used.</h1>
+        <h1>Selected projects.</h1>
       </div>
       <p class="page-hero__intro">
-        Product systems, independent software, autonomous robots, research, and a startup—each shaped by the people, constraints, and evidence around it.
+        Projects from RBC, independent software, RoboCup, and machine-learning research.
       </p>
     </div>
   </header>
@@ -27,8 +27,8 @@ const moreProjects = projects.filter((project) => !project.featured);
     <div class="shell">
       <SectionHeading
         eyebrow="Featured"
-        title="The clearest proof of how I work."
-        description="Outcome-led case studies spanning enterprise product engineering, an online family card game, and international robotics."
+        title="Three projects in detail."
+        description="An RBC API tool, an online version of my family’s card game, and autonomous soccer robots."
       />
       <div class="project-grid">
         {featuredProjects.map((project, index) => <ProjectCard project={project} priority={index === 0} />)}
@@ -40,8 +40,8 @@ const moreProjects = projects.filter((project) => !project.featured);
     <div class="shell">
       <SectionHeading
         eyebrow="More work"
-        title="The complete archive."
-        description="Every current project remains here, with a clearer place in the overall story."
+        title="A few more."
+        description="My first RBC internship, Shredr, and a six-month fake-news research project."
       />
       <div class="project-grid">
         {moreProjects.map((project) => <ProjectCard project={project} compact />)}

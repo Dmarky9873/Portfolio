@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: 'DM',
   title: 'Daniel Markusson — Software Developer',
   description:
-    'Software developer at RBC and Computer Science student at the University of Toronto, building reliable products across technology and finance.',
+    'Software developer at RBC and Computer Science student at the University of Toronto in Toronto, Canada.',
   url: 'https://www.danielmarkusson.net',
   location: 'Toronto, Canada',
   email: 'markussondan@gmail.com',

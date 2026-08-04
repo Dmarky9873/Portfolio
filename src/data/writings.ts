@@ -45,7 +45,7 @@ export const writings = [
     summary:
       "An examination of Hume's account of miracles, testimony, and violations of the laws of nature.",
     takeaway:
-      "Hume's definition makes miracles an empty category by ruling them out in advance; a subjective, experience-aware definition leaves more room for useful philosophical and psychological inquiry.",
+      "I argue that Hume's definition rules miracles out before the discussion begins, and that a subjective definition is more useful.",
     pdf: {
       src: phl235Paper,
       fileName: 'phl235-paper.pdf',
@@ -63,7 +63,7 @@ export const writings = [
     summary:
       'A published research paper on a lightweight machine-learning approach to distinguishing fake and real news articles.',
     takeaway:
-      "A five-feature XGBoost model reached 71% test accuracy, with signals of perceived effort—including article length, author count, and readability—among the model's useful predictors.",
+      'The five-feature XGBoost model reached 71% test accuracy. Article length, author count, and readability were among its strongest signals.',
     pdf: {
       src: fakeNewsPaper,
       fileName: 'a-minimal-approach-to-fake-news-detection.pdf',
@@ -81,7 +81,7 @@ export const writings = [
     summary:
       'A comparison of Bruce Lincoln and Melford Spiro on methodology in the study of religion.',
     takeaway:
-      'Careful scholarship requires explicit definitions, attention to context and bias, and caution when turning the beliefs of a dominant group into claims about an entire culture.',
+      'Lincoln and Spiro both argue that scholars should define religion carefully, examine their own bias, and avoid treating a dominant group as an entire culture.',
     pdf: {
       src: rlg211Paper1,
       fileName: 'rlg211-paper-1.pdf',
@@ -99,7 +99,7 @@ export const writings = [
     summary:
       "A reading of William James and Sigmund Freud through Bruce Lincoln's Theses on Method.",
     takeaway:
-      "Lincoln's method aligns more closely with Freud's awareness of ideology than with James's reliance on testimony, which raises questions about selection, authority, and framing.",
+      "I found Lincoln closer to Freud than James, mainly because James relies heavily on selected first-person testimony.",
     pdf: {
       src: rlg211Paper2,
       fileName: 'rlg211-paper-2.pdf',
@@ -117,7 +117,7 @@ export const writings = [
     summary:
       "An interpretation of Christoph Haizmann's visions using Sigmund Freud and Donald Winnicott.",
     takeaway:
-      "Freud explains why the Devil appeared through Haizmann's paternal loss and dependence; Winnicott explains how that figure functioned as a transitional phenomenon that made the loss more bearable.",
+      "Freud explains why the Devil appeared; Winnicott explains what it did for Haizmann by making his loss more bearable.",
     pdf: {
       src: rlg211Paper3,
       fileName: 'rlg211-paper-3.pdf',

@@ -16,10 +16,10 @@ const essays = writings.filter((entry) => entry.slug !== featured.slug);
     <div class="shell page-hero__grid">
       <div>
         <p class="eyebrow">Writing · Research and essays</p>
-        <h1>Ideas, tested in words.</h1>
+        <h1>Research and course papers.</h1>
       </div>
       <p class="page-hero__intro">
-        Writing forces a vague idea to become precise. These papers span machine learning, philosophy of religion, methodology, and psychology.
+        Five papers on fake-news detection, philosophy of religion, research methods, and religious experience.
       </p>
     </div>
   </header>
@@ -39,8 +39,8 @@ const essays = writings.filter((entry) => entry.slug !== featured.slug);
     <div class="shell">
       <SectionHeading
         eyebrow="Selected essays"
-        title="Evidence, methodology, and experience."
-        description="Every paper includes a concise summary, its main takeaway, and the original PDF."
+        title="Philosophy and religious studies."
+        description="Four course papers, each with a short summary and the original PDF."
       />
       <div class="writing-grid">
         {essays.map((entry) => <WritingCard writing={entry} />)}

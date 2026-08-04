@@ -23,6 +23,6 @@ const { writing, featured = false } = Astro.props;
     <div class="tag-list" aria-label="Topics">
       {writing.themes.map((theme) => <span>{theme}</span>)}
     </div>
-    <a class="arrow-link" href={`/writing/${writing.slug}`}>Read the summary <span aria-hidden="true">→</span></a>
+    <a class="arrow-link" href={`/writing/${writing.slug}`}>View paper <span aria-hidden="true">→</span></a>
   </div>
 </article>
