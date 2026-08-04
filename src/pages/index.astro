@@ -13,11 +13,30 @@ const featuredWriting = writings.find((entry) => entry.slug === 'a-minimal-appro
 <BaseLayout>
   <section class="hero">
     <div class="shell hero__grid">
-      <div>
+      <div class="hero__primary">
         <p class="eyebrow">Daniel Markusson · Toronto</p>
-        <h1>I make software—and sometimes robots.</h1>
+        <h1 class="hero-title" aria-label="I build software for RBC, for clients, and for fun.">
+          <span class="hero-title__line" aria-hidden="true">
+            <span class="hero-title__mask"><span class="hero-title__word">I</span></span>
+            <span class="hero-title__mask"><span class="hero-title__word">build</span></span>
+            <span class="hero-title__mask"><span class="hero-title__word">software</span></span>
+          </span>
+          <span class="hero-title__line" aria-hidden="true">
+            <span class="hero-title__mask"><span class="hero-title__word">for</span></span>
+            <span class="hero-title__mask"><span class="hero-title__word">RBC,</span></span>
+          </span>
+          <span class="hero-title__line" aria-hidden="true">
+            <span class="hero-title__mask"><span class="hero-title__word">for</span></span>
+            <span class="hero-title__mask"><span class="hero-title__word">clients,</span></span>
+          </span>
+          <span class="hero-title__line" aria-hidden="true">
+            <span class="hero-title__mask"><span class="hero-title__word">and</span></span>
+            <span class="hero-title__mask"><span class="hero-title__word">for</span></span>
+            <span class="hero-title__mask"><span class="hero-title__word">fun.</span></span>
+          </span>
+        </h1>
         <p class="hero__lead">
-          I’m a software developer at RBC and a Computer Science student at U of T. Outside work, I’ve built a family card game with self-play bots, autonomous soccer robots, and a fake-news classifier.
+          I’m a software developer at RBC and a Computer Science student at U of T. I also run a software creation agency and build side projects, including self-play bots for my family’s card game, autonomous soccer robots, and a fake-news classifier.
         </p>
         <div class="button-row">
           <a class="button button--primary" href="/portfolio">See my work</a>
