@@ -57,9 +57,29 @@ const isActive = (href: string) =>
   const themeLabel = document.querySelector<HTMLElement>('[data-theme-label]');
   const mobileQuery = window.matchMedia('(max-width: 839px)');
 
-  const storedTheme = () => localStorage.getItem('portfolio-theme') ?? 'auto';
+  type ThemePreference = 'auto' | 'light' | 'dark';
 
-  const applyTheme = (theme: string) => {
+  const isThemePreference = (theme: string | null): theme is ThemePreference =>
+    theme === 'auto' || theme === 'light' || theme === 'dark';
+
+  const storedTheme = (): ThemePreference => {
+    try {
+      const theme = localStorage.getItem('portfolio-theme');
+
+      if (isThemePreference(theme)) return theme;
+      if (theme !== null) localStorage.removeItem('portfolio-theme');
+    } catch {}
+
+    return 'auto';
+  };
+
+  const themeLabels: Record<ThemePreference, string> = {
+    auto: 'Auto',
+    light: 'Light',
+    dark: 'Dark',
+  };
+
+  const applyTheme = (theme: ThemePreference) => {
     if (theme === 'light' || theme === 'dark') {
       document.documentElement.dataset.theme = theme;
     } else {
@@ -67,7 +87,7 @@ const isActive = (href: string) =>
     }
 
     if (themeLabel) {
-      themeLabel.textContent = `${theme.charAt(0).toUpperCase()}${theme.slice(1)}`;
+      themeLabel.textContent = themeLabels[theme];
     }
   };
 
@@ -130,7 +150,9 @@ const isActive = (href: string) =>
   themeButton?.addEventListener('click', () => {
     const current = storedTheme();
     const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
-    localStorage.setItem('portfolio-theme', next);
+    try {
+      localStorage.setItem('portfolio-theme', next);
+    } catch {}
     applyTheme(next);
   });
 </script>

@@ -68,7 +68,11 @@ const personSchema = {
       (() => {
         try {
           const theme = localStorage.getItem('portfolio-theme');
-          if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+          if (theme === 'light' || theme === 'dark') {
+            document.documentElement.dataset.theme = theme;
+          } else if (theme !== 'auto' && theme !== null) {
+            localStorage.removeItem('portfolio-theme');
+          }
         } catch {}
       })();
     </script>
