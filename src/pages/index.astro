@@ -36,17 +36,17 @@ const featuredWriting = writings.find((entry) => entry.slug === 'a-minimal-appro
           </span>
         </h1>
         <p class="hero__lead">
-          I’m a software developer at RBC and a Computer Science student at U of T. I also run a software creation agency and build side projects, including self-play bots for my family’s card game, autonomous soccer robots, and a fake-news classifier.
+          I’m a software developer at RBC and a Computer Science student at U of T. At RBC, I build reusable interface components and previously helped reduce a weekly API-proxy workflow by 83%. Outside work, I run a software creation agency and build projects in machine learning, robotics, and game AI.
         </p>
         <div class="button-row">
-          <a class="button button--primary" href="/portfolio">See my work</a>
+          <a class="button button--primary" href="/portfolio">View selected work</a>
           <a class="button button--quiet" href={resumeHref} target="_blank" rel="noreferrer">Download résumé</a>
         </div>
       </div>
 
       <aside class="hero__aside" aria-label="Current status">
         <p class="eyebrow">Currently</p>
-        <p>Building reusable React components for RBC’s RIG design framework.</p>
+        <p>Building reusable React components for RIG, RBC’s internal design framework.</p>
         <dl class="status-list">
           <div><dt>Work</dt><dd>Software Developer · RBC</dd></div>
           <div><dt>Study</dt><dd>Computer Science · U of T</dd></div>
@@ -58,9 +58,9 @@ const featuredWriting = writings.find((entry) => entry.slug === 'a-minimal-appro
 
   <section class="proof-strip" aria-label="Selected results">
     <div class="shell proof-strip__grid">
-      <div class="proof"><strong>83%</strong><span>reduction in weekly API-proxy setup time at RBC</span></div>
+      <div class="proof"><strong>83%</strong><span>less time spent on a weekly RBC API-proxy workflow</span></div>
       <div class="proof"><strong>2×</strong><span>represented Canada at RoboCup Junior in France and Brazil</span></div>
-      <div class="proof"><strong>71%</strong><span>test accuracy using five article-level features</span></div>
+      <div class="proof"><strong>71%</strong><span>test accuracy for a five-feature fake-news classifier</span></div>
     </div>
   </section>
 
@@ -68,8 +68,8 @@ const featuredWriting = writings.find((entry) => entry.slug === 'a-minimal-appro
     <div class="shell">
       <SectionHeading
         eyebrow="Selected work"
-        title="A few things I’ve built."
-        description="An RBC API tool, my family’s card game, and two generations of autonomous soccer robots."
+        title="Selected software and engineering work."
+        description="An RBC API-proxy dashboard, self-play bots for my family’s card game, and two generations of autonomous soccer robots."
         link={{ label: 'See all work', href: '/portfolio' }}
       />
       <div class="project-grid">
@@ -84,8 +84,8 @@ const featuredWriting = writings.find((entry) => entry.slug === 'a-minimal-appro
     <div class="shell">
       <SectionHeading
         eyebrow="Research and writing"
-        title="Research and course papers."
-        description="Five papers on fake-news detection, research methods, and philosophy of religion."
+        title="Machine learning, methodology, and philosophy."
+        description="Published research on a five-feature XGBoost model, plus course papers on methodology and philosophy of religion."
         link={{ label: 'Browse all writing', href: '/writing' }}
       />
       <div class="writing-grid">

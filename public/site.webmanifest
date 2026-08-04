@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Daniel Markusson Portfolio",
+  "short_name": "Daniel Markusson",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#171817",
+  "background_color": "#171817",
+  "start_url": "/",
   "display": "standalone"
 }
