@@ -433,47 +433,6 @@ export const projects: Project[] = [
     nextStep: 'Use Shredr to compare healthier options at a restaurant.',
   },
   {
-    slug: 'vexo-labs',
-    title: 'Vexo Labs',
-    year: '2025–present',
-    category: 'Startup',
-    featured: false,
-    eyebrow: 'Co-founded startup · 2025–present',
-    summary:
-      'A startup founded with friends to help democratize investing and make wealth-building more accessible.',
-    outcome:
-      "Vexo Labs was accepted into Waterloo's Accelerator Centre and prepared to begin beta testing with volunteer users.",
-    role: 'Co-founder',
-    team: ['Friends and co-founders'],
-    stack: [],
-    links: [
-      {
-        label: 'Visit Vexo Labs',
-        href: 'https://www.vexo.gg/',
-      },
-      {
-        label: 'Accelerator Centre',
-        href: 'https://www.acceleratorcentre.com/',
-      },
-    ],
-    cover: {
-      path: '/src/assets/images/portfolio/vexo-labs/preview.png',
-      alt: 'The Vexo wordmark in black on a white background.',
-    },
-    gallery: [],
-    metrics: [],
-    sections: [
-      {
-        heading: 'Making investing more accessible',
-        paragraphs: [
-          'I founded Vexo Labs with friends in late 2025. We want to democratize investing and help more people build wealth.',
-          "The startup was accepted into Waterloo's Accelerator Centre, which we described as Canada's top accelerator. We then prepared to begin beta testing with volunteer users.",
-        ],
-      },
-    ],
-    nextStep: 'Begin beta testing with volunteer users.',
-  },
-  {
     slug: 'a-minimal-approach-to-fake-news-detection',
     title: 'A Minimal Approach to Fake News Detection',
     year: '2024',

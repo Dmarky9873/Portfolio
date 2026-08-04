@@ -14,7 +14,6 @@ import MinimalApproachToFakeNewsDetection from './components/pages/Portfolio/pag
 import SecondRBCInternship from './components/pages/Portfolio/pages/SecondRBCInternship';
 import Smear from './components/pages/Portfolio/pages/Smear';
 import Shredr from './components/pages/Portfolio/pages/Shredr';
-import VexoLabs from './components/pages/Portfolio/pages/VexoLabs';
 import WritingArticle from './components/pages/Writing/pages/WritingArticle';
 import {
   createRandomTheme,
@@ -111,7 +110,6 @@ function App() {
           />
           <Route path="portfolio/smear" element={<Smear />} />
           <Route path="portfolio/shredr" element={<Shredr />} />
-          <Route path="portfolio/vexo-labs" element={<VexoLabs />} />
           <Route
             path="portfolio/a-minimal-approach-to-fake-news-detection"
             element={<MinimalApproachToFakeNewsDetection />}
