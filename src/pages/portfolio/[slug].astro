@@ -1,0 +1,162 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectMedia from '../../components/ProjectMedia.astro';
+import { projects, type Project } from '../../data/projects';
+import { getImage, resolveAssetHref } from '../../lib/media';
+
+export const getStaticPaths = () =>
+  projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const currentIndex = projects.findIndex((item) => item.slug === project.slug);
+const nextProject = projects[(currentIndex + 1) % projects.length];
+const cover = project.cover.path.startsWith('/media/')
+  ? project.cover.path
+  : getImage(project.cover.path);
+const title = `${project.title} — Daniel Markusson`;
+const sectionId = (heading: string, index: number) =>
+  `${index + 1}-${heading.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+
+const creativeWorkSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: project.title,
+  description: project.outcome,
+  author: { '@type': 'Person', name: 'Daniel Markusson' },
+  dateCreated: project.year,
+  url: new URL(`/portfolio/${project.slug}`, Astro.site),
+};
+---
+
+<BaseLayout title={title} description={project.outcome} image={typeof cover === 'string' ? cover : cover.src} articleType="article">
+  <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(creativeWorkSchema)} />
+
+  <article>
+    <header class="case-hero">
+      <div class="shell">
+        <div class="case-hero__top">
+          <div>
+            <p class="eyebrow">{project.eyebrow}</p>
+            <h1>{project.title}</h1>
+            <p class="case-hero__summary">{project.summary}</p>
+          </div>
+          <div class="case-hero__outcome">
+            <p class="eyebrow">Outcome</p>
+            <strong>{project.outcome}</strong>
+          </div>
+        </div>
+        <div class="case-cover">
+          {typeof cover === 'string' ? (
+            <img
+              src={cover}
+              alt={project.cover.alt}
+              width="1800"
+              height="1013"
+              loading="eager"
+              fetchpriority="high"
+            />
+          ) : (
+            <Image
+              src={cover}
+              alt={project.cover.alt}
+              width={1800}
+              quality={84}
+              format="webp"
+              loading="eager"
+              fetchpriority="high"
+            />
+          )}
+        </div>
+      </div>
+    </header>
+
+    <section class="shell" aria-label="Project facts">
+      <dl class="case-facts">
+        <div class="case-fact"><dt>Role</dt><dd>{project.role}</dd></div>
+        <div class="case-fact"><dt>Year</dt><dd>{project.year}</dd></div>
+        <div class="case-fact"><dt>Team</dt><dd>{project.team.length ? project.team.join(', ') : 'Independent'}</dd></div>
+        <div class="case-fact"><dt>Tools</dt><dd>{project.stack.length ? project.stack.join(', ') : 'Product design and development'}</dd></div>
+      </dl>
+    </section>
+
+    {project.metrics.length > 0 && (
+      <section class="section">
+        <div class="shell metric-grid" aria-label="Project results">
+          {project.metrics.map((metric) => (
+            <div class="metric">
+              <strong class="metric__value">{metric.value}</strong>
+              <p class="metric__label">{metric.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class:list={['section', { 'section--bordered': project.metrics.length === 0 }]}>
+      <div class="shell case-story">
+        <nav class="case-story__nav" aria-label="Case study sections">
+          <p class="eyebrow">In this story</p>
+          <ol>
+            {project.sections.map((section, index) => (
+              <li><a href={`#${sectionId(section.heading, index)}`}>{String(index + 1).padStart(2, '0')} · {section.heading}</a></li>
+            ))}
+          </ol>
+        </nav>
+
+        <div>
+          {project.sections.map((section, index) => (
+            <section class="case-section" id={sectionId(section.heading, index)}>
+              <p class="eyebrow">{String(index + 1).padStart(2, '0')}</p>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </section>
+          ))}
+          <section class="case-section">
+            <p class="eyebrow">Next step</p>
+            <h2>Where it goes from here.</h2>
+            <p>{project.nextStep}</p>
+          </section>
+        </div>
+
+        {project.links.length > 0 && (
+          <aside class="case-links" aria-label="Project links">
+            <p class="eyebrow">Explore</p>
+            {project.links.map((link) => (
+              <a href={resolveAssetHref(link.href)} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
+                {link.label} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </aside>
+        )}
+      </div>
+    </section>
+
+    {project.gallery.length > 0 && (
+      <section class="section section--tint">
+        <div class="shell">
+          <p class="eyebrow">Project gallery</p>
+          <div class="gallery">
+            {project.gallery.map((media) => (
+              <figure>
+                <div class="gallery__media"><ProjectMedia path={media.path} alt={media.alt} /></div>
+                <figcaption>{media.alt}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <div class="shell">
+      <a class="next-project" href={`/portfolio/${nextProject.slug}`}>
+        <p class="eyebrow">Next case study</p>
+        <h2>{nextProject.title} <span aria-hidden="true">→</span></h2>
+      </a>
+    </div>
+  </article>
+</BaseLayout>

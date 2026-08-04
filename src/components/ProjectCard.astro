@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import type { Project } from '../data/projects';
+import { getImage } from '../lib/media';
+
+interface Props {
+  project: Project;
+  priority?: boolean;
+  compact?: boolean;
+}
+
+const { project, priority = false, compact = false } = Astro.props;
+const cover = project.cover.path.startsWith('/media/')
+  ? project.cover.path
+  : getImage(project.cover.path);
+---
+
+<article class:list={['project-card', { 'project-card--compact': compact }]}>
+  <a class="project-card__media" href={`/portfolio/${project.slug}`} tabindex="-1" aria-hidden="true">
+    {typeof cover === 'string' ? (
+      <img
+        src={cover}
+        alt=""
+        width={compact ? 760 : 1200}
+        height={compact ? 475 : 750}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : 'auto'}
+      />
+    ) : (
+      <Image
+        src={cover}
+        alt=""
+        width={compact ? 760 : 1200}
+        quality={82}
+        format="webp"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchpriority={priority ? 'high' : 'auto'}
+      />
+    )}
+  </a>
+  <div class="project-card__body">
+    <div class="project-card__meta">
+      <span>{project.category}</span>
+      <span>{project.year}</span>
+    </div>
+    <h3><a href={`/portfolio/${project.slug}`}>{project.title}</a></h3>
+    <p>{project.outcome}</p>
+    <div class="project-card__footer">
+      <span>{project.role}</span>
+      <a class="arrow-link" href={`/portfolio/${project.slug}`} aria-label={`Read the ${project.title} case study`}>
+        Read case study <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,28 @@
+---
+import { siteConfig } from '../config';
+import resumeHref from '../assets/files/daniel-markusson-resume.pdf';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell">
+    <section class="footer-cta" aria-labelledby="footer-cta-title">
+      <p class="eyebrow">Start a conversation</p>
+      <h2 id="footer-cta-title">Have a difficult problem worth building around?</h2>
+      <div class="button-row">
+        <a class="button button--primary" href={`mailto:${siteConfig.email}`}>Email Daniel</a>
+        <a class="button button--quiet" href="/contact">Contact details</a>
+      </div>
+    </section>
+
+    <div class="site-footer__bar">
+      <p>© {year} {siteConfig.name} · {siteConfig.location}</p>
+      <nav aria-label="Footer">
+        <a href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href={siteConfig.links.github} target="_blank" rel="noreferrer">GitHub</a>
+        <a href={resumeHref} target="_blank" rel="noreferrer">Résumé</a>
+      </nav>
+    </div>
+  </div>
+</footer>

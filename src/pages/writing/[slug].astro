@@ -1,0 +1,68 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { writings, type WritingEntry } from '../../data/writings';
+
+export const getStaticPaths = () =>
+  writings.map((writing) => ({ params: { slug: writing.slug }, props: { writing } }));
+
+interface Props {
+  writing: WritingEntry;
+}
+
+const { writing } = Astro.props;
+const title = `${writing.title} — Daniel Markusson`;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: writing.title,
+  description: writing.summary,
+  author: { '@type': 'Person', name: 'Daniel Markusson' },
+  url: new URL(`/writing/${writing.slug}`, Astro.site),
+};
+---
+
+<BaseLayout title={title} description={writing.summary} image={writing.preview.src.src} articleType="article">
+  <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article>
+    <header class="page-hero">
+      <div class="shell writing-hero">
+        <div>
+          <p class="eyebrow">{writing.meta}</p>
+          <h1>{writing.title}</h1>
+          <p class="page-hero__intro">{writing.summary}</p>
+        </div>
+        <div class="writing-hero__takeaway">
+          <p class="eyebrow">Key takeaway</p>
+          <p>{writing.takeaway}</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section section--bordered">
+      <div class="shell paper-layout">
+        <div>
+          <div class="paper-preview">
+            <Image src={writing.preview.src} alt={writing.preview.alt} width={760} quality={86} format="webp" loading="eager" />
+          </div>
+          <div class="tag-list" aria-label="Topics">
+            {writing.themes.map((theme) => <span>{theme}</span>)}
+          </div>
+        </div>
+        <div class="paper-reader">
+          <p class="eyebrow">Original paper</p>
+          <h2>Read the full work.</h2>
+          <p>
+            The PDF is preserved here as the source document. Open it in a separate tab for the clearest reading experience, or use the embedded reader below.
+          </p>
+          <div class="button-row">
+            <a class="button button--primary" href={writing.pdf.src} target="_blank" rel="noreferrer">Open PDF</a>
+            <a class="button button--quiet" href={writing.pdf.src} download={writing.pdf.fileName}>Download</a>
+          </div>
+          <iframe class="pdf-frame" src={writing.pdf.src} title={`${writing.title} PDF`} loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

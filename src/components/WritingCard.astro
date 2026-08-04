@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import type { WritingEntry } from '../data/writings';
+
+interface Props {
+  writing: WritingEntry;
+  featured?: boolean;
+}
+
+const { writing, featured = false } = Astro.props;
+---
+
+<article class:list={['writing-card', { 'writing-card--featured': featured }]}>
+  {featured && (
+    <a class="writing-card__preview" href={`/writing/${writing.slug}`} tabindex="-1" aria-hidden="true">
+      <Image src={writing.preview.src} alt="" width={680} quality={84} format="webp" loading="lazy" />
+    </a>
+  )}
+  <div class="writing-card__content">
+    <p class="eyebrow">{writing.meta}</p>
+    <h3><a href={`/writing/${writing.slug}`}>{writing.title}</a></h3>
+    <p>{writing.summary}</p>
+    <div class="tag-list" aria-label="Topics">
+      {writing.themes.map((theme) => <span>{theme}</span>)}
+    </div>
+    <a class="arrow-link" href={`/writing/${writing.slug}`}>Read the summary <span aria-hidden="true">→</span></a>
+  </div>
+</article>

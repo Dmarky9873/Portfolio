@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WritingCard from '../../components/WritingCard.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { writings } from '../../data/writings';
+
+const featured = writings.find((entry) => entry.slug === 'a-minimal-approach-to-fake-news-detection')!;
+const essays = writings.filter((entry) => entry.slug !== featured.slug);
+---
+
+<BaseLayout
+  title="Writing — Daniel Markusson"
+  description="Research and essays by Daniel Markusson on machine learning, evidence, methodology, and religious experience."
+>
+  <header class="page-hero">
+    <div class="shell page-hero__grid">
+      <div>
+        <p class="eyebrow">Writing · Research and essays</p>
+        <h1>Ideas, tested in words.</h1>
+      </div>
+      <p class="page-hero__intro">
+        Writing forces a vague idea to become precise. These papers span machine learning, philosophy of religion, methodology, and psychology.
+      </p>
+    </div>
+  </header>
+
+  <section class="section section--bordered">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Featured research"
+        title="A minimal approach to fake-news detection."
+        description="A five-feature XGBoost model, published after six months of independent research."
+      />
+      <div class="writing-grid"><WritingCard writing={featured} featured /></div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Selected essays"
+        title="Evidence, methodology, and experience."
+        description="Every paper includes a concise summary, its main takeaway, and the original PDF."
+      />
+      <div class="writing-grid">
+        {essays.map((entry) => <WritingCard writing={entry} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

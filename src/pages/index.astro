@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import WritingCard from '../components/WritingCard.astro';
+import { featuredProjects } from '../data/projects';
+import { writings } from '../data/writings';
+import resumeHref from '../assets/files/daniel-markusson-resume.pdf';
+
+const featuredWriting = writings.find((entry) => entry.slug === 'a-minimal-approach-to-fake-news-detection')!;
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="shell hero__grid">
+      <div>
+        <p class="eyebrow">Daniel Markusson · Toronto</p>
+        <h1>Software built for real constraints.</h1>
+        <p class="hero__lead">
+          I’m a developer at RBC and a Computer Science student at the University of Toronto. I turn ambiguous problems into systems that save time, teach people, and hold up under real use.
+        </p>
+        <div class="button-row">
+          <a class="button button--primary" href="/portfolio">View selected work</a>
+          <a class="button button--quiet" href={resumeHref} target="_blank" rel="noreferrer">Download résumé</a>
+        </div>
+      </div>
+
+      <aside class="hero__aside" aria-label="Current status">
+        <p class="eyebrow">Currently</p>
+        <p>Building reusable interface systems at the intersection of engineering, finance, and product.</p>
+        <dl class="status-list">
+          <div><dt>Work</dt><dd>Software Developer · RBC</dd></div>
+          <div><dt>Study</dt><dd>Computer Science · U of T</dd></div>
+          <div><dt>Based</dt><dd>Toronto, Canada</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="proof-strip" aria-label="Selected results">
+    <div class="shell proof-strip__grid">
+      <div class="proof"><strong>83%</strong><span>less time spent preparing API proxies in an RBC workflow</span></div>
+      <div class="proof"><strong>2×</strong><span>represented Canada at RoboCup Junior in France and Brazil</span></div>
+      <div class="proof"><strong>71%</strong><span>test accuracy from a deliberately minimal fake-news model</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Selected work"
+        title="Measured impact, carefully built."
+        description="Three projects that show how I approach product engineering, independent systems work, and technical leadership."
+        link={{ label: 'See all work', href: '/portfolio' }}
+      />
+      <div class="project-grid">
+        {featuredProjects.map((project, index) => (
+          <ProjectCard project={project} priority={index === 0} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Research and writing"
+        title="Thinking in public."
+        description="Research and essays on machine learning, evidence, methodology, and religious experience."
+        link={{ label: 'Browse all writing', href: '/writing' }}
+      />
+      <div class="writing-grid">
+        <WritingCard writing={featuredWriting} featured />
+        {writings.filter((entry) => entry.slug !== featuredWriting.slug).slice(0, 2).map((entry) => (
+          <WritingCard writing={entry} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bordered">
+    <div class="shell about-preview">
+      <div class="about-preview__image">
+        <img
+          src="/media/optimized/about/night-waterfront.webp"
+          alt="Daniel standing by the Toronto waterfront at night."
+          width="840"
+          height="1050"
+          loading="lazy"
+        />
+      </div>
+      <div class="about-preview__copy">
+        <p class="eyebrow">Beyond the résumé</p>
+        <h2>Curiosity is the common thread.</h2>
+        <p>
+          I like building things—software, robots, teams, music, and occasionally something by hand. The medium changes; the interest in how systems work does not.
+        </p>
+        <a class="text-link" href="/about">More about me <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

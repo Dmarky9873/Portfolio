@@ -1,0 +1,136 @@
+---
+import { navigation, siteConfig } from '../config';
+import resumeHref from '../assets/files/daniel-markusson-resume.pdf';
+
+const pathname = Astro.url.pathname;
+
+const isActive = (href: string) =>
+  href === '/portfolio'
+    ? pathname.startsWith('/portfolio')
+    : pathname === href || pathname.startsWith(`${href}/`);
+---
+
+<header class="site-header" data-site-header>
+  <div class="site-header__inner shell">
+    <a class="wordmark" href="/" aria-label={`${siteConfig.name} home`}>
+      <span class="wordmark__monogram" aria-hidden="true">DM</span>
+      <span class="wordmark__name">{siteConfig.name}</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-navigation"
+      data-menu-toggle
+    >
+      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="site-nav" id="site-navigation" aria-label="Primary" data-site-nav>
+      <div class="site-nav__links">
+        {navigation.map((item) => (
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))}
+      </div>
+      <div class="site-nav__actions">
+        <button class="theme-control" type="button" data-theme-control>
+          <span>Theme</span>
+          <strong data-theme-label>Auto</strong>
+        </button>
+        <a class="text-link" href={resumeHref} target="_blank" rel="noreferrer">
+          Résumé <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]');
+  const menuButton = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const navigationElement = document.querySelector<HTMLElement>('[data-site-nav]');
+  const themeButton = document.querySelector<HTMLButtonElement>('[data-theme-control]');
+  const themeLabel = document.querySelector<HTMLElement>('[data-theme-label]');
+  const mobileQuery = window.matchMedia('(max-width: 839px)');
+
+  const storedTheme = () => localStorage.getItem('portfolio-theme') ?? 'auto';
+
+  const applyTheme = (theme: string) => {
+    if (theme === 'light' || theme === 'dark') {
+      document.documentElement.dataset.theme = theme;
+    } else {
+      delete document.documentElement.dataset.theme;
+    }
+
+    if (themeLabel) {
+      themeLabel.textContent = `${theme.charAt(0).toUpperCase()}${theme.slice(1)}`;
+    }
+  };
+
+  const closeMenu = (restoreFocus = false) => {
+    header?.removeAttribute('data-menu-open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+
+    if (mobileQuery.matches && navigationElement) {
+      navigationElement.inert = true;
+      navigationElement.setAttribute('aria-hidden', 'true');
+    }
+
+    if (restoreFocus) menuButton?.focus();
+  };
+
+  const syncMenuMode = () => {
+    if (!navigationElement) return;
+
+    if (mobileQuery.matches) {
+      closeMenu(false);
+    } else {
+      navigationElement.inert = false;
+      navigationElement.removeAttribute('aria-hidden');
+      header?.removeAttribute('data-menu-open');
+      menuButton?.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  applyTheme(storedTheme());
+  syncMenuMode();
+
+  menuButton?.addEventListener('click', () => {
+    const isOpen = header?.hasAttribute('data-menu-open') ?? false;
+
+    if (isOpen) {
+      closeMenu(false);
+      return;
+    }
+
+    header?.setAttribute('data-menu-open', '');
+    menuButton.setAttribute('aria-expanded', 'true');
+    if (navigationElement) {
+      navigationElement.inert = false;
+      navigationElement.removeAttribute('aria-hidden');
+    }
+  });
+
+  navigationElement?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => closeMenu(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && header?.hasAttribute('data-menu-open')) {
+      closeMenu(true);
+    }
+  });
+
+  mobileQuery.addEventListener('change', syncMenuMode);
+
+  themeButton?.addEventListener('click', () => {
+    const current = storedTheme();
+    const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
+    localStorage.setItem('portfolio-theme', next);
+    applyTheme(next);
+  });
+</script>

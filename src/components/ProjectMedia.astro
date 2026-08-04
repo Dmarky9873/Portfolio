@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import { getImage } from '../lib/media';
+
+interface Props {
+  path: string;
+  alt: string;
+  priority?: boolean;
+}
+
+const { path, alt, priority = false } = Astro.props;
+
+const videos: Record<string, { mp4: string; webm: string; poster: string }> = {
+  '/src/assets/images/portfolio/advanced-robotics/old-robot.gif': {
+    mp4: '/media/optimized/portfolio/advanced-robotics/old-robot.mp4',
+    webm: '/media/optimized/portfolio/advanced-robotics/old-robot.webm',
+    poster: '/media/optimized/portfolio/advanced-robotics/old-robot-poster.webp',
+  },
+  '/src/assets/images/portfolio/advanced-robotics/new-robot.gif': {
+    mp4: '/media/optimized/portfolio/advanced-robotics/new-robot.mp4',
+    webm: '/media/optimized/portfolio/advanced-robotics/new-robot.webm',
+    poster: '/media/optimized/portfolio/advanced-robotics/new-robot-poster.webp',
+  },
+};
+
+const video = videos[path];
+const publicImage = path.startsWith('/media/') ? path : undefined;
+const image = video || publicImage ? undefined : getImage(path);
+---
+
+{video ? (
+  <video controls muted playsinline preload="metadata" poster={video.poster} aria-label={alt}>
+    <source src={video.mp4} type="video/mp4" />
+    <source src={video.webm} type="video/webm" />
+    Your browser does not support embedded video.
+  </video>
+) : (
+  publicImage ? (
+    <img
+      src={publicImage}
+      alt={alt}
+      width="1400"
+      height="875"
+      loading={priority ? 'eager' : 'lazy'}
+      fetchpriority={priority ? 'high' : 'auto'}
+    />
+  ) : (
+    <Image
+      src={image!}
+      alt={alt}
+      width={1400}
+      quality={82}
+      format="webp"
+      loading={priority ? 'eager' : 'lazy'}
+      fetchpriority={priority ? 'high' : 'auto'}
+    />
+  )
+)}

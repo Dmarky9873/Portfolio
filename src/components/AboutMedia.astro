@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import type { AboutSection } from '../data/about';
+
+interface Props {
+  media: AboutSection['image'];
+}
+
+const { media } = Astro.props;
+---
+
+{media.video ? (
+  <video controls muted playsinline preload="metadata" poster={media.video.poster} aria-label={media.alt}>
+    <source src={media.video.mp4} type="video/mp4" />
+    <source src={media.video.webm} type="video/webm" />
+    Your browser does not support embedded video.
+  </video>
+) : typeof media.src === 'string' ? (
+  <img src={media.src} alt={media.alt} loading="lazy" />
+) : (
+  <Image src={media.src} alt={media.alt} width={1200} quality={82} format="webp" loading="lazy" />
+)}

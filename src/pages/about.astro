@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutMedia from '../components/AboutMedia.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { about, type AboutSection, type CurrentFact } from '../data/about';
+
+const currentFacts = about.current as readonly CurrentFact[];
+const personalSections = about.sections as readonly AboutSection[];
+---
+
+<BaseLayout
+  title="About — Daniel Markusson"
+  description="About Daniel Markusson: software developer, Computer Science student, robotics leader, musician, and athlete in Toronto."
+>
+  <header class="page-hero">
+    <div class="shell page-hero__grid">
+      <div>
+        <p class="eyebrow">{about.eyebrow}</p>
+        <h1>{about.title}</h1>
+      </div>
+      <p class="page-hero__intro">A professional story shaped by curiosity, collaboration, and the habit of making things real.</p>
+    </div>
+  </header>
+
+  <section class="section section--bordered">
+    <div class="shell bio-grid">
+      <div class="bio-copy">
+        {about.bio.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <dl class="fact-list">
+        {currentFacts.map((fact) => (
+          <div>
+            <dt>{fact.label}</dt>
+            <dd>{fact.value}{fact.detail && <small>{fact.detail}</small>}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="shell">
+      <SectionHeading eyebrow="Experience" title="A record of building and learning." />
+      <div class="timeline">
+        {about.experience.map((item) => (
+          <article class="timeline__item">
+            <p class="timeline__period">{item.period}</p>
+            <div class="timeline__role"><strong>{item.role}</strong><span>{item.organization} · {item.location}</span></div>
+            <p>{item.summary}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Outside the job title"
+        title="The interests behind the work."
+        description="Programming is one way I make things. Robotics, athletics, music, and hands-on projects exercise the same curiosity in different forms."
+      />
+      {personalSections.map((section) => (
+        <article class:list={['personal-story', { 'personal-story--reverse': section.image.position === 'right' }]} id={section.id}>
+          <div class:list={['personal-story__media', { 'personal-story__media--portrait': section.image.portrait }]}>
+            <AboutMedia media={section.image} />
+          </div>
+          <div class="personal-story__copy">
+            <p class="eyebrow">{section.eyebrow}</p>
+            <h2>{section.title}</h2>
+            {section.body.map((paragraph) => <p>{paragraph}</p>)}
+            {section.links && (
+              <div class="button-row">
+                {section.links.map((link) => <a class="text-link" href={link.href} target="_blank" rel="noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

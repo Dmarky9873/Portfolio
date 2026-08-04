@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config';
+---
+
+<BaseLayout
+  title="Contact — Daniel Markusson"
+  description="Contact Daniel Markusson about software engineering, product, research, or collaboration opportunities."
+>
+  <header class="page-hero">
+    <div class="shell page-hero__grid">
+      <div>
+        <p class="eyebrow">Contact · Toronto</p>
+        <h1>Let’s talk about the problem.</h1>
+      </div>
+      <p class="page-hero__intro">
+        I’m glad to hear about software roles, research, ambitious side projects, or a problem that needs a careful technical approach.
+      </p>
+    </div>
+  </header>
+
+  <section class="section section--bordered">
+    <div class="shell contact-grid">
+      <aside>
+        <p class="eyebrow">Direct</p>
+        <div class="contact-details">
+          <div class="contact-detail"><span>Email</span><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></div>
+          <div class="contact-detail"><span>LinkedIn</span><a href={siteConfig.links.linkedin} target="_blank" rel="noreferrer">Connect with Daniel ↗</a></div>
+          <div class="contact-detail"><span>GitHub</span><a href={siteConfig.links.github} target="_blank" rel="noreferrer">See the code ↗</a></div>
+          <div class="contact-detail"><span>Location</span><strong>{siteConfig.location}</strong></div>
+        </div>
+      </aside>
+
+      <form class="contact-form" data-contact-form>
+        <div class="field">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field field--wide">
+          <label for="contact-subject">Subject</label>
+          <input id="contact-subject" name="subject" type="text" autocomplete="off" required />
+        </div>
+        <div class="field field--wide">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required></textarea>
+        </div>
+        <div class="field field--honeypot" aria-hidden="true">
+          <label for="contact-company">Company website</label>
+          <input id="contact-company" name="company" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+        <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+        <div class="contact-form__actions">
+          <button class="button button--primary" type="submit" data-submit-button>Send message</button>
+          <span class="contact-label">Usually replies within a few days.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import emailjs from '@emailjs/browser';
+
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  const status = document.querySelector<HTMLElement>('[data-form-status]');
+  const submitButton = document.querySelector<HTMLButtonElement>('[data-submit-button]');
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const honeypot = form.elements.namedItem('company') as HTMLInputElement | null;
+    if (honeypot?.value) {
+      status!.textContent = 'Thanks—your message has been sent.';
+      return;
+    }
+
+    const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID || 'service_7no497n';
+    const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || 'template_526768s';
+    const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY || 'Uu2o3Kl9TGdo-knIR';
+
+    submitButton!.disabled = true;
+    submitButton!.textContent = 'Sending…';
+    status!.textContent = 'Sending your message…';
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, form, { publicKey });
+      form.reset();
+      status!.textContent = 'Message sent. Thanks for reaching out.';
+    } catch {
+      status!.innerHTML = 'The form could not send just now. Please email <a href="mailto:markussondan@gmail.com">markussondan@gmail.com</a> instead.';
+    } finally {
+      submitButton!.disabled = false;
+      submitButton!.textContent = 'Send message';
+    }
+  });
+</script>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { featuredProjects, projects } from '../../data/projects';
+
+const moreProjects = projects.filter((project) => !project.featured);
+---
+
+<BaseLayout
+  title="Work — Daniel Markusson"
+  description="Selected software, product, robotics, startup, and research work by Daniel Markusson."
+>
+  <header class="page-hero">
+    <div class="shell page-hero__grid">
+      <div>
+        <p class="eyebrow">Work · 2022–present</p>
+        <h1>Built to be used.</h1>
+      </div>
+      <p class="page-hero__intro">
+        Product systems, independent software, autonomous robots, research, and a startup—each shaped by the people, constraints, and evidence around it.
+      </p>
+    </div>
+  </header>
+
+  <section class="section section--bordered">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="Featured"
+        title="The clearest proof of how I work."
+        description="Outcome-led case studies spanning enterprise product engineering, an online family card game, and international robotics."
+      />
+      <div class="project-grid">
+        {featuredProjects.map((project, index) => <ProjectCard project={project} priority={index === 0} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="shell">
+      <SectionHeading
+        eyebrow="More work"
+        title="The complete archive."
+        description="Every current project remains here, with a clearer place in the overall story."
+      />
+      <div class="project-grid">
+        {moreProjects.map((project) => <ProjectCard project={project} compact />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
